@@ -1,0 +1,120 @@
+@import "../../styles/variables"
+@import "../../styles/mixins"
+
+.navbar
+    width: 100%
+    background-color: $bgColor
+    padding: 10px 20px
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: space-between
+    position: relative
+    // height: 250px
+
+    @media (min-width: 769px)
+        flex-direction: row
+        height: 96px
+        padding-top: 29px
+        padding-bottom: 0
+
+    &__info
+        display: flex
+        align-items: center
+        justify-content: space-between
+        width: 100%
+        
+        @media (min-width: 769px)
+            width: auto
+
+    &__logo
+        height: auto
+
+    &__toggle
+        display: block
+        font-size: 40px
+        cursor: pointer
+        background: none
+        border: none
+        color: white
+        text-align: center
+        // width: 48px
+        // height: 30px
+        padding-right: 50px
+
+        @media (min-width: 769px)
+            display: none
+
+    &__item
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: flex-start
+        width: 100%
+        max-height: 0
+        overflow: hidden
+        transition: max-height 0.3s ease-in-out
+
+        @media (min-width: 769px)
+            flex-direction: row
+            align-items: center
+            justify-content: flex-end
+            width: auto
+            max-height: none
+            overflow: hidden
+
+    &__item_open
+        max-height: 1000px
+
+        @media (min-width: 769px)
+            max-height: none
+
+    &__menu
+        display: flex
+        flex-direction: column
+        align-items: center
+        list-style: none
+        padding: 0
+        margin: 0
+        gap: 16px
+        font-family: Roboto-Regular
+        font-size: 24px
+        font-weight: 400
+        width: 100%
+        transition: opacity 0.3s ease-in-out
+
+        @media (min-width: 769px)
+            flex-direction: row
+            padding-right: 60px
+            // gap: 5px
+            width: auto
+
+        & li
+            cursor: pointer
+
+    &__link
+        width: 100%
+        text-align: center
+        padding: 10px 0
+        color: white
+        text-decoration: none
+
+        @media (min-width: 769px)
+            width: auto
+            padding: 0
+
+    &__number
+        font-family: Roboto-Regular
+        font-size: 20px
+        color: white
+        padding-top: 8px
+        cursor: pointer
+        text-align: center
+        transition: opacity 0.3s ease-in-out
+
+        @media (max-width:769px)
+            margin-bottom: 15px 
+
+        @media (min-width: 769px)
+            padding-top: 0
+            margin-right: 20px

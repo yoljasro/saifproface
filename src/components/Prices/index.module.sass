@@ -1,0 +1,86 @@
+.container
+  width: 100%
+  justify-content: center
+  align-items: center
+  margin-bottom: 100px
+  margin-top: -100px
+  overflow: hidden
+  @media (max-width:769px)
+    margin-top: -150px
+
+  &__image
+    float: right
+
+  &__boy
+    width: 100%
+    display: flex
+    justify-content: flex-end
+    align-content: flex-end
+    align-items: flex-end
+    margin-top: 20px
+    padding-top: 20px
+
+    @media (max-width:769px)
+      justify-content: center
+      align-content: center
+      align-items: center
+      width: 100%
+      position: relative
+      display: none
+      
+
+  &__title
+    font-family: Roboto
+    font-size: 96px
+    text-align: center
+    color: #245D51
+
+    @media (max-width:769px)
+      font-size: 40px
+
+.swiper
+  width: 100%
+  height: 320px
+  border-radius: 8px
+  justify-content: center
+
+.swiperSlide
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  width: 100%
+  max-width: 586px
+  height: 320px
+  border-radius: 8px
+  background: #245D51
+  box-shadow: 0px 4px 10px 0px #00000066
+  color: #FFFFFF
+
+  @media (max-width:769px)
+    width: 90%
+
+  &__title
+    font-family: Roboto
+    font-size: 24px
+    text-align: center
+    color: #ffff3f
+
+  &__lesson,
+  &__hour,
+  &__price
+    font-family: Roboto-Regular
+    font-size: 16px
+    text-align: center
+
+  &__btn
+    // width: 100%
+    width: 264px
+    height: 42px
+    border-radius: 8px
+    border: none
+    font-family: Roboto-Regular
+    font-size: 20px
+    color: #0F2621
+    background: #ffff3f
+    cursor: pointer

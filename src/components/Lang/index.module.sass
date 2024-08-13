@@ -1,0 +1,53 @@
+@import "../../styles/variables"
+
+.lang
+    display: flex
+    justify-content: center
+    margin-top: 0px
+    padding-right: 60px
+    @media (max-width:769px)
+        margin-left: 50px
+
+    &__select
+        position: relative
+        display: inline-block
+        cursor: pointer
+        transition: transform 0.3s ease 
+        font-family: Roboto-Regular
+
+    &__select.animateOut
+        transform: translateY(-20px) 
+
+    &__selected
+        background: $black
+        border-radius: 100%
+        color: $mainBg
+        padding: 5px 10px
+        margin-right: 10px
+        transition: background-color 0.1s ease // Animatsiya uchun o'zgartirishlar
+
+    &__options
+        position: absolute
+        top: 100%
+        left: 0
+        background: $black
+        border-radius: 5px
+        padding: 5px
+        display: flex
+        flex-direction: column
+        width: 100px
+        opacity: 0
+        pointer-events: none
+        transition: opacity 0.1s ease // Animatsiya uchun o'zgartirishlar
+        transform: translateY(-20px)
+
+    &__select:hover .lang__options
+
+    &__options span
+        color: $mainBg
+        padding: 5px
+        cursor: pointer
+        transform: translateY(-20px)
+
+    &__options span:hover
+        background: darken($black, 20%)

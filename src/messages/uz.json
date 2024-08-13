@@ -1,0 +1,72 @@
+{
+    "about": "Biz haqimizda",
+    "courses": "Xizmatlar",
+    "reviews": "Narxlar",
+    "teachers": "Bemorga",
+    "contact": "Bog'lanish",
+    "welcome": "Xush kelibsiz",
+    "know": "Bilim bu ingliz tilini qulay tarzda o'rganishga yordam beruvchi onlayn platforma.",
+    "getBtn": "Boshlash",
+    "headeText": "Student Union - bu turli kurslarni qulay tarzda o'rganib, hayotingizda muvaffaqiyatga erishishingiz uchun yaratilgan o'quv markazi.",
+    "tryBtn": "Bepul sinab ko'ring",
+    "aboutBlock": {
+        "title": "Qulay muhit",
+        "desc": "Siz o'zingizning jadvalingizni tuzishingiz va qancha vaqt o'qishni xohlashingizni belgilashingiz mumkin",
+        "descTwo": "Bizning o'qituvchilarimiz yuqori malakaga ega va bolalar bilan ham, kattalar bilan ham ishlashda ko'p yillik tajribaga ega",
+        "titleThre": "Rejalashtirilgan tizim",
+        "descThree": "Jadvalingiz haqida tashvishlanishingiz shart emas. Bizning o'qituvchilarimiz siz uchun to'g'ri reja tuzishadi."
+    },
+    "learn": {
+        "title": "O'rganing",
+        "one": "Siz bizning bepul darsimizni ko'rib chiqishingiz yoki kurs uchun chegirma bilan to'lab, o'qishni boshlashingiz mumkin",
+        "two": "Darajangiz tekshirilgandan so'ng, biz bilan darslarni boshlashingiz mumkin. Bizning o'qituvchilarimiz keyin darslarni o'tkazish uchun mos usullarni rejalashtiradi.",
+        "three": "Agar darslar sizga yoqsa, biz bilan o'quv sayohatingizni boshlang!!!",
+        "contact": "Biz bilan bog'laning"
+    },
+    "why": {
+        "title": "Nega Bilim",
+        "cardOne": "Qulay muhit",
+        "cardDesc": "Siz o'zingizning jadvalingizni tuzishingiz va qancha vaqt o'qishni xohlashingizni belgilashingiz mumkin",
+        "cardTwo": "Sifatli o'qituvchilar",
+        "cardDescTwo": "Bizning o'qituvchilarimiz yuqori malakaga ega va bolalar bilan ham, kattalar bilan ham ishlashda ko'p yillik tajribaga ega",
+        "cardThree": "Rejalashtirilgan tizim",
+        "cardDescThree": "Jadvalingiz haqida tashvishlanishingiz shart emas. Bizning o'qituvchilarimiz siz uchun to'g'ri reja tuzishadi."
+    },
+    "coursesList": {
+        "title": "Bizning kurslarimiz",
+        "desc": "ingliz tilining asosiy foydalanuvchilariga mos keladi, bu juda oddiy iboralarni tushunish va ishlatishni o'z ichiga oladi.",
+        "start": "Boshlash",
+        "english": "Ingliz tili",
+        "korean": "Koreys tili",
+        "russian": "Rus tili",
+        "chinese": "Xitoy tili",
+        "german": "Nemis tili",
+        "it": "IT",
+        "biology": "Biologiya",
+        "chemistry": "Kimyo",
+        "sat": "SAT",
+        "mathematic": "Matematika",
+        "nursing": "Hamshiralik kursi",
+        "design": "Dizayn kurslari",
+        "englishPrice": "500 000 so'mdan 850 000 so'mgacha",
+        "coreanPrice": "850 000 so'm",
+        "russianPrice": "850 000 so'm",
+        "chinesePrice": "850 000 so'm",
+        "satPrice": "1 500 000 so'm"
+    },
+    "pupils": {
+        "title": "Sharhlar",
+        "one": "Sizni qadrlaymiz.",
+        "oneDesc": "O'qituvchilar faqat o'qitmaydi - ular bizni kelajak uchun tayyorlaydi. Sizning harakatlaringizni qadrlaymiz.",
+        "two": "Sizning fidoyiligingiz e'tiborsiz qolmaydi.",
+        "twoDesc": "O'qituvchilar uchun bilimlarimizni baholash, darslarga tayyorgarlik ko'rish va shaxsiy va oilaviy sharoitlarga asoslanib konferensiyalarga qatnashish juda foydali",
+        "three": "Vaqtimni tejayapman",
+        "threeDesc": "Menga kerak bo'lgan barcha fanlarni bir joyda o'rganayotganimdan faxrlanaman.",
+        "four": "Sharoitlar menga yoqadi",
+        "fourDesc": "Sharoitlar menga yoqadi, ayniqsa interaktiv doskalar va xonalarning dizayni juda zamonaviy. Men kelganimda hech narsani bilmasdim, lekin malakali o'qituvchilarning darslaridan keyin ko'p narsalarni o'rgandim, rahmat.",
+        "five": "Men kelganimda hech narsani bilmasdim",
+        "fiveDesc": "Malakali o'qituvchilarning darslaridan keyin ko'p narsalarni o'rgandim, rahmat.",
+        "six": "O'qitish usuli oson.",
+        "sixDesc": "O'qitish usulingiz osonligi sababli darslarga har kuni kelishni xohlayman."
+    }
+}
