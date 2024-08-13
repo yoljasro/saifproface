@@ -1,4 +1,5 @@
 @import "../../styles/variables"
+@import "../../styles/mixins"
 
 .lang
     display: flex
@@ -13,13 +14,13 @@
         display: inline-block
         cursor: pointer
         transition: transform 0.3s ease 
-        font-family: Roboto-Regular
+        font-family: Roboto-Bold
 
     &__select.animateOut
         transform: translateY(-20px) 
 
     &__selected
-        background: $black
+        background: #0088cc
         border-radius: 100%
         color: $mainBg
         padding: 5px 10px
