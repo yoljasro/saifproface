@@ -11,8 +11,17 @@ export const Header = () => {
   return (
     <div className={styles.header} id='header'>
       <Fade bottom cascade>
-        <p>О нас</p>
-        <div className={styles.header__container}></div>
+        <p className={styles.header__title}>О нас</p>
+        <div className={styles.header__container}>
+          <div>
+            <p className={styles.header__name}>Добро пожаловать в SAIF-PROFACE</p>
+            <p className={styles.header__desc}>Глазная клиника «SAIF-OPTIMA» основана в 2004 году в Ташкенте с филиалом в Андижане. Клиника предлагает широкий спектр офтальмологических услуг на качественно новом уровне, с соблюдением международных стандартов и применением новейших технологий и методик.</p>
+            <p className={styles.header__numbers}>БОЛЕЕ 20 ЛЕТ В РЕФРАКЦИОННОЙ ХИРУРГИИ</p>
+          </div>
+          <div>
+            <Image src={'/assets/img/headercont.png'} alt='headercont' width={700} height={560} />
+          </div>
+        </div>
       </Fade>
     </div>
   );

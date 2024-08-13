@@ -3,94 +3,47 @@
 
 .header
     display: flex
-    padding-left: 60px
-    padding-right: 60px
-    justify-content: space-between
+    flex-direction: column
+    justify-content: centera
+    align-content: center
+    align-items: center
+    margin-top: 50px
 
     @media (max-width:769px)
         flex-direction: column
         justify-content: center
         padding-left: 40px
 
-    &__info
-        margin-top: 80px
-
-    &__logo
-        margin: 0
-        padding: 0
-        margin-top: -125px
-        margin-left: -55px
+    &__container
+        width: 80%
+        height: 600px
+        background: #0088cc
+        border-radius: 12px
+        padding-left: 60px
+        display: flex
+        padding-top: 50px
 
     &__title
         font-family: Roboto
-        font-size: 48px
-        color: #0F2621
+        font-size: 96px
+        color: #245D51
+        text-align: center
 
         @media (max-width:769px)
             font-size: 40px
-            text-align: center
+
+    &__name
+        font-size: 48px
+        font-family: Roboto-Bold
+        // padding-top: 50px
 
     &__desc
-        font-family: Roboto-Regular
-        font-size: 26px
-        color: #047AC0
         width: 100%
-        max-width: 690px
-        margin-top: -45px
-
-
-        @media (max-width:769px)
-            font-size: 22px
-            max-width: 800px
-
-    &__btns
-        display: flex
-        gap: 20px
-        @media (max-width:769px)
-            gap: 15px
-            width: 100%
-
-    &__getBtn
-        background: #245D51
-        color: #FFFFFF
-        border: none
-        border-radius: 8px
-        padding: 13px 31px 12px 32px
+        max-width: 800px
+        font-size: 28px
         font-family: Roboto-Regular
-        font-size: 20px
-        font-weight: 400
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px
-        cursor: pointer
 
-        @media (max-width:769px)
-            font-size: 20px
-            width: 157px
-            height: 48px
-            padding: 0
-
-
-    &__freeBtn
-        background: #FFC400
-        color: #FFFFFF
-        border: none
-        border-radius: 8px
-        padding: 13px 31px 12px 32px
-        font-family: Roboto-Regular
-        font-size: 20px
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px
-        cursor: pointer
-
-        @media (max-width:769px)
-            font-size: 20px
-            width: 157px
-            height: 48px
-            padding: 0
-
-    &__bookBoy
-        margin-top: 85px
-
-        @media (max-width:769px)
-            width: 334px
-            height: 350px
-
-        // margin-left: 400px
+    &__numbers
+        font-size: 34px
+        font-family: Roboto-Bold
+        padding-top: 150px
