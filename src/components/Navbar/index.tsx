@@ -19,7 +19,7 @@ export const Navbar = () => {
       <Fade top cascade>
         <div className={styles.navbar__info}>
           <a href={'/'}>
-            <Image className={styles.navbar__logo} src={'/assets/img/whitelogo.png'} alt='logo' width={194} height={186} />
+            <Image className={styles.navbar__logo} src={'/assets/img/bglogo.png'} alt='logo' width={194} height={186} />
           </a>
           <a href={'tel:+998781139545'} target='_blank' className={styles.navbar__number}>
             <button className={styles.navbar__register}> Записаться онлайн</button>
