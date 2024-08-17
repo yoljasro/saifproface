@@ -150,9 +150,6 @@ export const Prices: React.FC = () => {
           </Link>
         </SwiperSlide>
       </Swiper>
-      <div className={styles.container__boy}>
-        <Image className={styles.container__image} src={'/assets/img/priceimage.png'} alt='image' width={306} height={321} />
-      </div>
     </div>
   );
 };
