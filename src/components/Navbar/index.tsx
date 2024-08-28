@@ -23,7 +23,7 @@ export const Navbar = () => {
               className={styles.navbar__logo}
               src={'/assets/img/minilogo.png'}
               alt='logo'
-              width={295}
+              width={135}
               height={130}
             />
           </a>
