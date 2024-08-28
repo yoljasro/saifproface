@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { Lang } from '../Lang';
 import { useTranslations } from "next-intl";
 import { Link } from "react-scroll";
-import { Zoom, Fade } from "react-reveal";
+import { Zoom, Fade, Slide } from "react-reveal";
 
 export const Navbar = () => {
   const t = useTranslations();
@@ -16,10 +16,16 @@ export const Navbar = () => {
 
   return (
     <div className={`${styles.navbar} ${menuOpen ? styles.navbar_open : ''}`}>
-      <Fade top cascade>
+      <Slide top>
         <div className={styles.navbar__info}>
           <a href={'/'}>
-            <Image className={styles.navbar__logo} src={'/assets/img/bglogo.png'} alt='logo' width={194} height={186} />
+            <Image
+              className={styles.navbar__logo}
+              src={'/assets/img/minilogo.png'}
+              alt='logo'
+              width={295}
+              height={130}
+            />
           </a>
           <a href={'tel:+998781139545'} target='_blank' className={styles.navbar__number}>
             <button className={styles.navbar__register}> Записаться онлайн</button>
@@ -28,21 +34,23 @@ export const Navbar = () => {
             {menuOpen ? '✕' : '☰'}
           </button>
         </div>
+      </Slide>
+      <Fade top cascade>
         <div className={`${styles.navbar__item} ${menuOpen ? styles.navbar__item_open : ''}`}>
           <ul className={styles.navbar__menu}>
-            <Link activeClass="active" to="about" spy={true} smooth={true} offset={-70} duration={500} className={styles.navbar__link}>
+            <Link activeClass="active" to="aboutus" spy={true} smooth={true} offset={-70} duration={500} className={styles.navbar__link}>
               <li>{t("about")}</li>
             </Link>
-            <Link activeClass="active" to="courses" spy={true} smooth={true} offset={-70} duration={500} className={styles.navbar__link}>
-              <li>{t("courses")}</li>
+            <Link activeClass="active" to="ourservices" spy={true} smooth={true} offset={-70} duration={500} className={styles.navbar__link}>
+              <li>{t("services")}</li>
             </Link>
-            <Link activeClass="active" to="reviews" spy={true} smooth={true} offset={-70} duration={500} className={styles.navbar__link}>
-              <li>{t("reviews")}</li>
+            <Link activeClass="active" to="advantage" spy={true} smooth={true} offset={-70} duration={500} className={styles.navbar__link}>
+              <li>{t("advantages")}</li>
             </Link>
             <Link activeClass="active" to="teachers" spy={true} smooth={true} offset={-70} duration={500} className={styles.navbar__link}>
-              <li>{t("teachers")}</li>
+              <li>{t("whyChooseUs")}</li>
             </Link>
-            <Link activeClass="active" to="prices" spy={true} smooth={true} offset={-70} duration={500} className={styles.navbar__link}>
+            <Link activeClass="active" to="team" spy={true} smooth={true} offset={-70} duration={500} className={styles.navbar__link}>
               <li>{t("contact")}</li>
             </Link>
           </ul>

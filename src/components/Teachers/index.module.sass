@@ -12,7 +12,7 @@
         color: #245D51
         padding-top: 100px
 
-        @media (max-width:769px)
+        @media (max-width: 769px)
             font-size: 40px
 
     &__cards
@@ -20,72 +20,37 @@
         width: 100%
         justify-content: center
         flex-wrap: wrap
-        gap: 25px
+        gap: 10px
         margin-top: 50px
-        @media (max-width:769px)
+        align-content: flex-start
+        align-items: flex-start
+
+        @media (max-width: 769px)
             flex-direction: column
             align-content: center
             align-items: center
             gap: 20px
 
     &__card
-        width: 100%
-        max-width: 587px
+        flex: 1 1 calc(50% - 50px)
+        max-width: 360px
         border-radius: 8px
         background: #6a994e
-        height: 625px
+        height: auto
         display: flex
-        flex-direction: column
-        justify-content: center
-        align-content: center
-        align-items: center
+        border-radius: 15px 
         box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1)
 
-        @media (max-width:769px)
+        @media (max-width: 769px)
             width: 90%
-            height: 480px
+            height: auto
 
     &__image
-        margin-top: 67px
-        border-radius: 15px
-        border-radius: 15px 15px 0px 0px
-        filter: drop-shadow(5px 5px 10px #000000)
-        // filter: drop-shadow(1px 3px 7px #424242)
-
-        @media (max-width:769px)
-            width: 95%
-            height: 300px
-            margin-top: 50px
-            margin-top: -10px
-
-    &__info
         width: 100%
-        height: 210px
-        background: #245D51
-        border-radius: 6px
-
-        @media (max-width:769px)
-            height: 160px
-
-    &__name
-        font-family: Roboto
-        font-size: 24px
-        text-align: center
-        color: #FFFFFF
-        padding-top: 30px
-        @media (max-width:769px)
-            padding-top: 5px
-
-    &__experience
-        font-family: Roboto-Regular
-        font-size: 16px
-        text-align: center
-        padding-top: 20px
-        @media (max-width:769px)
-            padding-top: 10px
-
-    &__certificate
-        font-family: Roboto-Light
-        font-size: 16px
-        text-align: center
-        color: #FFFFFF
+        height: auto
+        border-radius: 15px
+        object-fit: cover !important
+        filter: drop-shadow(5px 5px 10px #000000)
+        @media (max-width: 769px)
+            width: 100%
+            height: auto

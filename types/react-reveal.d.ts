@@ -51,6 +51,18 @@ declare module 'react-reveal' {
         right? : true;
         top? : true;
     }
+    interface Bounce {
+        duration?: number; // To'g'ri: number
+        delay?: number; // To'g'ri: number
+        fraction?: number; // To'g'ri: number
+        zoomStyle?: {};
+        children?: React.ReactNode; // To'g'ri: React.ReactNode
+        cascade? : true;
+        left? : true;
+        right? : true;
+        top? : true;
+        bottom? : true;
+    }
 
     interface RevealProps {
         duration?: number; // To'g'ri: number

@@ -83,15 +83,7 @@ export const Map: FC<MapProps> = () => {
                             </GoogleMap>
                         </LoadScript>
                     </div>
-                    <div className={styles.location__adress}>
-                        <div className={styles.location__card}>
-                            <div className={styles.location__cardLine}></div>
-                            <p className={styles.location__cardTitle}>АДРЕС КОМПАНИИ </p>
-                            <p className={styles.location__cardDesc}> Yunusabad Akhmad Donish 4\80</p>
-                        </div>
-
-                        
-                    </div>
+                    
                 </div>
         </>
     );

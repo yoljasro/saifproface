@@ -1,73 +1,40 @@
 {
-    "about": "About us",
-    "courses": "Services",
-    "reviews": "Prices",
-    "teachers": "For patients",
-    "contact": "Contact",
-    "welcome": "Welcome to",
-    "know": "Bilim is an online platform designed to help you to learn English comfortably.",
-    "getBtn": "Get started",
-    "headeText" : "Student Union is an learning centre designed to help you to learn several courses comfortably to achieve success in your life.",
-    "tryBtn": "Try free",
-    "aboutBlock" :{
-        "title" :"Comfy environment",
-        "desc" :"You can schedule your own timetable and how long you would like to study",
-        "descTwo" : "Our teachers are highly qualified and have many years of experience with working with children as well with adults",
-        "titleThre" : "Planned system",
-        "descThree" : "You don’t have to worry about your timetable. Our teachers will design a right plan for you."
-    },
-    "learn" : {
-        "title" : "Learn ",
-        "one" : "You can check our free lesson with our teachers or you can pay for the the course with a discount and start learning",
-        "two" : "Once your level checked up you can start your lessons with us. Our teachers then will plan appropriate methods to run the lessons.",
-        "three" :"Once the classes likes, start your learning journey with us!!!",
-        "contact" : "Contact Us"
-    },
-    "why": {
-        "title": "Why Bilim",
-        "cardOne": "Comfy environment",
-        "cardDesc": "You can schedule your own timetable and how long you would like to study",
-        "cardTwo": "Quality Teachers",
-        "cardDescTwo": "Our teachers are highly qualified and have many years of experience with working with children as well with adults ",
-        "cardThree": "Planned system",
-        "cardDescThree": "You don’t have to worry about your timetable. Our teachers will design a right plan for you. "
-    },
-    "coursesList": {
-        "title": "Our Courses",
-        "desc": "corresponds to basic users of English who can understand and very basic phrases.",
-        "start": "Start" , 
-        "english" : "English" , 
-        "korean" : "Korean language",
-        "russian" : "Russian",
-        "chinese" : "Chinese language",
-        "german" : "German language",
-        "it" : "IT",
-        "biology" : "Biology",
-        "chemistry" : "Chemistry",
-        "sat" : "SAT",
-        "mathematic" : "Mathematics",
-        "nursing" : "Nursing course",
-        "design" : "Design courses",
-        "englishPrice" : "From 500,000 soums to 850,000 soums",
-        "coreanPrice" : "850 000  soum",
-        "russianPrice" :"850 000 soum" , 
-        "chinesePrice" : "850 000 soum",
-        "satPrice" : "1500 000 soum"
-    },
-        
-    "pupils": {
-        "title" : "Reviews",
-        "one": " We appreciate you.",
-        "oneDesc": " Teachers don't just teach - they prepare us for the future. We appreciate your actions. ",
-        "two": "Your dedication will not go unnoticed.",
-        "twoDesc": " It is very useful for teachers to assess our knowledge, to prepare lessons and attend conferences based on personal and family circumstances",
-        "three": "I am saving time",
-        "threeDesc": " I am proud that I can study all the subjects I need in one place.",
-        "four": "I like the conditions",
-        "fourDesc": "I like the conditions, especially the interactive whiteboards and the design of the rooms is very modern. 5. I didn't know anything when I arrived, I learned a lot after the lessons of qualified teachers, thank you. ",
-        "five": "I didn't know anything when I arrived",
-        "fiveDesc": "I learned a lot after the lessons of qualified teachers, thank you.",
-        "six": "Teaching method is easy.",
-        "sixDesc": "I want to come to my classes every day because your teaching method is easy."
-    }
+  "about": "About Us",
+  "services": "Our Services",
+  "advantages": "Our Advantages",
+  "whyChooseUs": "Why Choose Us",
+  "contact": "Team",
+  "welcome": "Welcome to Saif ProFace",
+  "aboutBlock": {
+    "title": "Modern Jaw and Facial Surgery Center",
+    "desc": "Saif ProFace is a modern center for jaw and facial surgery and dentistry, equipped with advanced medical equipment and staffed by highly qualified specialists.",
+    "descTwo": "We prioritize patient safety, effective treatment, and a high level of comfort."
+  },
+  "servicesBlock": {
+    "title": "Our Services",
+    "titleOne": "Jaw and Facial Surgery",
+    "descOne": "Orthognathic surgery, Correction of congenital defects, Surgical treatment of injuries, Removal of facial and jaw tumors.",
+    "titleTwo": "Dentistry",
+    "descTwo": "Therapeutic dentistry, Aesthetic dentistry, Prosthetics, Dental implants, Periodontology, Orthodontics.",
+    "titleThree": "Facial Aesthetics",
+    "descThree": "Plastic surgery, Injection techniques, Laser and hardware procedures."
+  },
+  "advantagesBlock": {
+    "title": "Our Advantages",
+    "titleOne": "Highly Qualified Team",
+    "descOne": "Our staff continuously improves their skills through international conferences.",
+    "titleTwo": "Personalized Approach",
+    "descTwo": "We tailor treatment plans to each patient's unique needs.",
+    "titleThree": "Modern Equipment",
+    "descThree": "Equipped with the latest technology for accurate and safe treatment.",
+    "titleFour": "Comprehensive Approach",
+    "descFour": "Full range of services from diagnostics to complex surgeries.",
+    "titleFive": "Comfortable Conditions",
+    "descFive": "We provide a cozy and calm environment for a comfortable visit."
+  },
+  "whyChooseUsBlock": { 
+    "title": "Why Choose Saif ProFace",
+    "desc": " Guaranteed results: Our reputation and positive reviews speak for our quality.",
+    "descTwo": "Convenient location: Easily accessible location for residents."
+  }
 }

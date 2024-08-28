@@ -1,68 +1,35 @@
 import React from 'react'
 import styles from './index.module.sass'
 import Image from 'next/image'
-import { Zoom, Fade , Rotate } from "react-reveal";
+import { Fade } from "react-reveal";
 import { useTranslations } from "next-intl";
 
 export const Teachers = () => {
   const t = useTranslations();
 
   return (
-    <div className={styles.teachers} id='teachers'>
-      <Fade right cascade>
-      <p className={styles.teachers__title}>{t("teachers")}</p>
+    <div className={styles.teachers} id='team'>
+      <Fade top cascade>
+        <p className={styles.teachers__title}>{t("team")}</p>
+      </Fade>
+
       <div className={styles.teachers__cards}>
-        <div className={styles.teachers__card}>
-          <Image className={styles.teachers__image} src={'/assets/img/teacher1.jpg'} alt='teachers' width={295} height={400}/>
-          <div className={styles.teachers__info}>
-            <p className={styles.teachers__name}>{t("coursesList.english")} kids</p>
-            <p className={styles.teachers__experience}>Experience: 6 years</p>
-            <p className={styles.teachers__certificate}>Certificates: IELTS</p>
-          </div>
-        </div>
-        <div className={styles.teachers__card}>
-        <Image className={styles.teachers__image} src={'/assets/img/teacher2.jpg'} alt='teachers' width={295} height={400}/>
-          <div className={styles.teachers__info}>
-            <p className={styles.teachers__name}>{t("coursesList.sat")}</p>
-            <p className={styles.teachers__experience}>Experience: 6 years</p>
-            <p className={styles.teachers__certificate}>Certificates: IELTS</p>
-          </div>
-        </div>
-        <div className={styles.teachers__card}>
-        <Image className={styles.teachers__image} src={'/assets/img/teacher3.jpg'} alt='teachers' width={295} height={400}/>
-          <div className={styles.teachers__info}>
-            <p className={styles.teachers__name}>{t("coursesList.chinese")} && {t("coursesList.german")}</p>
-            <p className={styles.teachers__experience}>Experience: 6 years</p>
-            <p className={styles.teachers__certificate}>Certificates: IELTS</p>
-          </div>
-        </div>
-        <div className={styles.teachers__card}>
-        <Image className={styles.teachers__image} src={'/assets/img/teacher4.jpg'} alt='teachers' width={295} height={400}/>
-          <div className={styles.teachers__info}>
-            <p className={styles.teachers__name}>{t("coursesList.mathematic")}</p>
-            <p className={styles.teachers__experience}>Experience: 6 years</p>
-            <p className={styles.teachers__certificate}>Certificates: IELTS</p>
-          </div>
-        </div>
-        <div className={styles.teachers__card}>
-        <Image className={styles.teachers__image} src={'/assets/img/teacher6.jpg'} alt='teachers' width={295} height={400}/>
-          <div className={styles.teachers__info}>
-            <p className={styles.teachers__name}>{t("coursesList.korean")}</p>
-            <p className={styles.teachers__experience}>Experience: 6 years</p>
-            <p className={styles.teachers__certificate}>Certificates: IELTS</p>
-          </div>
-        </div>
-        <div className={styles.teachers__card}>
-        <Image className={styles.teachers__image} src={'/assets/img/bonu.jpg'} alt='teachers' width={295} height={400}/>
-          <div className={styles.teachers__info}>
-            <p className={styles.teachers__name}>{t("coursesList.english")}</p>
-            <p className={styles.teachers__experience}>Experience: 6 years</p>
-            <p className={styles.teachers__certificate}>Certificates: IELTS</p>
-          </div>
-        </div>
+        <Fade bottom cascade>
+
+          {['/assets/img/1.jpg', '/assets/img/2.jpg', '/assets/img/3.jpg', '/assets/img/4.jpg', '/assets/img/5.jpg'].map((src, index) => (
+            <div key={index} className={styles.teachers__card}>
+              <Image
+                className={styles.teachers__image}
+                src={src}
+                alt={`teacher-${index + 1}`}
+                width={295}
+                height={400}
+              />
+            </div>
+          ))}
+        </Fade>
 
       </div>
-      </Fade>
     </div>
   )
 }

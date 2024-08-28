@@ -1,11 +1,13 @@
 .container
   width: 100%
-  justify-content: center
+  display: flex
+  flex-direction: column  // Ensure the title and swiper are stacked vertically
   align-items: center
   margin-bottom: 100px
-  margin-top: -100px
+  margin-top: 50px
   overflow: hidden
-  @media (max-width:769px)
+  
+  @media (max-width: 769px)
     margin-top: -150px
 
   &__image
@@ -15,41 +17,41 @@
     width: 100%
     display: flex
     justify-content: flex-end
-    align-content: flex-end
     align-items: flex-end
     margin-top: 20px
     padding-top: 20px
 
-    @media (max-width:769px) 
+    @media (max-width: 769px)
       justify-content: center
-      align-content: center
       align-items: center
-      width: 100%
-      position: relative
       display: none
-      
 
   &__title
     font-family: Roboto
     font-size: 96px
     text-align: center
     color: #245D51
+    margin-bottom: 20px // Add space below the title
 
-    @media (max-width:769px)
+    @media (max-width: 769px)
       font-size: 40px
 
 .swiper
   width: 100%
   height: 320px
   border-radius: 8px
+  display: flex
   justify-content: center
+  align-items: center
+  overflow: hidden
+  margin-top: 20px // Add margin-top to create space between the title and swiper
 
 .swiperSlide
   display: flex
   flex-direction: column
   justify-content: center
   align-items: center
-  width: 100%
+  width: auto
   max-width: 586px
   height: 320px
   border-radius: 8px
@@ -57,7 +59,7 @@
   box-shadow: 0px 4px 10px 0px #00000066
   color: #FFFFFF
 
-  @media (max-width:769px)
+  @media (max-width: 769px)
     width: 90%
 
   &__title
@@ -74,9 +76,9 @@
     text-align: center
 
   &__btn
-    // width: 100%
     width: 264px
     height: 42px
+    margin-top: 50px
     border-radius: 8px
     border: none
     font-family: Roboto-Regular

@@ -7,10 +7,11 @@ import Link from 'next/link';
 export const Footer = () => {
   return (
     <div className={styles.footer}>
-      <Image src={'/assets/img/footerlogo.png'} alt='footerlogo' width={192} height={175} className={styles.footer__logo} />
+      <Image src={'/assets/img/minilogo.png'} alt='footerlogo' width={202} height={205} className={styles.footer__logo} />
       <div className={styles.footer__content}>
-        <p className={styles.footer__platform}>Online english platform for all.</p>
-        <p className={styles.footer__email}>bilimonlineschool@gmail.com</p>
+        <p className={styles.footer__platform}>+998781139545</p>
+        <p className={styles.footer__email}>email@gmail.com</p>
+        <p className={styles.footer__email}>Manzil: Toshkent shahri, Yashnobod tumani, Alimkent 1-tor, 32</p>
       </div>
       <div className={styles.footer__social}>
         <Rotate bottom cascade>

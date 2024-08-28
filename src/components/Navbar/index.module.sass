@@ -10,14 +10,12 @@
     align-items: center
     justify-content: space-between
     position: relative
-    // margin-bottom: 100px
     height: auto
-    // height: auto
-    // height: 250px
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out
 
     @media (min-width: 769px)
         flex-direction: row
-        height: 96px
+        height: 160px
         padding-top: 29px
         padding-bottom: 0
 
@@ -26,28 +24,38 @@
         align-items: center
         justify-content: space-between
         width: 100%
+        transition: transform 0.3s ease-in-out
 
         @media (min-width: 769px)
             width: auto
 
     &__logo
+        max-width: 100%
         height: auto
+        object-fit: contain
+        margin-top: -50px
+        transition: transform 0.3s ease-in-out
 
     &__register
         width: 100%
         max-width: 250px
         background: #0088cc
         border: none
-        color: #FFFFFFFF
-        padding: 12px 24px
+        color: #FFFFFF
+        padding: 16px 24px
         border-radius: 10px
         cursor: pointer
         font-family: Roboto-Regular
         font-size: 17px
         box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2)
         margin-left: 20px
+        transition: background 0.3s ease-in-out, transform 0.3s ease-in-out
 
-        @media (max-width:769px)
+        &:hover
+            background: #005f8f
+            transform: scale(1.05)
+
+        @media (max-width: 769px)
             position: relative
             top: 500px
             right: 60px
@@ -61,9 +69,11 @@
         border: none
         color: white
         text-align: center
-        // width: 48px
-        // height: 30px
         padding-right: 50px
+        transition: color 0.3s ease-in-out
+
+        &:hover
+            color: #00aaff
 
         @media (min-width: 769px)
             display: none
@@ -75,8 +85,8 @@
         justify-content: flex-start
         width: 100%
         max-height: 0
-        // overflow: hidden
-        transition: max-height 0.3s ease-in-out
+        overflow: hidden
+        transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out
 
         @media (min-width: 769px)
             flex-direction: row
@@ -84,10 +94,12 @@
             justify-content: flex-end
             width: auto
             max-height: none
+            opacity: 1
             overflow: hidden
 
     &__item_open
         max-height: 1000px
+        opacity: 1
 
         @media (min-width: 769px)
             max-height: none
@@ -105,17 +117,18 @@
         font-weight: 400
         width: 100%
         transition: opacity 0.3s ease-in-out
-        // margin-right: 200px
 
         @media (min-width: 769px)
             flex-direction: row
             padding-right: 60px
-            // gap: 5px
             width: auto
-            // padding-bottom: 150px
 
         & li
             cursor: pointer
+            transition: color 0.3s ease-in-out
+
+            &:hover
+                color: #00aaff
 
     &__link
         width: 100%
@@ -123,10 +136,15 @@
         padding: 10px 0
         color: white
         text-decoration: none
+        transition: background 0.3s ease-in-out
 
         @media (min-width: 769px)
             width: auto
             padding: 0
+            background: none
+
+        &:hover
+            background: rgba(255, 255, 255, 0.2)
 
     &__number
         font-family: Roboto-Regular
@@ -135,10 +153,9 @@
         padding-top: 8px
         cursor: pointer
         text-align: center
-        transition: opacity 0.3s ease-in-out
-        // padding-bottom: 100px
+        transition: color 0.3s ease-in-out
 
-        @media (max-width:769px)
+        @media (max-width: 769px)
             margin-bottom: 15px
 
         @media (min-width: 769px)
