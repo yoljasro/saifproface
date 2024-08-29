@@ -16,7 +16,7 @@ export const Teachers = () => {
       <div className={styles.teachers__cards}>
         <Fade bottom cascade>
 
-          {['/assets/img/1.jpg', '/assets/img/2.jpg', '/assets/img/3.jpg', '/assets/img/4.jpg', '/assets/img/5.jpg'].map((src, index) => (
+          {['/assets/img/t1.jpg', '/assets/img/t2.jpg',  '/assets/img/t4.jpg', ].map((src, index) => (
             <div key={index} className={styles.teachers__card}>
               <Image
                 className={styles.teachers__image}

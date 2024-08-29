@@ -1,70 +1,91 @@
-@import "../../styles/variables"
-@import "../../styles/mixins"
-
 .about
     width: 100%
+    padding: 40px 0
 
     &__title
-        font-family: Roboto
-        font-size: 96px
-        color: #245D51
+        font-family: Mulish-Black
+        font-size: 64px
+        color: #FFFFFF
         text-align: center
 
-        @media (max-width:769px)
+        @media (max-width: 769px)
             font-size: 40px
 
     &__cards
         display: flex
-        gap: 20px
+        gap: 40px
         justify-content: center
+        flex-wrap: wrap
+        width: 100%
+        padding: 0px 5px 0px 5px
+        // padding-right: 10px
 
-        @media (max-width:769px)
+        @media (max-width: 769px)
             flex-direction: column
-            justify-content: center
-            width: 100%
-            align-content: center
             align-items: center
 
     &__card
+        position: relative
         width: 100%
-        max-width: 587px
-        height: 360px
-        background: #245D51
-        border-radius: 8px 
-        opacity: 0px
-        box-shadow: 0px 4px 10px 0px #00000066
+        max-width: 540px
+        height: 280px
+        border-radius: 8px
+        overflow: hidden
         display: flex
-        justify-content: center
-        flex-direction: column
-        color: #FFFFFF
-        justify-content: center
-        align-items: center
-        align-content: center
+        background: #FFFFFF
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2)
+        transition: transform 0.4s ease, box-shadow 0.3s ease
+        cursor: pointer
+        padding: 10px
+        gap: 10px
+        flex-direction: row // Text va rasmni yonma-yon joylashtirish
 
-        @media (max-width:769px)
-            width: 90%
-            height: 320px
+        &:hover
+            transform: scale(1.05)
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4)
+
+    &__cardImage
+        object-fit: cover
+        border-radius: 8px
+        transition: opacity 0.3s ease, transform 0.4s ease
+        z-index: 1
+        margin-top: 20px
+        margin-right: 15px
+
+        &:hover
+            opacity: 0.9
+            transform: scale(1.05)
+
+    &__cardContent
+        width: 60% // Matnning o'lchamini sozlash
+        text-align: left
+        color: #000000 // Matn rangi qora
 
     &__cardTitle
-        font-family: Roboto
+        font-family: Mulish-Regular
         font-size: 24px
-        text-align: center
-        color: #A7C957
 
-        @media (max-width:769px)
-            font-size: 18px
+        @media (max-width: 769px)
+            font-size: 20px
 
     &__desc
-        font-family: Roboto-Regular
+        font-family: Mulish-Medium
         font-size: 20px
-        text-align: center
-        color: #FFFFFF
-        width: 100%
-        max-width: 474px
-        @media (max-width:769px)
+        padding-left: 20px
+        color: #000000
+        display: block // Doimo ko'rinadigan qilish
+        transition: opacity 0.5s ease
+
+        @media (max-width: 769px)
             font-size: 16px
-            font-family: Roboto-Light
-            padding: 0px 23px
-            width: 100%
-            text-align: center
-            max-width: 350px
+
+    &__desclast
+        font-family: Mulish-Regular
+        font-size: 16px
+        padding-left: 20px
+        color: #000000
+        display: block // Doimo ko'rinadigan qilish
+        transition: opacity 0.5s ease
+
+        @media (max-width: 769px)
+            font-size: 14px

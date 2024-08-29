@@ -13,7 +13,8 @@
   "servicesBlock": {
     "title": "Our Services",
     "titleOne": "Jaw and Facial Surgery",
-    "descOne": "Orthognathic surgery, Correction of congenital defects, Surgical treatment of injuries, Removal of facial and jaw tumors.",
+    "descOne": "Orthognathic surgery",
+    "desclast" : "Orthognathic surgery restores harmony and confidence. Our service will help you to find a beautiful smile and improve the quality of life.",
     "titleTwo": "Dentistry",
     "descTwo": "Therapeutic dentistry, Aesthetic dentistry, Prosthetics, Dental implants, Periodontology, Orthodontics.",
     "titleThree": "Facial Aesthetics",

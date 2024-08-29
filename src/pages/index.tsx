@@ -30,7 +30,7 @@ export default function Home() {
       <About/>
       {/* <Courses/> */}
       <Learn/>
-      <Reviews/>
+      {/* <Reviews/> */}
       <Teachers/>
       <Prices/>
       <Map/>

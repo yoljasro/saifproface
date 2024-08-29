@@ -9,10 +9,13 @@ export const Header = () => {
 
   return (
     <div className={styles.header} id='aboutus'>
+
+      {/* <div className={}> */}
       <Fade bottom cascade>
-        <p className={styles.header__title}>{t("about")}</p>
-      </Fade>
+          {/* <p className={styles.header__title}>{t("about")}</p> */}
+        </Fade>
       <div className={styles.header__container}>
+       
         <Fade cascade left>
           <div className={styles.header__text}>
             <p className={styles.header__name}>{t("welcome")}</p>
@@ -23,16 +26,17 @@ export const Header = () => {
         </Fade>
         <Zoom>
           <div className={styles.header__image}>
-            <Image 
-              src={'/assets/img/headercont.png'} 
-              alt='headercont' 
-              width={700} 
-              height={560} 
+            <Image
+              src={'/assets/img/fasad.jpg'}
+              alt='headercont'
+              width={800}
+              height={504}
             />
           </div>
         </Zoom>
       </div>
     </div>
+    // </div> 
   );
 };
 

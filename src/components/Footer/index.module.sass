@@ -3,49 +3,102 @@
 
 .footer
   width: 100%
-  height: 325px
-  background: #245D51
+  background-color: #444A50 !important
   display: flex
-  flex-direction: column
+  justify-content: space-between
   align-items: center
-  padding: 20px 0
+  padding: 20px 0px 20px 120px
   box-sizing: border-box
+  position: relative
   overflow: hidden
 
-  &__icon
-    cursor: pointer
+  &__left, &__center, &__right
+    flex: 1
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
 
-    &:hover
-        transform: rotate(360deg)
-        transition: 0.6s ease
-        
+  &__left
+    align-items: flex-start
 
-  &__content
-    margin-top: -35px
+  &__center
+    align-items: center
+    gap: 25px
+    margin-top: 30px
+
+  &__right
+    display: flex
+    justify-content: space-between
+    align-items: center
+    flex: 1
 
   &__logo
-    margin-top: -30px
-
-  &__platform
-    font-family: Roboto-Regular
-    font-size: 18px
-    text-align: center
-    color: #FFFFFF
-    margin: 5px 0
-
-  &__email
-    font-family: Roboto
-    font-size: 16px
-    text-align: center
-    color: #FFFFFF
-    margin: 5px 0
-    padding-top: 10px
+    // margin-bottom: 10px
 
   &__social
     display: flex
-    gap: 16px
-    margin-top: 10px
+    gap: 10px
 
+  &__icon
+    cursor: pointer
+    transition: transform 0.6s ease
+    font-size: 50px
 
+    &:hover
+      transform: rotate(360deg)
 
-    
+  &__menu
+    font-family: Mulish-Regular
+    font-size: 18px
+    text-align: center
+    color: #FFFFFF
+    margin: 0
+    cursor: pointer
+    position: relative
+    transition: color 0.3s ease
+
+    &:hover
+      color: #245D51
+
+    &::after
+      content: ''
+      position: absolute
+      width: 0
+      height: 2px
+      background-color: #245D51
+      left: 50%
+      bottom: -5px
+      transition: width 0.3s ease, left 0.3s ease
+
+    &:hover::after
+      width: 100%
+      left: 0
+
+  &__platform, &__email
+    font-family: Mulish-Regular
+    font-size: 18px
+    color: #FFFFFF
+    margin: 0
+
+  &__contact
+    display: flex
+    flex-direction: column
+    align-items: flex-end
+    gap: 10px
+
+  &__patternContainer
+    display: flex
+    align-items: center
+    justify-content: flex-end
+    width: 300px
+    height: 100%
+
+  &__pattern
+    width: 100%
+    height: 100%
+    background: url('/assets/img/pattern.png') no-repeat center center
+    background-size: cover
+    opacity: 0.2
+    z-index: 1
+    transition: opacity 0.6s ease

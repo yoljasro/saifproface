@@ -21,21 +21,13 @@ export const Navbar = () => {
           <a href={'/'}>
             <Image
               className={styles.navbar__logo}
-              src={'/assets/img/minilogo.png'}
+              src={'/assets/img/svglogo.svg'}
               alt='logo'
-              width={135}
-              height={130}
+              width={250}
+              height={20}
             />
           </a>
-          <a href={'tel:+998781139545'} target='_blank' className={styles.navbar__number}>
-            <button className={styles.navbar__register}> Записаться онлайн</button>
-          </a>
-          <button className={styles.navbar__toggle} onClick={toggleMenu}>
-            {menuOpen ? '✕' : '☰'}
-          </button>
-        </div>
-      </Slide>
-      <Fade top cascade>
+          <Fade top cascade>
         <div className={`${styles.navbar__item} ${menuOpen ? styles.navbar__item_open : ''}`}>
           <ul className={styles.navbar__menu}>
             <Link activeClass="active" to="aboutus" spy={true} smooth={true} offset={-70} duration={500} className={styles.navbar__link}>
@@ -54,12 +46,23 @@ export const Navbar = () => {
               <li>{t("contact")}</li>
             </Link>
           </ul>
-          <a href={'tel:+998781139545'} target='_blank' className={styles.navbar__number}>
-            +998781139545
-          </a>
-          <Lang />
+        
         </div>
       </Fade>
+      
+          <button className={styles.navbar__toggle} onClick={toggleMenu}>
+            {menuOpen ? '✕' : '☰'}
+          </button>
+          <a href={'tel:+998781139545'} target='_blank' className={styles.navbar__number}>
+            +998781139545
+          </a>  
+        </div>
+      </Slide>
+      <a href={'tel:+998781139545'} target='_blank'>
+            <button className={styles.navbar__register}> Записаться онлайн</button>
+          </a>
+          <Lang />
+     
     </div>
   );
 };
