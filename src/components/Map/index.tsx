@@ -1,6 +1,5 @@
-import { useState, FC } from "react";
-import { GoogleMap, LoadScript, Marker, InfoWindow } from "@react-google-maps/api";
-import Image from "next/image";
+import React, { useState, FC } from 'react';
+import { YMaps, Map, Placemark, ZoomControl, FullscreenControl } from '@pbe/react-yandex-maps';
 import styles from './index.module.sass';
 
 const mapContainerStyle = {
@@ -9,10 +8,7 @@ const mapContainerStyle = {
     marginBottom: "100px",
 };
 
-const center = {
-    lat: 41.315281,
-    lng: 69.289192,
-};
+const center = [41.315281, 69.289192];
 
 type Location = {
     lat: number;
@@ -27,7 +23,7 @@ type Place = {
 
 type MapProps = {};
 
-export const Map: FC<MapProps> = () => {
+export const YandexMap: FC<MapProps> = () => {
     const [places, setPlaces] = useState<Place[]>([
         {
             name: "Student Union",
@@ -38,53 +34,60 @@ export const Map: FC<MapProps> = () => {
 
     const [selectedPlace, setSelectedPlace] = useState<Place | null>(null);
 
-    const onMarkerClick = (place: Place) => {
+    const onPlacemarkClick = (place: Place) => {
         setSelectedPlace(place);
     };
 
-    const closeInfoWindow = () => {
+    const closeInfoBox = () => {
         setSelectedPlace(null);
     };
 
     return (
-        <>
-                <div className={styles.location} id="location">
-                    <div>
-                        {selectedPlace && (
-                            <InfoWindow
-                                position={selectedPlace.location}
-                                onCloseClick={closeInfoWindow}
-                            >
-                                <div>
-                                    <h2>{selectedPlace.name}</h2>
-                                    <p>{selectedPlace.info}</p>
-                                </div>
-                            </InfoWindow>
-                        )}
-                    </div>
-                    <div>
-                        <LoadScript googleMapsApiKey="AIzaSyCBNEcEo5qilBZTygjDy59HcujlvPYS4XI">
-                            <GoogleMap
-                                mapContainerStyle={mapContainerStyle}
-                                center={center}
-                                zoom={15}
-                            >
-                                {places.map((place, index) => (
-                                    <Marker
-                                        key={index}
-                                        position={place.location}
-                                        label={place.name}
-                                        onClick={() => onMarkerClick(place)}
-                                        icon={{
-                                            url: selectedPlace === place ? "http://maps.google.com/mapfiles/ms/icons/green-dot.png" : "http://maps.google.com/mapfiles/ms/icons/red-dot.png",
-                                        }}
-                                    />
-                                ))}
-                            </GoogleMap>
-                        </LoadScript>
-                    </div>
-                    
-                </div>
-        </>
+        <div className={styles.location} id="location">
+            <YMaps>
+                <Map
+                    defaultState={{ center, zoom: 15 }}
+                    style={mapContainerStyle}
+                >
+                    {places.map((place, index) => (
+                        <Placemark
+                            key={index}
+                            geometry={[place.location.lat, place.location.lng]}
+                            properties={{
+                                balloonContentHeader: place.name,
+                                balloonContentBody: place.info,
+                            }}
+                            onClick={() => onPlacemarkClick(place)}
+                            options={{
+                                iconLayout: 'default#image',
+                                iconImageHref: selectedPlace === place ? 'http://maps.yandex.net/i/2x/blue.png' : 'http://maps.yandex.net/i/2x/red.png',
+                                iconImageSize: [30, 30],
+                                iconImageOffset: [-15, -15],
+                            }}
+                        />
+                    ))}
+                    {selectedPlace && (
+                        <Placemark
+                            geometry={[selectedPlace.location.lat, selectedPlace.location.lng]}
+                            properties={{
+                                balloonContentHeader: selectedPlace.name,
+                                balloonContentBody: selectedPlace.info,
+                            }}
+                            options={{
+                                iconLayout: 'default#image',
+                                iconImageHref: 'http://maps.yandex.net/i/2x/blue.png',
+                                iconImageSize: [30, 30],
+                                iconImageOffset: [-15, -15],
+                            }}
+                            onClick={closeInfoBox}
+                        />
+                    )}
+                    <ZoomControl options={{ float: 'right' }} />
+                    <FullscreenControl />
+                </Map>
+            </YMaps>
+        </div>
     );
 };
+
+export default YandexMap;

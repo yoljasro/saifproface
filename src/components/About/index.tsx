@@ -14,135 +14,53 @@ export const About = () => {
         <div className={styles.about__cards}>
           <Zoom>
             <div className={styles.about__card}>
-            <div className={styles.about__cardContent}>
-                {/* <p className={styles.about__cardTitle}>{t("servicesBlock.titleOne")}</p> */}
-                <p className={styles.about__desc}>{t("servicesBlock.descOne")}</p>
-                <p className={styles.about__desclast}>{t("servicesBlock.desclast")}</p>
+              <div className={styles.about__cardContent}>
+                <p className={styles.about__desc}>{t("servicesBlock.titleOne")}</p>
+                <ul className={styles.about__list}>
+                  <li>{t("servicesBlock.descOne")}</li>
+                  <li>{t("servicesBlock.correction")}</li>
+                  <li>{t("servicesBlock.hirurgy")}</li>
+                  <li>{t("servicesBlock.face")}</li>
+                </ul>
               </div>
-              <Image src={'/assets/img/service4.jpg'} alt='cardone' width={250} height={240}  className={styles.about__cardImage}/>
-             
-            </div>
-          </Zoom>
-          <Zoom>
-          <div className={styles.about__card}>
-            <div className={styles.about__cardContent}>
-                {/* <p className={styles.about__cardTitle}>{t("servicesBlock.titleOne")}</p> */}
-                <p className={styles.about__desc}> Инъекционные методики (ботокс, филлеры)</p>
-              </div>
-              <Image src={'/assets/img/service3.jpg'} alt='cardone' width={250} height={240}  className={styles.about__cardImage}/>
-             
-            </div>
-          </Zoom>
-          <Zoom>
-          <div className={styles.about__card}>
-            <div className={styles.about__cardContent}>
-                {/* <p className={styles.about__cardTitle}>{t("servicesBlock.titleOne")}</p> */}
-                <p className={styles.about__desc}>Лазерные и аппаратные процедуры</p>
-              </div>
-              <Image src={'/assets/img/11.jpg'} alt='cardone' width={250} height={240}  className={styles.about__cardImage}/>
-             
+              <Image src={'/assets/img/tooth2.png'} alt='cardone' width={250} height={240} className={styles.about__cardImage} />
+
             </div>
           </Zoom>
           <Zoom>
             <div className={styles.about__card}>
-            <div className={styles.about__cardContent}>
+              <div className={styles.about__cardContent}>
                 {/* <p className={styles.about__cardTitle}>{t("servicesBlock.titleOne")}</p> */}
-                <p className={styles.about__desc}>{t("servicesBlock.descOne")}</p>
+                <p className={styles.about__desc}> {t("servicesBlock.titleTwo")}</p>
+                <ul className={styles.about__listtwo}>
+                  <li> Терапевтическая стоматология (лечение кариеса и его осложнений)</li>
+                  <li> Эстетическая стоматология (отбеливание зубов, художественная реставрация)</li>
+                  <li> Протезирование (керамические коронки, виниры, мосты, протезы)</li>
+                  <li>Имплантация зубов</li>
+                  <li>Пародонтология (лечение и профилактика заболеваний десен)</li>
+                  <li>Ортодонтия </li>
+                </ul>
               </div>
-              <Image src={'/assets/img/12.png'} alt='cardone' width={250} height={240}  className={styles.about__cardImage}/>
-             
+              <Image src={'/assets/img/13.png'} alt='cardone' width={250} height={240} className={styles.about__cardImage} />
+
+
+            </div>
+          </Zoom>
+          <Zoom>
+            <div className={styles.about__card}>
+              <div className={styles.about__cardContent}>
+                <p className={styles.about__desc}>{t("servicesBlock.titleThree")}</p>
+                <ul className={styles.about__listthree}>
+                  <li> Пластическая хирургия (ринопластика, подтяжка лица)</li>
+                  <li> Инъекционные методики (ботокс, филлеры)</li>
+                  <li>  Лазерные и аппаратные процедуры</li>
+                </ul>
+              </div>
+              <Image src={'/assets/img/11.jpg'} alt='cardone' width={250} height={240} className={styles.about__cardImage} />
+
             </div>
           </Zoom>
 
-          <Zoom>
-            <div className={styles.about__card}>
-            <div className={styles.about__cardContent}>
-                {/* <p className={styles.about__cardTitle}>{t("servicesBlock.titleOne")}</p> */}
-                <p className={styles.about__desc}>{t("servicesBlock.descOne")}</p>
-              </div>
-              <Image src={'/assets/img/13.png'} alt='cardone' width={250} height={240}  className={styles.about__cardImage}/>
-             
-            </div>
-          </Zoom>
-
-          <Zoom>
-            <div className={styles.about__card}>
-            <div className={styles.about__cardContent}>
-                {/* <p className={styles.about__cardTitle}>{t("servicesBlock.titleOne")}</p> */}
-                <p className={styles.about__desc}>{t("servicesBlock.descOne")}</p>
-              </div>
-              <Image src={'/assets/img/15.png'} alt='cardone' width={250} height={240}  className={styles.about__cardImage}/>
-             
-            </div>
-          </Zoom>
-
-
-
-          <Zoom>
-            <div className={styles.about__card}>
-            <div className={styles.about__cardContent}>
-                {/* <p className={styles.about__cardTitle}>{t("servicesBlock.titleOne")}</p> */}
-                <p className={styles.about__desc}>{t("servicesBlock.descOne")}</p>
-              </div>
-              <Image src={'/assets/img/16.png'} alt='cardone' width={250} height={240}  className={styles.about__cardImage}/>
-             
-            </div>
-          </Zoom>
-
-          <Zoom>
-            <div className={styles.about__card}>
-            <div className={styles.about__cardContent}>
-                {/* <p className={styles.about__cardTitle}>{t("servicesBlock.titleOne")}</p> */}
-                <p className={styles.about__desc}>{t("servicesBlock.descOne")}</p>
-              </div>
-              <Image src={'/assets/img/service4.jpg'} alt='cardone' width={250} height={240}  className={styles.about__cardImage}/>
-             
-            </div>
-          </Zoom>
-
-          <Zoom>
-            <div className={styles.about__card}>
-            <div className={styles.about__cardContent}>
-                {/* <p className={styles.about__cardTitle}>{t("servicesBlock.titleOne")}</p> */}
-                <p className={styles.about__desc}>{t("servicesBlock.descOne")}</p>
-              </div>
-              <Image src={'/assets/img/service4.jpg'} alt='cardone' width={250} height={240}  className={styles.about__cardImage}/>
-             
-            </div>
-          </Zoom> 
-
-          <Zoom>
-            <div className={styles.about__card}>
-            <div className={styles.about__cardContent}>
-                {/* <p className={styles.about__cardTitle}>{t("servicesBlock.titleOne")}</p> */}
-                <p className={styles.about__desc}>{t("servicesBlock.descOne")}</p>
-              </div>
-              <Image src={'/assets/img/service4.jpg'} alt='cardone' width={250} height={240}  className={styles.about__cardImage}/>
-             
-            </div>
-          </Zoom>
-
-          <Zoom>
-            <div className={styles.about__card}>
-            <div className={styles.about__cardContent}>
-                {/* <p className={styles.about__cardTitle}>{t("servicesBlock.titleOne")}</p> */}
-                <p className={styles.about__desc}>{t("servicesBlock.descOne")}</p>
-              </div>
-              <Image src={'/assets/img/service4.jpg'} alt='cardone' width={250} height={240}  className={styles.about__cardImage}/>
-             
-            </div>
-          </Zoom>
-
-          <Zoom>
-            <div className={styles.about__card}>
-            <div className={styles.about__cardContent}>
-                {/* <p className={styles.about__cardTitle}>{t("servicesBlock.titleOne")}</p> */}
-                <p className={styles.about__desc}>{t("servicesBlock.descOne")}</p>
-              </div>
-              <Image src={'/assets/img/service4.jpg'} alt='cardone' width={250} height={240}  className={styles.about__cardImage}/>
-             
-            </div>
-          </Zoom>
         </div>
       </Fade>
     </div>

@@ -7,25 +7,11 @@
   align-items: center
   justify-content: center
   padding: 0px 0
-  background-color: #777777
+  background-color: #afa7a7c2
   color: white
 
-  @media (max-width:769px)
+  @media (max-width: 769px)
     padding: 30px 20px
-
-  &__title
-    font-family: Mulish-Regular
-    font-size: 52px
-    font-weight: bold
-    padding-right: 1500px
-    text-align: right !important
-    margin-bottom: 20px
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3)
-    position: relative
-    top: 50px
-
-    @media (max-width:769px)
-      font-size: 40px
 
   &__container
     display: flex
@@ -37,10 +23,10 @@
     border-radius: 20px
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2)
     overflow: hidden
-    // margin-top: -55px
     margin-top: 50px
+    position: relative
 
-    @media (max-width:769px)
+    @media (max-width: 769px)
       flex-direction: column
       padding: 20px
 
@@ -49,7 +35,7 @@
     text-align: left
     padding-right: 30px
 
-    @media (max-width:769px)
+    @media (max-width: 769px)
       text-align: center
       padding-right: 0
       margin-bottom: 30px
@@ -77,13 +63,36 @@
     padding-top: 20px
 
   &__image
-    max-width: 600px
-    margin-right: 100px
-    position: relative
-    // top: 
-    left: -120px
-    // padding-right: 70px
+    max-width: 800px
+    position: absolute
+    right: 80px
+    height: 100%
+    top: 60px
+    
     img
+      object-fit: cover
+      height: 80%
       border-radius: 15px
-
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2)
+
+  .fadeIn
+    animation: fadeIn 0.5s forwards
+
+  .fadeOut
+    animation: fadeOut 0.5s forwards
+
+  @keyframes fadeIn
+    from 
+      opacity: 0
+      transform: scale(1.05)
+    to 
+      opacity: 1
+      transform: scale(1)
+
+  @keyframes fadeOut
+    from 
+      opacity: 1
+      transform: scale(1)
+    to 
+      opacity: 0
+      transform: scale(1.05)

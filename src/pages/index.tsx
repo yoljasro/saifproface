@@ -6,7 +6,7 @@ import { Navbar } from "@/components/Navbar";
 import { Header } from "@/components/Header";
 import { About } from "@/components/About";
 import { Reviews } from "@/components/Reviews";
-import { Map } from "@/components/Map";
+import YandexMap from "@/components/Map";
 import type { NextPage, GetStaticProps } from "next";
 import { Courses } from "@/components/Courses";
 import { Footer } from "@/components/Footer";
@@ -29,11 +29,12 @@ export default function Home() {
       <Header/>
       <About/>
       {/* <Courses/> */}
-      <Learn/>
+      {/* <Learn/> */}
       {/* <Reviews/> */}
       <Teachers/>
       <Prices/>
-      <Map/>
+      <YandexMap/>
+      {/* <Map/> */}
       <Footer/>
     </>
   );
