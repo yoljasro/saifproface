@@ -12,7 +12,7 @@ export const Footer = () => {
   return (
     <div className={styles.footer}>
       <div className={styles.footer__left}>
-        <Image src={'/assets/img/minilogo.png'} alt='footerlogo' width={202} height={205} className={styles.footer__logo} />
+        <Image src={'/assets/img/minilogo.png'} alt='footerlogo' width={260} height={260} className={styles.footer__logo} />
         <p className={styles.footer__liner}> © 2024 SAIF PROFACE <br /> Все права защищены</p>
       </div>
 
@@ -27,12 +27,12 @@ export const Footer = () => {
       </div>
       <div className={styles.footer__work} >
         <Fade bottom cascade>
-          <p className={styles.footer__menu}>Dushanba : <span className={styles.footer__span}> 09:00-18:00</span> </p>
-          <p className={styles.footer__menu}>Seshanba :  <span className={styles.footer__span}> 09:00-18:00</span> </p>
-          <p className={styles.footer__menu}>Chorshanba :   <span className={styles.footer__span}> 09:00-18:00</span>  </p>
-          <p className={styles.footer__menu}>Payshanba :   <span className={styles.footer__span}> 09:00-18:00</span></p>
-          <p className={styles.footer__menu}>Juma :   <span className={styles.footer__span}> 09:00-18:00</span></p>
-          <p className={styles.footer__menu}>Shanba :   <span className={styles.footer__span}> 09:00-18:00</span></p>
+          <p className={styles.footer__menu}>Dushanba : <span className={styles.footer__span}> 08:00-18:00</span> </p>
+          <p className={styles.footer__menu}>Seshanba :  <span className={styles.footer__span}> 08:00-18:00</span> </p>
+          <p className={styles.footer__menu}>Chorshanba :   <span className={styles.footer__span}> 08:00-18:00</span>  </p>
+          <p className={styles.footer__menu}>Payshanba :   <span className={styles.footer__span}> 08:00-18:00</span></p>
+          <p className={styles.footer__menu}>Juma :   <span className={styles.footer__span}> 08:00-18:00</span></p>
+          <p className={styles.footer__menu}>Shanba :   <span className={styles.footer__span}> 08:00-18:00</span></p>
           <p className={styles.footer__menu}>Yakshanba :   <span className={styles.footer__span}> Выходной</span></p>
 
         </Fade>

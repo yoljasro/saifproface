@@ -4,10 +4,10 @@
     "advantages": "Afzalliklarimiz",
     "whyChooseUs": "Nima aynan biz  ?",
     "contact": "Jamoa",
-    "welcome": "SAIF PROFACE -ga xush kelibsiz",
+    "welcome": "SAIF PROFACE ga xush kelibsiz",
     "aboutBlock": {
-      "title": "Zamonaviy jag' va yuz jarrohlik markazi",
-      "desc": "SAIF PROFACE – bu zamonaviy jag' va yuz jarrohlik markazi bo'lib, ilg'or tibbiy uskunalar bilan jihozlangan va yuqori malakali mutaxassislar jamoasi bilan ta'minlangan.",
+      "title": "Yuz-jag' jarrohligi va stamatologiya markazi",
+      "desc": "SAIF PROFACE bu zamonaviy jag' va yuz jarrohlik markazi bo'lib, ilg'or tibbiy uskunalar bilan jihozlangan va yuqori malakali mutaxassislar jamoasi bilan ta'minlangan.",
       "descTwo": "Bizning ustuvorligimiz bemorlarning xavfsizligi, samarali davolanish va yuqori darajadagi qulaylikdir."
     },
     "servicesBlock": {
@@ -38,8 +38,8 @@
     },
     "whyChooseUsBlock": {
       "name" : "Nega aynan biz?",
-      "title": "Nima uchun Saif ProFace-ni tanlaysiz",
-      "desc": "Natijaga kafolat: Bizning obro' va ijobiy sharhlarimiz o'zimizni taqdim etadi.",
+      "title": "Nima uchun Saif ProFaceni tanlaysiz",
+      "desc": "Natijaga kafolat: Bizning ijobiy sharxlarimiz , obro'yimizni ko'rsatadi",
       "descTwo": "Qulay joylashuv: Shaharda yashovchilar uchun qulay joy."
     }
   }

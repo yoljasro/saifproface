@@ -21,9 +21,9 @@ export const Navbar = () => {
           <a href={'/'}>
             <Image
               className={styles.navbar__logo}
-              src={'/assets/img/svglogo.svg'}
+              src={'/assets/img/lastuz.png'}
               alt='logo'
-              width={250}
+              width={300}
               height={20}
             />
           </a>
@@ -39,9 +39,9 @@ export const Navbar = () => {
             <Link activeClass="active" to="advantage" spy={true} smooth={true} offset={-70} duration={500} className={styles.navbar__link}>
               <li>{t("advantages")}</li>
             </Link>
-            <Link activeClass="active" to="teachers" spy={true} smooth={true} offset={-70} duration={500} className={styles.navbar__link}>
+            {/* <Link activeClass="active" to="teachers" spy={true} smooth={true} offset={-70} duration={500} className={styles.navbar__link}>
               <li>{t("whyChooseUs")}</li>
-            </Link>
+            </Link> */}
             <Link activeClass="active" to="team" spy={true} smooth={true} offset={-70} duration={500} className={styles.navbar__link}>
               <li>{t("contact")}</li>
             </Link>
