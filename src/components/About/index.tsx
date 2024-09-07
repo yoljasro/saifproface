@@ -17,6 +17,7 @@ export const About = () => {
               <div className={styles.about__cardContent}>
                 <p className={styles.about__desc}>{t("servicesBlock.titleOne")}</p>
                 <ul className={styles.about__list}>
+                <li>{t("servicesBlock.first")}</li>
                   <li>{t("servicesBlock.descOne")}</li>
                   <li>{t("servicesBlock.correction")}</li>
                   <li>{t("servicesBlock.hirurgy")}</li>
@@ -33,12 +34,12 @@ export const About = () => {
                 {/* <p className={styles.about__cardTitle}>{t("servicesBlock.titleOne")}</p> */}
                 <p className={styles.about__desc}> {t("servicesBlock.titleTwo")}</p>
                 <ul className={styles.about__listtwo}>
-                  <li> Терапевтическая стоматология (лечение кариеса и его осложнений)</li>
-                  <li> Эстетическая стоматология (отбеливание зубов, художественная реставрация)</li>
-                  <li> Протезирование (керамические коронки, виниры, мосты, протезы)</li>
-                  <li>Имплантация зубов</li>
-                  <li>Пародонтология (лечение и профилактика заболеваний десен)</li>
-                  <li>Ортодонтия </li>
+                <li>{t("servicesBlock.descTwo")}</li>
+                <li>{t("servicesBlock.second")}</li>
+                <li>{t("servicesBlock.three")}</li>
+                <li>{t("servicesBlock.four")}</li>
+                <li>{t("servicesBlock.five")}</li>
+                <li>{t("servicesBlock.six")}</li>
                 </ul>
               </div>
               <Image src={'/assets/img/13.png'} alt='cardone' width={250} height={240} className={styles.about__cardImage} />
@@ -51,9 +52,9 @@ export const About = () => {
               <div className={styles.about__cardContent}>
                 <p className={styles.about__desc}>{t("servicesBlock.titleThree")}</p>
                 <ul className={styles.about__listthree}>
-                  <li> Пластическая хирургия (ринопластика, подтяжка лица)</li>
-                  <li> Инъекционные методики (ботокс, филлеры)</li>
-                  <li>  Лазерные и аппаратные процедуры</li>
+                <li>{t("servicesBlock.descThree")}</li>
+                <li>{t("servicesBlock.seven")}</li>
+                <li>{t("servicesBlock.eight")}</li>
                 </ul>
               </div>
               <Image src={'/assets/img/11.jpg'} alt='cardone' width={250} height={240} className={styles.about__cardImage} />

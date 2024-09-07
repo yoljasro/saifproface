@@ -1,46 +1,69 @@
 {
-    "about": "Biz haqimizda",
-    "services": "Xizmatlarimiz",
-    "advantages": "Afzalliklarimiz",
-    "whyChooseUs": "Nima aynan biz  ?",
-    "contact": "Jamoa",
-    "welcome": "SAIF PROFACE ga xush kelibsiz",
-    "aboutBlock": {
-      "title": "Yuz-jag' jarrohligi va stamatologiya markazi",
-      "desc": "SAIF PROFACE bu zamonaviy jag' va yuz jarrohlik markazi bo'lib, ilg'or tibbiy uskunalar bilan jihozlangan va yuqori malakali mutaxassislar jamoasi bilan ta'minlangan.",
-      "descTwo": "Bizning ustuvorligimiz bemorlarning xavfsizligi, samarali davolanish va yuqori darajadagi qulaylikdir."
-    },
-    "servicesBlock": {
-      "title": "Xizmatlarimiz",
-      "titleOne": "Jag' va yuz jarrohligi",
-      "correction": " Tug’ma yuz va jag’ defektlarini tuzatish",
-      "hirurgy" : "Jarohatlar va singan suyaklarni jarrohlik bilan davolash",
-      "face" : " Yuz va jag’dagi o’smalarning olib tashlanishi",
-      "descOne": "Ortognatik jarrohlik",
-      "titleTwo": "Stomatologiya",
-      "deslast" : "Ortognatik jarrohlik uyg'unlik va ishonchni tiklaydi. Bizning xizmatimiz sizga chiroyli tabassumga erishish va hayot sifatini yaxshilashga yordam beradi.",
-      "descTwo": "Terapevtik stomatologiya, Estetik stomatologiya, Protezlash, Tish implantatsiyasi, Parodontologiya, Ortodontiya.",
-      "titleThree": "Yuz estetikasi",
-      "descThree": "Plastik jarrohlik, In'ektsiya usullari, Laser va apparat protseduralar."
-    },
-    "advantagesBlock": {
-      "title": "Bizning Afzalliklarimiz",
-      "titleOne": "Yuqori malakali jamoa",
-      "descOne": "Bizning xodimlar xalqaro konferensiyalar orqali doimiy ravishda o'z malakalarini oshirib boradilar.",
-      "titleTwo": "Individual yondashuv",
-      "descTwo": "Har bir bemorning o'ziga xos ehtiyojlariga mos ravishda davolash rejalarini ishlab chiqamiz.",
-      "titleThree": "Zamonaviy uskunalar",
-      "descThree": "Aniq va xavfsiz davolash uchun eng so'nggi texnologiyalar bilan jihozlangan.",
-      "titleFour": "Kompleks yondashuv",
-      "descFour": "Diagnostikadan tortib murakkab jarrohlik amaliyotlariga qadar to'liq xizmatlar spektri.",
-      "titleFive": "Quyoshli sharoitlar",
-      "descFive": "Biz qulay va tinch muhitni taqdim etamiz, bu esa tashrifni qulayroq qiladi."
-    },
-    "whyChooseUsBlock": {
-      "name" : "Nega aynan biz?",
-      "title": "Nima uchun Saif ProFaceni tanlaysiz",
-      "desc": "Natijaga kafolat: Bizning ijobiy sharxlarimiz , obro'yimizni ko'rsatadi",
-      "descTwo": "Qulay joylashuv: Shaharda yashovchilar uchun qulay joy."
-    }
+  "about": "Biz haqimizda",
+  "services": "Bizning xizmatlarimiz",
+  "advantages": "Bizning afzalliklarimiz",
+  "whyChooseUs": "Nima uchun bizni tanlashadi",
+  "contact": "Jamoa",
+  "btn" : "Onlayn ro'yxatdan o'ting",
+  "welcome": "SAIF PROFACE ga xush kelibsiz",
+  "aboutBlock": {
+    "title": "Jag‘-yuz jarrohligi va stomatologiya markazi",
+    "desc": "SAIF PROFACE bu zamonaviy jag‘-yuz jarrohligi va stomatologiya markazi bo‘lib, yuz va og‘iz bo‘shlig‘ining sog‘lig‘i va estetikasi tiklash sohasida yuqori sifatli tibbiy xizmatlarni taqdim etish uchun mo‘ljallangan. Bizning markazimiz ilg‘or tibbiy uskunalar bilan jihozlangan va bemor xavfsizligini, samarali davolanish va yuqori darajada qulaylikni ta’minlashni maqsad qilgan malakali mutaxassislar jamoasiga ega.",
+    "descTwo": "Biz bemor xavfsizligi, samarali davolanish va yuqori qulaylik darajasini birinchi o‘ringa qo‘yamiz."
+  },
+  "servicesBlock": {
+    "title": "Bizning xizmatlarimiz",
+    "first": "Jag‘-yuz jarrohligi",
+    "correction": "Tug‘ma yuz va jag‘ nuqsonlarini tuzatish",
+    "hirurgy": "Jarohatlar va singan suyaklarni jarrohlik yo‘li bilan davolash",
+    "face": "Yuz va jag‘dagi yangi o‘smalarni yo‘q qilish",
+    "titleOne": "Jag‘ va yuz jarrohligi",
+    "descOne": "Ortognatik jarrohlik",
+    "desclast": "Ortognatik jarrohlik garmoniya va ishonchni tiklaydi. Bizning xizmatimiz sizga chiroyli tabassumni qaytarish va hayot sifatini yaxshilashda yordam beradi.",
+    "titleTwo": "Stomatologiya",
+    "descTwo": "Tibbiy stomatologiya (karies va uning asoratlarini davolash).",
+    "second": "Estetik stomatologiya (tishlarni oqartirish, badiiy restavratsiya)",
+    "three": "Protezlash (keramika tojlari, vinirlar, ko‘priklar, protezlar)",
+    "four": "Tish implantatsiyasi",
+    "five": "Parodontologiya (tish go‘shtini davolash va oldini olish)",
+    "six": "Ortodontiya (diagnostika, breketlar, eleynerlar va olinadigan qo‘lqoplar)",
+    "titleThree": "Yuz kosmetologiyasi",
+    "descThree": "Plastik jarrohlik (rinoplastika, yuzni tortish)",
+    "seven": "Inyeksiya usullari (Botoks, fillerlari)",
+    "eight": "Lazer va apparat usullari"
+  },
+  "advantagesBlock": {
+    "title": "Bizning afzalliklarimiz",
+    "guarant": "Kafolatlangan natijalar",
+    "conver": "Qulay joylashuv",
+    "converDesc": "Bizning markazimiz shahar va viloyat aholisi uchun qulay va oson yetib boriladigan joyda joylashgan.",
+    "guarantDesc": "Bizga bemorlar ishonishadi, chunki bizning obro‘-e'tiborimiz va ko‘plab ijobiy sharhlarimiz mavjud.",
+    "titleOne": "Yuqori malakali jamoa",
+    "descOne": "SAIF PROFACE ning shifokor va tibbiyot xodimlari katta tajribaga ega va xalqaro konferentsiyalar va seminarlar orqali o‘z malakalarini oshirishda davom etishadi.",
+    "titleTwo": "Shaxsiy yondashuv",
+    "descTwo": "Biz har bir bemorning o‘ziga xos ehtiyojlari va istaklarini hisobga olamiz, eng yaxshi natijalarga erishish uchun individual davolash rejalari ishlab chiqamiz.",
+    "titleThree": "Zamonaviy jihozlar",
+    "descThree": "Aniq va xavfsiz davolash uchun eng yangi texnologiyalar bilan jihozlangan.",
+    "state": "Zamonaviy jihozlar",
+    "stateDesc": "Markazimiz eng yangi texnologiyalar va maxsus uskunalar bilan jihozlangan bo‘lib, bu bizga tashxis va davolashni maksimal aniqlik va xavfsizlik bilan amalga oshirish imkonini beradi.",
+    "titleFour": "Kompleks yondashuv",
+    "descFour": "SAIF PROFACE” da bemorlar tashxis va profilaktikadan tortib murakkab jarrohlik aralashuvlari va estetik protseduralargacha bo‘lgan to‘liq xizmatlar majmuasiga ega.",
+    "titleFive": "Qulay muhit",
+    "descFive": "Bizning markazimizda shifokorga tashrif buyurishni iloji boricha qulay va xotirjam qilish uchun yoqimli va tinchlantiruvchi muhit yaratdik.",
+    "footerone": "Barcha huquqlar himoyalangan",
+    "weekone": "Dushanba",
+    "weektwo": "Seshanba",
+    "weekthree": "Chorshanba",
+    "weekfour": "Payshanba",
+    "weekfive": "Juma",
+    "weeksix": "Shanba",
+    "weekseven": "Yakshanba",
+    "oursocial": "Biz ijtimoiy tarmoqlarda",
+    "adress": "Manzil: Toshkent shahri, Yashnobod tumani, Alimkent 1-tor, 32"
+  },
+  "whyChooseUsBlock": { 
+    "title": "Nima uchun Saif ProFace ni tanlaysiz",
+    "desc": "Kafolatlangan natijalar: Bizning obro‘-e'tiborimiz va ijobiy sharhlarimiz sifatimizni tasdiqlaydi.",
+    "descTwo": "Qulay joylashuv: Aholi uchun oson yetib boriladigan joy."
   }
-  
+}

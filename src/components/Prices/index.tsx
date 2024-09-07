@@ -55,16 +55,16 @@ export const Prices: React.FC = () => {
         </SwiperSlide>
 
         <SwiperSlide className={styles.swiperSlide}>
-          <p className={styles.swiperSlide__title}> Гарантия результата</p>
-          <p className={styles.swiperSlide__lesson}>Нам доверяют пациенты благодаря нашей репутации и множеству положительных отзывов</p>
+        <p className={styles.swiperSlide__title}>{t("advantagesBlock.guarant")}</p>
+          <p className={styles.swiperSlide__lesson}>{t("advantagesBlock.guarantDesc")}</p>
           {/* <Link href={'https://student-union.modme.uz/entry/lead?utm_source=4564&section=145181'} target='_blank'>
               <button className={styles.swiperSlide__btn}>Try it</button>
             </Link> */}
         </SwiperSlide>
 
         <SwiperSlide className={styles.swiperSlide}>
-          <p className={styles.swiperSlide__title}>Удобное расположение</p>
-          <p className={styles.swiperSlide__lesson}>Наш центр находится в удобном и легко доступном месте, что делает его посещение комфортным для жителей города и области</p>
+          <p className={styles.swiperSlide__title}>{t("advantagesBlock.conver")}</p>
+          <p className={styles.swiperSlide__lesson}>{t("advantagesBlock.converDesc")}</p>
           {/* <Link href={'https://student-union.modme.uz/entry/lead?utm_source=4564&section=145181'} target='_blank'>
               <button className={styles.swiperSlide__btn}>Try it</button>
             </Link> */}

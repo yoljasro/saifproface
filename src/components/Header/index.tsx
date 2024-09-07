@@ -9,7 +9,7 @@ export const Header = () => {
   const [fade, setFade] = useState(true);
 
   const images = [
-    '/assets/img/fasad.jpg',
+    '/assets/img/fasadline.jpg',
     '/assets/img/fasad.jpg' // Shu yerda boshqa rasm qo'shishingiz mumkin
   ];
 
@@ -34,7 +34,7 @@ export const Header = () => {
           <p className={styles.header__desc}>{t("aboutBlock.desc")}.</p>
           <p className={styles.header__numbers}>{t("aboutBlock.descTwo")}</p>
         </div>
-        <div className={`${styles.header__image} ${fade ? styles.fadeIn : styles.fadeOut}`}>
+          {/* <div className={`${styles.header__image} ${fade ? styles.fadeIn : styles.fadeOut}`}>
           <Image
             src={images[currentImage]}
             alt='headercont'
@@ -42,7 +42,7 @@ export const Header = () => {
             height={504}
             key={currentImage}
           />
-        </div>
+        </div> */}
       </div>
     </div>
   );

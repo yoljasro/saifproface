@@ -59,7 +59,7 @@ export const Navbar = () => {
         </div>
       </Slide>
       <a href={'tel:+998781139545'} target='_blank'>
-            <button className={styles.navbar__register}> Записаться онлайн</button>
+            <button className={styles.navbar__register}> {t("btn")}</button>
           </a>
           <Lang />
      
