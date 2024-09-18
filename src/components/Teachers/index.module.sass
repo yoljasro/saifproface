@@ -1,56 +1,86 @@
-@import "../../styles/variables"
-@import "../../styles/mixins"
-
 .teachers
+  width: 100%
+  position: relative
+
+  &__title
+    font-family: Mulish-Black
+    font-size: 64px
+    text-align: center
+    color: #ffffff
+    margin-bottom: 20px
+
+    @media (max-width: 769px)
+      font-size: 35px
+
+  .swiper-slide
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 10px
+    box-sizing: border-box
+
+  .swiper-wrapper
+    display: flex
+    gap: 10px // Slayderlar orasida 10px masofa
+
+  &__slide
+    position: relative
+    height: 500px
+    width: 400px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: center
+    box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6)
+    // padding: 10px
+    // border: 1px solid black
+    gap: 5px
+    border-radius: 15px // Border-radius qo'shildi
+    overflow: hidden // Karta ichidagi elementlarning o'zgarishlari
+
+  &__image
     width: 100%
-    // margin-top: 80px
+    height: 100%
+    object-fit: cover
+    border-radius: 15px // Rasmning ham border-radiusi
 
-    &__title
-        font-family: Mulish-Black
-        font-size: 96px
-        text-align: center
-        color: #ffffff
-        // padding-top: 100px
+  &__info
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    position: absolute
+    bottom: 20px
+    left: 50%
+    transform: translateX(-50%)
+    color: white
+    text-align: center
+    padding: 10px
+    border-radius: 10px
+    width: 90%
+    min-height: 80px
+    // background-color: rgba(0, 0, 0, 0.5) // Matn qismi fonini ajratib turish uchun
 
-        @media (max-width: 769px)
-            font-size: 40px
+  &__name
+    font-family: Mulish-Regular
+    font-size: 24px
+    width: 100%
+    max-width: 300px
+    margin: 0 0 10px 0
+    display: -webkit-box
+    -webkit-line-clamp: 2
+    -webkit-box-orient: vertical
+    overflow: hidden
+    text-overflow: ellipsis
+    white-space: normal
+    text-align: center
 
-    &__cards
-        display: flex
-        width: 100%
-        justify-content: center
-        flex-wrap: wrap
-        gap: 25px
-        margin-top: 50px
-        align-content: flex-start
-        align-items: flex-start
+  &__desc
+    font-family: Mulish-Regular
+    font-size: 16px
+    margin: 0
+    text-align: center
 
-        @media (max-width: 769px)
-            flex-direction: column
-            align-content: center
-            align-items: center
-            gap: 20px
-
-    &__card
-        flex: 1 1 calc(50% - 50px)
-        max-width: 550px
-        border-radius: 8px
-        background: #6a994e
-        height: auto
-        display: flex
-        border-radius: 15px 
-        box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1)
-
-        @media (max-width: 769px)
-            width: 90%
-            height: auto
-
-    &__image
-        width: 100%
-        height: auto
-        border-radius: 15px
-        object-fit: contain !important
-        // filter: drop-shadow(5px 5px 10px #000000)
-        @media (max-width: 769px)
-            width: 100%
-            height: auto
+  @media (max-width: 1024px)
+    &__slide
+      height: 400px

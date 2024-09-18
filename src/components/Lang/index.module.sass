@@ -4,51 +4,47 @@
 .lang
     display: flex
     justify-content: center
-    margin-top: 0px
+    align-items: center
+    margin-top: 0
     padding-right: 60px
-    @media (max-width:769px)
+    @media (max-width: 769px)
         margin-left: 50px
 
-    &__select
-        position: relative
-        display: inline-block
-        cursor: pointer
-        transition: transform 0.3s ease 
-        font-family: Mulish-Regular
+.customSelect
+    padding: 10px 15px
+    border-radius: 25px
+    border: none // Borderni olib tashlash
+    background-color: #00acee
+    color: $mainBg
+    font-size: 16px
+    font-family: Mulish-Regular
+    cursor: pointer
+    transition: all 0.3s ease
+    text-align: center // Matnni markazga joylash
+    appearance: none // Brauzer strelkasini yashirish
+    outline: none // Outline ni olib tashlash
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) // Chiroyli shadow qo'shish
+    background-image: url('/path/to/your/arrow-icon.svg') // O'z ikonkangiz
+    background-repeat: no-repeat
+    background-position: right 10px center
+    background-size: 12px
 
-    &__select.animateOut
-        transform: translateY(-20px) 
+    &:hover
+        background-color: lighten(#00acee, 10%) // Hoverda rangni o'zgartirish
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2) // Hover effekti uchun shadow
 
-    &__selected
-        background: #00acee
-        border-radius: 100%
-        color: $mainBg
-        padding: 5px 10px
-        margin-right: 10px
-        transition: background-color 0.1s ease // Animatsiya uchun o'zgartirishlar
+    &:focus
+        outline: none
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1) // Fokusda shadow
 
-    &__options
-        position: absolute
-        top: 100%
-        left: 0
-        background: $black
-        border-radius: 5px
-        padding: 5px
-        display: flex
-        flex-direction: column
-        width: 100px
-        opacity: 0
-        pointer-events: none
-        transition: opacity 0.1s ease // Animatsiya uchun o'zgartirishlar
-        transform: translateY(-20px)
+    // Optionlar uslubi
+    option
+        background-color: #fff
+        color: $black
+        padding: 10px
+        text-align: center // Optionlar ham markazda tursin
+        transition: all 0.3s ease
 
-    &__select:hover .lang__options
-
-    &__options span
-        color: $mainBg
-        padding: 5px
-        cursor: pointer
-        transform: translateY(-20px)
-
-    &__options span:hover
-        background: darken($black, 20%)
+    // Hover va ochilish animatsiyasi
+    option:hover
+        background-color: lighten($black, 20%) // Option hoverda rang o'zgarishi

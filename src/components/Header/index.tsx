@@ -9,7 +9,7 @@ export const Header = () => {
   const [fade, setFade] = useState(true);
 
   const images = [
-    '/assets/img/fasadline.jpg',
+    '/assets/img/.jpg',
     '/assets/img/fasad.jpg' // Shu yerda boshqa rasm qo'shishingiz mumkin
   ];
 
@@ -30,9 +30,9 @@ export const Header = () => {
       <div className={styles.header__container}>
         <div className={styles.header__text}>
           <p className={styles.header__name}>{t("welcome")}</p>
-          <p className={styles.header__desc}>{t("aboutBlock.title")}.</p>
-          <p className={styles.header__desc}>{t("aboutBlock.desc")}.</p>
-          <p className={styles.header__numbers}>{t("aboutBlock.descTwo")}</p>
+          <p className={styles.header__descone}>{t("aboutBlock.title")}</p>
+          <p className={styles.header__desc}>{t("aboutBlock.desc")}</p>
+          {/* <p className={styles.header__numbers}>{t("aboutBlock.descTwo")}</p> */}
         </div>
           {/* <div className={`${styles.header__image} ${fade ? styles.fadeIn : styles.fadeOut}`}>
           <Image

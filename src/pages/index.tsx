@@ -12,6 +12,8 @@ import { Courses } from "@/components/Courses";
 import { Footer } from "@/components/Footer";
 import { Teachers } from "@/components/Teachers";
 import { Prices } from "@/components/Prices";
+import 'swiper/swiper-bundle.css'; // Yangi versiyalar uchun to'g'ri yo'l
+
 import { Learn } from "@/components/Learn";
 
 const inter = Inter({ subsets: ["latin"] });

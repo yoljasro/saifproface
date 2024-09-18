@@ -26,8 +26,9 @@
     "react-slick": "^0.30.2",
     "sass": "^1.77.4",
     "slick-carousel": "^1.8.1",
-    "swiper": "^11.1.4",
-    "three": "^0.165.0"
+    "swiper": "^11.1.14",
+    "three": "^0.165.0",
+    "use-carousel-hook": "^0.2.1"
   },
   "devDependencies": {
     "@types/node": "^20",

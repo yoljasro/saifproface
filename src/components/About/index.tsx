@@ -15,16 +15,15 @@ export const About = () => {
           <Zoom>
             <div className={styles.about__card}>
               <div className={styles.about__cardContent}>
-                <p className={styles.about__desc}>{t("servicesBlock.titleOne")}</p>
+                <p className={styles.about__desc}>{t("servicesBlock.first")}</p>
                 <ul className={styles.about__list}>
-                <li>{t("servicesBlock.first")}</li>
                   <li>{t("servicesBlock.descOne")}</li>
                   <li>{t("servicesBlock.correction")}</li>
                   <li>{t("servicesBlock.hirurgy")}</li>
                   <li>{t("servicesBlock.face")}</li>
                 </ul>
               </div>
-              <Image src={'/assets/img/tooth2.png'} alt='cardone' width={250} height={240} className={styles.about__cardImage} />
+              <Image src={'/assets/img/head.jpg'} alt='cardone' width={250} height={240} className={styles.about__cardImage} />
 
             </div>
           </Zoom>
@@ -42,7 +41,7 @@ export const About = () => {
                 <li>{t("servicesBlock.six")}</li>
                 </ul>
               </div>
-              <Image src={'/assets/img/13.png'} alt='cardone' width={250} height={240} className={styles.about__cardImage} />
+              <Image src={'/assets/img/tet.jpg'} alt='cardone' width={250} height={240} className={styles.about__cardImage} />
 
 
             </div>
