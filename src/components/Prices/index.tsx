@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import styles from './index.module.sass';
 import { useTranslations } from "next-intl";
+import { FaArrowAltCircleLeft } from "react-icons/fa";
+import { FaArrowAltCircleRight } from "react-icons/fa";
 
 export const Prices: React.FC = () => {
   const t = useTranslations();
@@ -66,63 +68,83 @@ export const Prices: React.FC = () => {
       contentDesc: t("advantagesBlock.converDesc"),
       backgroundImage: '/assets/img/j5.jpg'
     },
-    // Add other reviews as necessary
   ];
+  const [contentIndex, setContentIndex] = useState(0);
+  const [reviewIndex, setReviewIndex] = useState(0);
 
-  const [currentIndex, setCurrentIndex] = useState(0);
-
+  // Auto change for reviews
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % reviews.length);
+      setReviewIndex((prevIndex) => (prevIndex + 1) % reviews.length);
     }, 5000); // 5 seconds
 
     return () => clearInterval(interval);
   }, [reviews.length]);
 
-  const review = reviews[currentIndex];
+  // Auto change for content
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setContentIndex((prevIndex) => (prevIndex + 1) % reviews.length);
+    }, 5000); // 5 seconds
+
+    return () => clearInterval(interval);
+  }, [reviews.length]);
+
+  // Handle content change when buttons are clicked
+  const handleNext = () => {
+    setContentIndex((prevIndex) => (prevIndex + 1) % reviews.length);
+  };
+
+  const handlePrev = () => {
+    setContentIndex((prevIndex) => (prevIndex - 1 + reviews.length) % reviews.length);
+  };
+
+  const review = reviews[reviewIndex];
+  const content = reviews[contentIndex];
 
   return (
     <div className={styles.container} id='advantage'>
-   
-      
+
       <motion.div
         className={styles.container__content}
-        style={{ backgroundImage: `url(${review.backgroundImage})` }}
+        style={{ backgroundImage: `url(${content.backgroundImage})` }}
         initial={{ opacity: 0, x: 100 }} // Start from right
         animate={{ opacity: 1, x: 0 }} // Animate to center
         exit={{ opacity: 0, x: -100 }} // Exit to left
         transition={{ duration: 0.5 }}
       >
-           <div className={styles.container__static}>
-        {/* These elements won't be affected by animation */}
-        <p className={styles.title}>{t("advantagesBlock.title")}</p>
-      </div>
+        <div className={styles.sliderControls}>
+        <FaArrowAltCircleRight className={styles.leftButton} onClick={handlePrev} />
+
+          <FaArrowAltCircleLeft className={styles.rightButton} onClick={handleNext}/>
+          
+        </div>
+        <div className={styles.container__static}>
+          <p className={styles.title}>{t("advantagesBlock.title")}</p>
+        </div>
         <motion.div
-          key={currentIndex} // Key added for proper animation
-          initial={{ opacity: 0, x: 100 }} // Start from right
-          animate={{ opacity: 1, x: 0 }} // Animate to center
-          exit={{ opacity: 0, x: -100 }} // Exit to left
+          key={contentIndex} // Use contentIndex for animating content
+          initial={{ opacity: 0, x: 100 }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: -100 }}
           transition={{ duration: 0.5 }}
         >
-          {/* Only animated content */}
-          <p className={styles.container__name}>{review.contentTitle}</p>
-          <p className={styles.container__desc}>{review.contentDesc}</p>
+          <p className={styles.container__name}>{content.contentTitle}</p>
+          <p className={styles.container__desc}>{content.contentDesc}</p>
         </motion.div>
       </motion.div>
 
       <div className={styles.container__review}>
         <div className={styles.container__static}>
-          {/* Static title won't change */}
           <p className={styles.container__revtitle}>{t("advantagesBlock.person")}</p>
         </div>
         <motion.div
-          key={currentIndex} // Key added for proper animation
-          initial={{ opacity: 0, x: 100 }} // Start from right
-          animate={{ opacity: 1, x: 0 }} // Animate to center
-          exit={{ opacity: 0, x: -100 }} // Exit to left
+          key={reviewIndex} // Use reviewIndex for animating review
+          initial={{ opacity: 0, x: 100 }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: -100 }}
           transition={{ duration: 0.5 }}
         >
-          {/* Animated person review details */}
           <p className={styles.container__person}>{review.name}</p>
           <p className={styles.container__date}>{review.date}</p>
           <p className={styles.container__text}>{review.text}</p>

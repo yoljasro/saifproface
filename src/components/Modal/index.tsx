@@ -11,6 +11,9 @@ interface Teacher {
   biografy?: string;
   teach? : string;
   skill?: string;
+  titleone?: string;
+  titletwo?: string;
+  titlethree?: string;
 }
 
 interface ModalProps {
@@ -26,11 +29,11 @@ const Modal: React.FC<ModalProps> = ({ onClose, teacher }) => {
         <div className={styles.info}>
         <p className={styles.title}>{teacher.title}</p>
         <p className={styles.desc}>{teacher.description}</p>
-        <p className={styles.biografy}>Биография </p>
+        <p className={styles.biografy}>{teacher.titleone} </p>
         <p className={styles.bio}>{teacher.biografy}</p>
-        <p className={styles.biografytwo}>Образование</p>
+        <p className={styles.biografytwo}>{teacher.titletwo}</p>
         <p className={styles.biotwo}>{teacher.teach}</p>
-        <p className={styles.biografythree}>Стаж работы</p>
+        <p className={styles.biografythree}>{teacher.titlethree}</p>
         <p className={styles.biothree}>{teacher.skill}</p>
         </div>
       
