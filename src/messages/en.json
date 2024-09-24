@@ -69,11 +69,13 @@
     "weeksix": "Saturday",
     "weekseven": "Sunday",
     "oursocial": "We are on social networks",
-    "adress": "Address: Tashkent city, Yashnabad district, Alimkent 1-tor, 32",
+    "adress": "Tashkent city, Yashnabad district, Alimkent 1-tor, 32",
     "dayoff": "Day off",
     "callme": "Call us:",
     "writeme": "Write to us:",
-    "adressme": "Our address is:"
+    "adressme": "Our address is:",
+    "push" : "Click on the map to build a route:",
+    "person": "Reviews"
   },
   "whyChooseUsBlock": {
     "title": "Why Choose Saif ProFace",

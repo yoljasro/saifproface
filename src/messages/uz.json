@@ -20,7 +20,7 @@
     "doctortwo" : "Yuz-jag' jarrohi",
     "doctorthree" : "Tibbiyot fanlari nomzodi, yuz-jag' va plastik jarroh",
     "doctorfour" : "Doktor terapevt-ortoped",
-    "doctorfive" : "ortodont"
+    "doctorfive" : "Ortodont"
   },
   "servicesBlock": {
     "title": "Bizning xizmatlarimiz",
@@ -65,16 +65,18 @@
     "weekone": "Dushanba",
     "weektwo": "Seshanba",
     "weekthree": "Chorshanba",
-    "weekfour": "Payshanba",
+    "weekfour": "Payshanba",  
     "weekfive": "Juma",
     "weeksix": "Shanba",
     "weekseven": "Yakshanba",
     "oursocial": "Biz ijtimoiy tarmoqlarda",
-    "adress": "Manzil: Toshkent shahri, Yashnobod tumani, Alimkent 1-tor, 32",
+    "adress": "Toshkent shahri, Yashnobod tumani, Alimkent 1-tor, 32",
     "dayoff": "Dam olish kuni",
     "callme": "Bizga qo'ng'iroq qiling:",
     "writeme": "Bizga yozing:",
-    "adressme": "Bizning manzilimiz:"
+    "adressme": "Bizning manzilimiz:",
+    "push" : "Yo'nalishlarni olish uchun xaritani bosing:",
+    "person" : "Sharhlar"
   },
   "whyChooseUsBlock": {
     "title": "Nima uchun Saif ProFace ni tanlaysiz",

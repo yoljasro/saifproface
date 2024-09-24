@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import styles from './index.module.sass';
-import Image from 'next/image';
 import { useTranslations } from "next-intl";
 
 export const Header = () => {
@@ -10,7 +9,7 @@ export const Header = () => {
 
   const images = [
     '/assets/img/.jpg',
-    '/assets/img/fasad.jpg' // Shu yerda boshqa rasm qo'shishingiz mumkin
+    '/assets/img/fasad.jpg'
   ];
 
   useEffect(() => {
@@ -19,8 +18,8 @@ export const Header = () => {
       setTimeout(() => {
         setCurrentImage((prevImage) => (prevImage + 1) % images.length);
         setFade(true);
-      }, 500); // fade-out effekti 500ms davom etadi
-    }, 4000); // 4 soniyada bir marta rasm almashtiriladi
+      }, 500); // fade-out effect for 500ms
+    }, 4000); // image changes every 4 seconds
 
     return () => clearInterval(interval);
   }, [images.length]);
@@ -28,21 +27,22 @@ export const Header = () => {
   return (
     <div className={styles.header} id='aboutus'>
       <div className={styles.header__container}>
+        {/* Video Background */}
+        <video
+          className={styles.header__video}
+          autoPlay
+          loop
+          muted
+          playsInline
+        >
+          <source src="/assets/img/saifvideo.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
         <div className={styles.header__text}>
           <p className={styles.header__name}>{t("welcome")}</p>
           <p className={styles.header__descone}>{t("aboutBlock.title")}</p>
           <p className={styles.header__desc}>{t("aboutBlock.desc")}</p>
-          {/* <p className={styles.header__numbers}>{t("aboutBlock.descTwo")}</p> */}
         </div>
-          {/* <div className={`${styles.header__image} ${fade ? styles.fadeIn : styles.fadeOut}`}>
-          <Image
-            src={images[currentImage]}
-            alt='headercont'
-            width={700}
-            height={504}
-            key={currentImage}
-          />
-        </div> */}
       </div>
     </div>
   );

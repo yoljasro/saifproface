@@ -1,117 +1,96 @@
 .container
   width: 100%
   display: flex
-  flex-direction: column
   align-items: center
-  margin-bottom: 100px
-  margin-top: 50px
-  overflow: hidden
+  justify-content: center
+  margin: 100px 0
   position: relative
+  gap: 30px
 
-  &__title
+  &__content
+    width: 100%
+    max-width: 1140px
+    height: 500px
+    padding-left: 60px
+    border-radius: 20px !important
+    background-size: cover
+    background-repeat: no-repeat
+    transition: 1s linear
+
+  &__name
+    color: #444A50
+    font-family: Mulish-Black 
+    font-size: 45px
+    line-height: 40px
+    width: 100%
+    max-width: 100px
+
+  &__desc
+    color: #444A50
+    font-family: Mulish-Regular
+    font-size: 24px
+    width: 100%
+    max-width: 430px
+
+  &__review
+    height: 500px
+    border-radius: 20px
+    width: 100%
+    max-width: 500px
+    background-image: url('/assets/img/bgpre.png')
+    background-repeat: no-repeat
+    background-size: cover
+    padding-left: 40px 
+
+  &__revtitle
+    color: #FFFFFF
+    font-family: Mulish-Regular
+    font-size: 40px
+
+  &__person
     font-family: Mulish-Black
-    font-size: 64px
-    text-align: center
-    color: #ffffff
-    margin-bottom: 20px
+    font-size: 30px
 
-    @media (max-width: 769px)
-      font-size: 35px
+  &__date
+    font-family: Mulish-Regular
+    font-size: 20px
+    color: #fff
+    position: relative
+    top: -20px
 
-  // Rasmni cardlar ichida burchaklarga yopishishi uchun
-  &::before
-    content: ''
-    position: absolute
-    background: url('/assets/img/pricepatern.png') no-repeat
-    background-size: contain
-    width: 200px
-    height: 200px
-    bottom: 0  // Burchakka yopishib turishi uchun
-    left: 0  // Burchakka yopishib turishi uchun
-    z-index: -1
+  &__text
+    font-family: Mulish-Regular
+    font-size: 24px
+    position: relative
+    top: -15px
+    width: 100%
+    max-width: 400px
 
-  &::after
-    content: ''
-    position: absolute
-    background: url('/assets/img/pricepatern2.png') no-repeat
-    background-size: contain
-    width: 200px
-    height: 200px
-    top: 0  // Burchakka yopishib turishi uchun
-    right: 0  // Burchakka yopishib turishi uchun
-    z-index: -1
+.title
+  font-family: Mulish-Medium
+  font-size: 40px
+  color: #444A50
+  margin-bottom: 20px
+
+  @media (max-width: 769px)
+    font-size: 35px
 
 .swiper
   width: 100%
-  height: 320px
-  border-radius: 8px
+  max-width: 1200px
+  height: auto
+  padding: 40px 0
   display: flex
   justify-content: center
   align-items: center
-  overflow: hidden
-  margin-top: 20px
-  position: relative
 
-.swiperSlide
+.swiperSlideContent
   display: flex
-  flex-direction: column
   justify-content: center
-  align-items: center
-  width: auto
-  max-width: 586px
-  height: 320px
-  border-radius: 8px
-  background: #00acee
-  box-shadow: 0px 4px 10px 0px #00000066
-  color: #FFFFFF
-  position: relative
+  width: 100%
+  background-size: cover
+  background-repeat: no-repeat
 
-  @media (max-width: 769px)
-    width: 80%
-    height: auto
-
-  &::before
-    content: ''
-    position: absolute
-    background: url('/assets/img/pricepatern.png') no-repeat
-    background-size: contain
-    width: 100px  
-    height: 60px  
-    bottom: 0  // Burchakka yopishib turishi uchun
-    left: 30px    // Burchakka yopishib turishi uchun
-    z-index: -1
-
-  &::after
-    content: ''
-    position: absolute
-    background: url('/assets/img/pricepatern2.png') no-repeat
-    background-size: contain
-    width: 55px  
-    height: 100px  
-    top: 15px  // Burchakka yopishib turishi uchun
-    right: 0  // Burchakka yopishib turishi uchun
-    z-index: -1
-
-  &__title
-    font-family: Mulish-Black
-    font-size: 24px
-    text-align: center
-    color: #FFFFFF
-
-  &__lesson
-    font-family: Mulish-Regular
-    width: 90%
-    font-size: 16px
-    text-align: center
-
-  &__btn
-    width: 264px
-    height: 42px
-    margin-top: 50px
-    border-radius: 8px
-    border: none
-    font-family: Roboto-Regular
-    font-size: 20px
-    color: #0F2621
-    background: #ffff3f
-    cursor: pointer
+  & > div
+    flex: 1 1 45%
+    margin: 0 10px

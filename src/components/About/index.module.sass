@@ -1,11 +1,32 @@
 .about
     width: 100%
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-content: center
+    align-items: center
     padding: 40px 0
 
+    &__container
+        width: 94%
+        background: #444A50
+        border-radius: 20px
+        padding-bottom: 50px
+
+    &__imageContainer
+        position: relative
+        width: 260px
+        height: 280px
+        overflow: hidden
+        display: flex
+        align-items: center
+        justify-content: center
+        border-radius: 15px // Make the border-radius permanent
+
     &__title
-        font-family: Mulish-Black
+        font-family: Mulish-Medium
         font-size: 64px
-        color: #FFFFFF
+        color: #fff
         text-align: center
 
         @media (max-width: 769px)
@@ -13,12 +34,10 @@
 
     &__cards
         display: flex
-        gap: 40px
+        gap: 25px
         justify-content: center
         flex-wrap: wrap
         width: 100%
-        padding: 0px 5px 0px 5px
-        // padding-right: 10px
 
         @media (max-width: 769px)
             flex-direction: column
@@ -29,51 +48,38 @@
         width: 100%
         max-width: 540px
         height: 280px
-        border-radius: 8px
+        border-radius: 20px
         overflow: hidden
         display: flex
         background: #FFFFFF
         box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2)
-        transition: transform 0.4s ease, box-shadow 0.3s ease
+        transition: transform 0.4s ease, box-shadow 0.3s linear
         cursor: pointer
-        padding: 10px
+        padding: 15px
         gap: 10px
-        flex-direction: row // Text va rasmni yonma-yon joylashtirish
+        flex-direction: row
 
         &:hover
-            transform: scale(1.05)
+            transform: scale(1.02)
             box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4)
 
-    &__cardImage
+    .about__cardImage
         object-fit: cover
-        border-radius: 8px
-        transition: opacity 0.3s ease, transform 0.4s ease
-        z-index: 1
-        margin-top: 20px
-        margin-right: 15px
-
-        &:hover
-            opacity: 0.9
-            transform: scale(1.05)
+        width: 100%
+        height: 100%
+        border-radius: 15px // Ensure images keep 15px border-radius
 
     &__cardContent
-        width: 60% // Matnning o'lchamini sozlash
+        width: 60%
         text-align: left
-        color: #000000 // Matn rangi qora
-
-    &__cardTitle
-        font-family: Mulish-Regular
-        font-size: 24px
-
-        @media (max-width: 769px)
-            font-size: 20px
+        color: #000000
 
     &__desc
         font-family: Mulish-Medium
         font-size: 20px
         padding-left: 20px
         color: #000000
-        display: block // Doimo ko'rinadigan qilish
+        display: block
         transition: opacity 0.5s ease
 
         @media (max-width: 769px)
@@ -94,7 +100,7 @@
         flex-direction: column
         gap: 3px
         padding-top: 0px
-    
+
     &__listthree
         font-size: 13px
         font-family: Mulish-Regular
@@ -102,14 +108,3 @@
         flex-direction: column
         gap: 15px
         padding-top: 15px
-
-    &__desclast
-        font-family: Mulish-Regular
-        font-size: 16px
-        padding-left: 20px
-        color: #000000
-        display: block // Doimo ko'rinadigan qilish
-        transition: opacity 0.5s ease
-
-        @media (max-width: 769px)
-            font-size: 14px

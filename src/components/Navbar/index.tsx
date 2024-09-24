@@ -6,6 +6,7 @@ import { useTranslations } from "next-intl";
 import { Link } from "react-scroll";
 import { Zoom, Fade, Slide } from "react-reveal";
 import { useRouter } from 'next/router';
+import { FaPhoneAlt } from 'react-icons/fa'; // react-icons dan telefon ikonasini import qilish
 
 export const Navbar = () => {
   const t = useTranslations();
@@ -63,13 +64,20 @@ export const Navbar = () => {
               </ul>
             </div>
           </Fade>
-          
+
           <button className={styles.navbar__toggle} onClick={toggleMenu}>
             {menuOpen ? '✕' : '☰'}
           </button>
-          <a href={'tel:+998781139545'} target='_blank' className={styles.navbar__number}>
-            +998884307000
-          </a>  
+          <a href={'tel:+998781139545'}  className={styles.navbar__number}>
+            <Image
+              style={{ marginRight: '15px' }}
+              src={'/assets/img/phoneicon.png'}
+              width={35}
+              height={35}
+              alt='phoneicon'
+            />
+            +998 (78) 113-95-45
+          </a>
         </div>
       </Slide>
       <a href={'tel:+998884307000'}>

@@ -4,14 +4,14 @@ import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.sass";
 import { Navbar } from "@/components/Navbar";
 import { Header } from "@/components/Header";
-import { About } from "@/components/About";
+import About  from "@/components/About";
 import { Reviews } from "@/components/Reviews";
 import YandexMap from "@/components/Map";
 import type { NextPage, GetStaticProps } from "next";
 import { Courses } from "@/components/Courses";
 import { Footer } from "@/components/Footer";
 import { Teachers } from "@/components/Teachers";
-import { Prices } from "@/components/Prices";
+import {Prices}  from "@/components/Prices";
 import 'swiper/swiper-bundle.css'; // Yangi versiyalar uchun to'g'ri yo'l
 
 import { Learn } from "@/components/Learn";

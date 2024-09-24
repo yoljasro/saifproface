@@ -1,112 +1,97 @@
 @import "../../styles/variables"
 @import "../../styles/mixins"
 
+.container
+    width: 90%
+    height: 670px
+    background-color: #444A50
+    border-radius: 30px
+    display: flex
+    justify-content: space-between // Ikkita blokni yonma-yon joylashtirish
+    align-items: center
+    margin: 0 auto
+    padding: 20px
+    margin-bottom: 40px
+
+    // For small devices
+    @media (max-width: 768px)
+        flex-direction: column
+        height: auto
+        padding: 10px
+
 .location
     width: 100%
-    // margin-top: 150px
-    position: relative
-    top: 100px
+    display: flex // Ikkita blokni yonma-yon joylashtirish uchun flex ishlatish
+    justify-content: space-between
+    border-radius: 20px !important
 
-    &__info
-        display: flex
-        justify-content: center
-        z-index: 0
-
-    &__adress
-        display: flex
-        justify-content: center
-        flex-wrap: wrap
+    // For small devices, stack items vertically
+    @media (max-width: 768px)
+        flex-direction: column
         align-items: center
-        align-content: center
 
-    &__card
+.mapContainer
+    width: 65% // Birinchi blokning kengligini belgilash
+    padding: 20px // Ichki bo'shliq berish
+    border-radius: 20px !important
+    overflow: hidden // Yangi o'zgarish
+
+
+    // Make the map responsive
+    @media (max-width: 768px)
         width: 100%
-        max-width: 450px
-        height: 255px
-        background: #FFFFFF
-        filter: drop-shadow(0px 2px 4px #00215b54)
-        border: none
-        z-index: 3 !important
-        top: -200px
-        position: relative
+        padding: 10px
 
-        @media (max-width:769px)
-            max-width: 95%
-            top: -80px
-            margin-bottom: 100px
+.textBlock
+    margin-bottom: 20px // Bloklar o'rtasidagi bo'shliq
 
-    &__cardLine
+.imageContainer
+    width: 30% // Ikkinchi blokning kengligini belgilash
+    display: flex
+    justify-content: center
+    align-items: center
+
+    & img
+        object-fit: cover
+
+    // Adjust image container size for smaller screens
+    @media (max-width: 768px)
         width: 100%
-        height: 7px
-        background: #B4C634
+        margin-top: 20px
 
-    &__cardTitle
-        font-size: 14px
-        color: #515755
-        font-family: Roboto-Regular
-        padding-left: 50px
-        padding-top: 69px
+.imgback
+    position: relative
+    top: -25px
+    right: 20px
 
-    &__cardDesc
+.name
+    font-family: Mulish-Black
+    font-size: 47px
+    color: #ffffff
+
+    // Font size adjustment for smaller screens
+    @media (max-width: 768px)
+        font-size: 36px
+
+.desc
+    font-family: Mulish-Medium
+    font-size: 32px
+    color: #ffffff
+    padding-bottom: 6px
+    position: relative
+    top: -15px
+    width: 100%
+    max-width: 480px
+
+    // Font size adjustment for smaller screens
+    @media (max-width: 768px)
         font-size: 24px
-        color: #515755
-        font-family: Roboto-Regular
-        padding-left: 50px
-        padding-top: 30px
 
-    &__phone
-        margin-left: 60px
-        position: relative
-        top: -130px
-        display: flex
-        gap: 20px
+.text
+    font-family: Mulish-Regular
+    font-size: 23px
+    color: #ffffff
 
-        @media (max-width:769px)
-            margin-left: 0
-            margin-bottom: 35px
-
-    &__companyPhone
-        font-size: 14px
-        color: #B4C634
-        font-family: Roboto-Regular
-        margin-top: -11px
-        padding-bottom: 15px
-
-    &__number
-        font-size: 22px
-        color: #B4C634
-        font-family: Roboto-Regular
-
-        @media (max-width:769px)
-            font-size: 20px
-            color: #B4C634
-            font-family: Roboto-Regular
-
-    &__email
-        margin-left: 27px
-        position: relative
-        top: -130px
-        display: flex
-        gap: 20px
-        background: green
-
-
-    &__companyEmail
+    // Font size adjustment for smaller screens
+    @media (max-width: 768px)
         font-size: 20px
-        color: #B4C634
-        font-family: Roboto-Regular
-        font-size: 20px
-        color: #B4C634
-        font-family: Roboto-Regular
-        margin-top: -11px
-        padding-bottom: 15px
-
-    &__emailName
-        font-size: 20px
-        color: #B4C634
-        font-family: Roboto-Regular
-
-        @media (max-width:769px)
-            font-size: 20px
-            color: #B4C634
-            font-family: Roboto-Regular

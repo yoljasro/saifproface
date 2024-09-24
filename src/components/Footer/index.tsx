@@ -33,8 +33,8 @@ export const Footer = () => {
   return (
     <div className={styles.footer}>
       <div className={styles.footer__left}>
-        <Image src={getFooterLogoSrc()} alt='footerlogo' width={300} height={50} className={styles.footer__logo} />
-        <p className={styles.footer__liner}> © 2024 SAIF PROFACE <br /> {t("advantagesBlock.footerone")}</p>
+        <Image src={getFooterLogoSrc()} alt='footerlogo' width={400} height={55} className={styles.footer__logo} />
+        <p className={styles.footer__liner}> © 2024 SAIF PROFACE  {t("advantagesBlock.footerone")}</p>
       </div>
 
       <div className={styles.footer__center}>
@@ -56,13 +56,13 @@ export const Footer = () => {
 
       <div className={styles.footer__work}>
         <Fade bottom cascade>
-          <p className={styles.footer__menu}>{t("advantagesBlock.weekone")} : <span className={styles.footer__span}> 08:00-18:00</span> </p>
-          <p className={styles.footer__menu}>{t("advantagesBlock.weektwo")} :  <span className={styles.footer__span}> 08:00-18:00</span> </p>
-          <p className={styles.footer__menu}>{t("advantagesBlock.weekthree")} :   <span className={styles.footer__span}> 08:00-18:00</span>  </p>
-          <p className={styles.footer__menu}>{t("advantagesBlock.weekfour")} :   <span className={styles.footer__span}> 08:00-18:00</span></p>
-          <p className={styles.footer__menu}>{t("advantagesBlock.weekfive")} :   <span className={styles.footer__span}> 08:00-18:00</span></p>
-          <p className={styles.footer__menu}>{t("advantagesBlock.weeksix")} :   <span className={styles.footer__span}> 08:00-18:00</span></p>
-          <p className={styles.footer__menu}>{t("advantagesBlock.weekseven")} :   <span className={styles.footer__span}> {t("advantagesBlock.dayoff")}</span></p>
+          <p className={styles.footer__menutwo}>{t("advantagesBlock.weekone")} : <span className={styles.footer__span}> 08:00-18:00</span> </p>
+          <p className={styles.footer__menutwo}>{t("advantagesBlock.weektwo")} :  <span className={styles.footer__span}> 08:00-18:00</span> </p>
+          <p className={styles.footer__menutwo}>{t("advantagesBlock.weekthree")} :   <span className={styles.footer__span}> 08:00-18:00</span>  </p>
+          <p className={styles.footer__menutwo}>{t("advantagesBlock.weekfour")} :   <span className={styles.footer__span}> 08:00-18:00</span></p>
+          <p className={styles.footer__menutwo}>{t("advantagesBlock.weekfive")} :   <span className={styles.footer__span}> 08:00-18:00</span></p>
+          <p className={styles.footer__menutwo}>{t("advantagesBlock.weeksix")} :   <span className={styles.footer__span}> 08:00-18:00</span></p>
+          <p className={styles.footer__menutwo}>{t("advantagesBlock.weekseven")} :   <span className={styles.footer__span}> {t("advantagesBlock.dayoff")}</span></p>
         </Fade>
       </div>
 
@@ -78,9 +78,12 @@ export const Footer = () => {
             </Link>
             <Link href={"https://t.me/saifproface"} target='_blank'>
               <FaTelegram className={styles.footer__icon} width={40} height={40} />
-            </Link>
+            </Link> 
           </Rotate>
         </div>
+        <Link href={'https://mainstream.global'} target='_blank'>
+          <p className={styles.footer__created}> Разработано в: <Image className={styles.footer__main} src={'/assets/img/mainstream.png'} alt='logo' width={170} height={12}/> </p>
+          </Link>
       </div>
       <div className={styles.footer__right}>
         <div className={styles.footer__contact}>
@@ -96,12 +99,12 @@ export const Footer = () => {
           </ul>
         </div>
 
-        <div className={styles.footer__contact}>
+        <div className={styles.footer__contactold}>
           <ul className={styles.footer__context}>
             <FaEnvelope className={styles.footer__iconic} />
             <div>
               <li>{t("advantagesBlock.writeme")}</li>
-              <li>email@gmail.com</li>
+              <li>saifproface@gmail.com</li>
             </div>
           </ul>
         </div>

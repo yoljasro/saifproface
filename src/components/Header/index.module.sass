@@ -7,26 +7,19 @@
   align-items: center
   justify-content: center
   padding: 0px 0
-
-  // background-color: #afa7a7c2
-  color: white
+  // color: white
 
   @media (max-width: 769px)
     padding: 30px 20px
 
   &__container
-    background-image: url('/assets/img/zdaniyaimg.jpg')
-    background-repeat: no-repeat
-    background-size: cover
     display: flex
     align-items: center
     justify-content: space-between
     width: 90%
     padding: 40px
-    // background: #00acee
     border-radius: 20px
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2)
-    overflow: hidden
+    // box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2)
     margin-top: 50px
     position: relative
     overflow: hidden
@@ -35,10 +28,22 @@
       flex-direction: column
       padding: 20px
 
+  &__video
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    object-fit: cover
+    z-index: 0  // Video to be behind text
+    // opacity: 0.8 // Slight transparency for visibility of text
+
   &__text
     max-width: 700px
     text-align: left
     padding-right: 30px
+    position: relative
+    z-index: 1  // Text should appear above video
 
     @media (max-width: 769px)
       text-align: center
@@ -47,6 +52,8 @@
 
   &__name
     font-size: 48px
+    width: 100%
+    max-width: 600px
     font-family: Mulish-Black
     margin-bottom: 20px
     transform: translateY(0)
@@ -67,24 +74,6 @@
     line-height: 1.5
     margin-bottom: 20px
     font-family: Mulish-Regular
-
-  &__numbers
-    font-size: 24px
-    font-family: Mulish-Regular
-    padding-top: 20px
-
-  &__image
-    max-width: 800px
-    position: absolute
-    right: 80px
-    height: 100%
-    top: 60px
-
-    img
-      object-fit: cover
-      height: 80%
-      border-radius: 15px
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2)
 
   .fadeIn
     animation: fadeIn 0.5s forwards
