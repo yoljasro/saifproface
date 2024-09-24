@@ -68,7 +68,11 @@ export const Navbar = () => {
           <button className={styles.navbar__toggle} onClick={toggleMenu}>
             {menuOpen ? '✕' : '☰'}
           </button>
-          <a href={'tel:+998781139545'}  className={styles.navbar__number}>
+          <a
+            href={'tel:+998781139545'}
+            className={styles.navbar__number}
+            style={{ left: router.locale === 'uz' || router.locale === 'kl' ? '150px' : '250px' }}
+          >
             <Image
               style={{ marginRight: '15px' }}
               src={'/assets/img/phoneicon.png'}
@@ -81,7 +85,7 @@ export const Navbar = () => {
         </div>
       </Slide>
       <a href={'tel:+998884307000'}>
-        <button className={styles.navbar__register}>{t("btn")}</button>
+        <button  style={{ marginLeft: router.locale === 'uz' || router.locale === 'kl' ? '150px' : '200px' }} className={styles.navbar__register}>{t("btn")}</button>
       </a>
       <Lang />
     </div>
