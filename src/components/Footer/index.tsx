@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './index.module.sass';
 import Image from 'next/image';
 import { Zoom, Fade, Rotate } from "react-reveal";
@@ -11,6 +11,7 @@ import { useTranslations } from "next-intl";
 import { useRouter } from 'next/router'; // Import useRouter hook
 
 export const Footer = () => {
+  const [imageSrc, setImageSrc] = useState('/assets/img/whitelogomain.png');
   const t = useTranslations();
   const router = useRouter(); // Get current locale
 
@@ -82,7 +83,8 @@ export const Footer = () => {
           </Rotate>
         </div>
         <Link href={'https://mainstream.global'} target='_blank'>
-          <p className={styles.footer__created}> Разработано в: <Image className={styles.footer__main} src={'/assets/img/mainstream.png'} alt='logo' width={170} height={12}/> </p>
+          <p className={styles.footer__created}> Разработано в:  </p>
+          <div className={styles.footer__main}></div>
           </Link>
       </div>
       <div className={styles.footer__right}>
