@@ -18,6 +18,8 @@
         flex-direction: column
         height: auto
         padding: 10px
+        border-radius: 0px 
+        width: 100%
 
 .location
     width: 100%
@@ -35,12 +37,26 @@
     padding: 20px // Ichki bo'shliq berish
     border-radius: 20px !important
     overflow: hidden // Yangi o'zgarish
-
+    @media (max-width:1500px)
+        width: 450px !important
+        margin-right: 40px
+        height: 250px
+        border-radius: 20px !important
+        border-radius: none  !important
+        overflow: hidden 
+        // overflow: hidden
 
     // Make the map responsive
     @media (max-width: 768px)
-        width: 100%
-        padding: 10px
+        width: 400px
+        justify-content: center
+        align-content: center
+        align-items: center
+        // border-radius: 0px !important
+        // overflow: hidden
+        // border-radius: 20px
+        // padding: 10px
+        margin-right: 20px
 
 .textBlock
     margin-bottom: 20px // Bloklar o'rtasidagi bo'shliq
@@ -63,15 +79,31 @@
     position: relative
     top: -25px
     right: 20px
+    @media (max-width:1500px)
+        top: 0px
+        height: 700px
+        width: 800px
+    // object-fit: cover
+
+    @media (max-width:769px)
+        object-fit: auto
+        width: 90%
+        height: 400px
+        padding-left: 20px
+        // border-radius: 20px !important
 
 .name
     font-family: Mulish-Black
     font-size: 47px
     color: #ffffff
+    @media (max-width:769px)
+        font-size: 32px
+        padding-left: 10px
+        // text-align: center
 
     // Font size adjustment for smaller screens
     @media (max-width: 768px)
-        font-size: 36px
+        font-size: 32px
 
 .desc
     font-family: Mulish-Medium
@@ -79,13 +111,15 @@
     color: #ffffff
     padding-bottom: 6px
     position: relative
-    top: -15px
+    top: -15pxw
     width: 100%
     max-width: 480px
 
     // Font size adjustment for smaller screens
     @media (max-width: 768px)
-        font-size: 24px
+        font-size: 20px
+        padding-left: 10px
+        text-align: left
 
 .text
     font-family: Mulish-Regular
@@ -94,4 +128,5 @@
 
     // Font size adjustment for smaller screens
     @media (max-width: 768px)
-        font-size: 20px
+        font-size: 17px
+        padding-left: 10px

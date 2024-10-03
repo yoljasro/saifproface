@@ -21,7 +21,7 @@ type Location = {
 type Place = {
     location: Location;
     name: string;
-    info: string;
+    info: string;   
 };
 
 type MapProps = {};

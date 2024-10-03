@@ -2,11 +2,14 @@ import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import styles from './index.module.sass';
 import { useTranslations } from "next-intl";
+import Image from 'next/image';
 import { FaArrowAltCircleLeft } from "react-icons/fa";
 import { FaArrowAltCircleRight } from "react-icons/fa";
 
 export const Prices: React.FC = () => {
   const t = useTranslations();
+  const [isHovered, setIsHovered] = useState({ left: false, right: false });
+
 
   const reviews = [
     {
@@ -114,9 +117,27 @@ export const Prices: React.FC = () => {
         transition={{ duration: 0.5 }}
       >
         <div className={styles.sliderControls}>
-        <FaArrowAltCircleRight className={styles.leftButton} onClick={handlePrev} />
+        <Image
+        src={isHovered.left ? '/assets/img/1-1.svg' : '/assets/img/1.svg'}
+        alt="arrow"
+        width={45}
+        height={45}
+        className={styles.leftButton}
+        onClick={handlePrev}
+        onMouseEnter={() => setIsHovered({ ...isHovered, left: true })}
+        onMouseLeave={() => setIsHovered({ ...isHovered, left: false })}
+      />
 
-          <FaArrowAltCircleLeft className={styles.rightButton} onClick={handleNext}/>
+      <Image
+        src={isHovered.right ? '/assets/img/2-1.svg' : '/assets/img/2.svg'}
+        alt="arrow"
+        width={45}
+        height={45}
+        className={styles.rightButton}
+        onClick={handleNext}
+        onMouseEnter={() => setIsHovered({ ...isHovered, right: true })}
+        onMouseLeave={() => setIsHovered({ ...isHovered, right: false })}
+      />
           
         </div>
         <div className={styles.container__static}>

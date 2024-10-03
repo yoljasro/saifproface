@@ -12,6 +12,8 @@
         background: #444A50
         border-radius: 20px
         padding-bottom: 50px
+        @media (max-width: 769px)
+            width: 100%
 
     &__imageContainer
         position: relative
@@ -30,15 +32,16 @@
         text-align: center
 
         @media (max-width: 769px)
-            font-size: 40px
+            font-size: 32px
 
     &__cards
         display: flex
         gap: 25px
         justify-content: center
-        flex-wrap: wrap
+        // flex-wrap: wrap
         width: 100%
-
+        @media (max-width:1500px)
+            gap: 15px
         @media (max-width: 769px)
             flex-direction: column
             align-items: center
@@ -58,6 +61,15 @@
         padding: 15px
         gap: 10px
         flex-direction: row
+        // overflow: scroll
+        @media (max-width:1500px)
+            max-width: 380px
+            // height: 
+
+        @media (max-width: 769px)
+            width: 85%
+            padding: 8px
+            gap: 8px
 
         &:hover
             transform: scale(1.02)
@@ -67,6 +79,7 @@
         object-fit: cover
         width: 100%
         height: 100%
+        // position: fixed
         border-radius: 15px // Ensure images keep 15px border-radius
 
     &__cardContent
@@ -81,9 +94,12 @@
         color: #000000
         display: block
         transition: opacity 0.5s ease
+        @media (max-width:1500px)
+            font-size: 16px
 
         @media (max-width: 769px)
             font-size: 16px
+            // padding-left: 0
 
     &__list
         font-size: 13px
@@ -92,6 +108,13 @@
         flex-direction: column
         gap: 8px
         padding-top: 15px
+        @media (max-width:1500px)
+            font-size: 12px
+
+        @media (max-width: 769px)
+            list-style: none
+            font-size: 11px
+            padding-left: 10px
 
     &__listtwo
         font-size: 13px
@@ -100,6 +123,12 @@
         flex-direction: column
         gap: 3px
         padding-top: 0px
+        
+        @media (max-width: 769px)
+            font-size: 10px
+            // padding-top: -20px
+            padding-left: 10px
+            list-style: none
 
     &__listthree
         font-size: 13px
@@ -108,3 +137,7 @@
         flex-direction: column
         gap: 15px
         padding-top: 15px
+        @media (max-width: 769px)
+            font-size: 11px
+            padding-left: 10px
+            list-style: none

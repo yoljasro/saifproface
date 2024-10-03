@@ -11,6 +11,16 @@
   box-sizing: border-box
   position: relative
   overflow: hidden
+  @media (max-width:769px)
+    flex-direction: column
+    align-content: center
+    padding: 0
+    height: auto
+    align-items: center
+    justify-content: center
+    align-items: left
+    align-content: left
+    text-align: left
 
 .footer__left, .footer__center, .footer__right
   flex: 1
@@ -31,6 +41,8 @@
   margin-top: 30px
   position: relative
   right: 200px
+  @media (max-width:769px)
+    right: 0
 
 .footer__socials
   display: flex
@@ -40,6 +52,8 @@
   top: 7px
   right: 50px
   margin-top: 15px
+  @media (max-width:769px)
+    right: 0
   // margin-top: -83px
 
 .footer__liner
@@ -50,13 +64,25 @@
   margin-top: 50px
   position: relative
   left: 16px
-  // margin-top: -65px
+  @media (max-width:769px)
+    left: 0
+    text-align: center
+    width: 100%
+    font-size: 13px
+    left: 8px
+    // margin-top: -65px
 
 .footer__logo
   margin-top: 100px
   position: relative
   right: 30px !important
   top: 30px
+  @media (max-width:769px)
+    right: 0 !important
+    width: 100%
+    justify-content: center
+    width: 370px
+    height: 50px
 
 .footer__created
   font-family: Mulish-Regular
@@ -96,6 +122,11 @@
   gap: 20px
   margin-top: 30px
   position: relative
+  @media (max-width:769px)
+    gap: 10px
+    margin-top: -20px
+    text-align: center
+    align-items: left
   // right: 100px
 
 .footer__span
@@ -139,6 +170,8 @@
 .footer__logo
   position: relative
   left: -70px
+  @media (max-width:769px)
+    left: 0
 
 .footer__social
   display: flex
@@ -208,6 +241,8 @@
   position: relative
   margin: 0 15px
   left: 120px
+  @media (max-width:769px)
+    left: 0
   // padding-left: 150px
 
 .footer__first

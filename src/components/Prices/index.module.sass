@@ -6,6 +6,11 @@
   margin: 100px 0
   position: relative
   gap: 30px
+  @media (max-width:769px)
+    flex-direction: column
+  @media (max-width:1500px)
+    gap: 25px
+    padding: 0px 20px 0px 20px
 
   &__content
     width: 100%
@@ -15,16 +20,21 @@
     border-radius: 20px !important
     background-size: cover
     background-repeat: no-repeat
-    transition: 1s linear
+    transition: 0.5s linear
     position: relative
+    @media (max-width:769px)
+      max-width: 90%
+      background-size: cover
+      background-position: center
+      height: 380px
 
     .sliderControls
       display: flex
       justify-content: center // Tugmalarni markazga joylashtirish
-      gap: 30px // Tugmalar orasidagi masofa
+      gap: 20px // Tugmalar orasidagi masofa
       position: absolute
       bottom: 20px // Tugmalarni pastda joylashgan holati
-      left: 80px // Tugmalarni o'ngga joylashtirish
+      left: 90px // Tugmalarni o'ngga joylashtirish
       transform: translateX(-50%) // Tugmalarni markazga moslashtirish
 
       button
@@ -52,6 +62,8 @@
     max-width: 300px
     position: relative
     top: -10px
+    @media (max-width:769px)
+      font-size: 30px
 
   &__desc
     color: #444A50
@@ -62,6 +74,8 @@
     position: relative
     top: -30px
     margin-bottom: 20px // Tugmalar uchun joy
+    @media (max-width:769px)
+      font-size: 20px
 
   &__review
     height: 500px
@@ -73,15 +87,38 @@
     background-size: cover
     padding: 20px
     position: relative
+    @media (max-width:769px)
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-content: center
+      max-width: 100%
+      width: 100%
+      align-items: center
+      height: 380px
+      text-align: center
+      padding: 10px
+    @media (max-width:1500px)
+      margin-right: 20px
 
   &__revtitle
     color: #FFFFFF
     font-family: 'Mulish-Regular'
     font-size: 40px
+    @media (max-width:769px)
+      font-size: 32px
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-content: center
+      align-items: center
 
   &__person
     font-family: 'Mulish-Black'
     font-size: 30px
+    @media (max-width:769px)
+      font-size: 26px
+      text-align: center
 
   &__date
     font-family: 'Mulish-Regular'
@@ -89,6 +126,8 @@
     color: #fff
     position: relative
     top: -20px
+    @media (max-width:769px)
+      font-size: 18px
 
   &__text
     font-family: 'Mulish-Regular'
@@ -97,23 +136,27 @@
     top: -15px
     width: 100%
     max-width: 400px
+    @media (max-width:769px)
+      font-size: 20px
+      text-align: center
 
 .title
   font-family: 'Mulish-Medium'
   font-size: 40px
   color: #444A50
   margin-bottom: 20px
+  @media (max-width:769px)
+    font-size: 32px
+    // text-align: center
 
   @media (max-width: 769px)
     font-size: 35px
 
-.leftButton
+.leftButton, .rightButton
   font-size: 35px
-  color: black
   cursor: pointer
+  transition: transform 0.4s ease, filter 0.4s ease // Animatsiya uchun o'zgarishlar
 
-.rightButton
-  font-size: 35px
-  color: black
-  cursor: pointer
-
+.leftButton:hover, .rightButton:hover
+  transform: scale(1.1) // Kattalashtirish effekti
+  filter: brightness(1.2) // Yorqinlik effekti

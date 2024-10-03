@@ -126,41 +126,59 @@ export const Teachers: React.FC = () => {
     <div className={styles.teachers} id='team'>
       <p className={styles.teachers__title}>{t("contact")}</p>
       <Swiper
-        modules={[Autoplay]}
-        spaceBetween={30}
-        slidesPerView={5}
-        loop={true}
-        autoplay={{
-          delay: 2000,
-          disableOnInteraction: false,
-        }}
-        pagination={{ clickable: false }}
-        navigation={false}
-      >
-        {teachers.map((teacher, index) => (
-          <SwiperSlide key={index} className={styles.teachers__slide}>
-            <Image
-              className={styles.teachers__image}
-              src={teacher.src}
-              alt={`teacher-${index + 1}`}
-              width={400}
-              height={560}
-              layout="responsive"
-              objectFit="cover"
-            />
-            <div className={styles.teachers__info}>
-              <h3 className={styles.teachers__name}>{teacher.title}</h3>
-              <p className={styles.teachers__desc}>{teacher.description}</p>
-              <button
-                className={styles.teachers__seeAll}
-                onClick={() => openModal(teacher)}
-              >
-                Биография
-              </button>
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+  modules={[Autoplay]}
+  spaceBetween={30}
+  slidesPerView={5} // Default ko'rinish uchun
+  loop={true}
+  autoplay={{
+    delay: 2000,
+    disableOnInteraction: false,
+  }}
+  pagination={{ clickable: false }}
+  navigation={false}
+  breakpoints={{
+    // Mobil ekranlar uchun (640px dan kichik bo'lsa)
+    0: {
+      slidesPerView: 1, // Telefon ekrani uchun bitta card ko'rsatiladi
+      spaceBetween: 10, // Kartalar orasidagi bo'shliq
+    },
+    // Planshet ekranlar uchun (640px dan 1024px gacha)
+    640: {
+      slidesPerView: 2, // Planshet ekranida ikkita card ko'rinadi
+      spaceBetween: 20,
+    },
+    // Katta ekranlar uchun (1024px dan katta)
+    1024: {
+      slidesPerView: 5, // Katta ekranlar uchun 5 card
+      spaceBetween: 30,
+    },
+  }}
+>
+  {teachers.map((teacher, index) => (
+    <SwiperSlide key={index} className={styles.teachers__slide}>
+      <Image
+        className={styles.teachers__image}
+        src={teacher.src}
+        alt={`teacher-${index + 1}`}
+        width={400}
+        height={560}
+        layout="responsive"
+        objectFit="cover"
+      />
+      <div className={styles.teachers__info}>
+        <h3 className={styles.teachers__name}>{teacher.title}</h3>
+        <p className={styles.teachers__desc}>{teacher.description}</p>
+        <button
+          className={styles.teachers__seeAll}
+          onClick={() => openModal(teacher)}
+        >
+          Биография
+        </button>
+      </div>
+    </SwiperSlide>
+  ))}
+</Swiper>
+
       {selectedTeacher && <Modal onClose={closeModal} teacher={selectedTeacher} />}
     </div>
   );
