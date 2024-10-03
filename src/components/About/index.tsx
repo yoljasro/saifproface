@@ -81,7 +81,7 @@ export const About = () => {
                     alt="cardone"
                     width={260}
                     height={310}
-                    className={styles.about__cardImage}
+                    className={styles.about__cardImage} 
                   />
                 </motion.div>
               </AnimatePresence>

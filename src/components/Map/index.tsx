@@ -8,10 +8,9 @@ const mapContainerStyle = {
     width: "830px", // Kenglik
     height: "300px",
     borderRadius: "20px", // 20px radius qo'shildi
-    // margin: "0 auto", // Markazda joylashishi uchun
 };
 
-const center = [41.315281, 69.289192];
+const center = [41.315281, 69.289192]; // Xaritadagi markaz
 
 type Location = {
     lat: number;
@@ -27,7 +26,7 @@ type Place = {
 type MapProps = {};
 
 export const YandexMap: FC<MapProps> = () => {
-  const t = useTranslations();
+    const t = useTranslations();
     const [places, setPlaces] = useState<Place[]>([
         {
             name: "Student Union",
@@ -57,9 +56,9 @@ export const YandexMap: FC<MapProps> = () => {
                     </div>
                     <YMaps>
                         <Map
+                        className={styles.maping}
                             defaultState={{ center, zoom: 15 }}
-                            style={{ ...mapContainerStyle, borderRadius: '20px', overflow : "hidden" }} // Yangi o'zgarish
-
+                            style={{ ...mapContainerStyle, borderRadius: '20px', overflow: "hidden" }} // Yangi o'zgarish
                         >
                             {places.map((place, index) => (
                                 <Placemark
@@ -72,7 +71,7 @@ export const YandexMap: FC<MapProps> = () => {
                                     onClick={() => onPlacemarkClick(place)}
                                     options={{
                                         iconLayout: 'default#image',
-                                        iconImageHref: selectedPlace === place ? 'http://maps.yandex.net/i/2x/blue.png' : 'http://maps.yandex.net/i/2x/red.png',
+                                        iconImageHref: 'http://maps.google.com/mapfiles/ms/icons/red-dot.png', // Qizil belgi
                                         iconImageSize: [30, 30],
                                         iconImageOffset: [-15, -15],
                                     }}
@@ -87,7 +86,7 @@ export const YandexMap: FC<MapProps> = () => {
                                     }}
                                     options={{
                                         iconLayout: 'default#image',
-                                        iconImageHref: 'http://maps.yandex.net/i/2x/blue.png',
+                                        iconImageHref: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png',
                                         iconImageSize: [30, 30],
                                         iconImageOffset: [-15, -15],
                                     }}
@@ -99,9 +98,7 @@ export const YandexMap: FC<MapProps> = () => {
                         </Map>
                     </YMaps>
                 </div>
-                {/* <div className={styles.imageContainer}> */}
-                    <Image className={styles.imgback} src={'/assets/img/mapimg.png'} alt='mapimg' width={1070} height={670}/>
-                {/* </div> */}
+                <Image className={styles.imgback} src={'/assets/img/mapimg.png'} alt='mapimg' width={1070} height={670} />
             </div>
         </div>
     );

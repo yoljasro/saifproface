@@ -11,6 +11,8 @@
 
   @media (max-width: 769px)
     padding: 30px 20px
+    margin-top: 25px
+    margin-bottom: 380px
 
   &__container
     display: flex
@@ -28,9 +30,8 @@
       flex-direction: column
       padding: 20px
       width: 100%
-      height: 300px
-      // overflow: 
-
+      height: 450px
+      overflow: visible
 
   &__video
     position: absolute
@@ -63,7 +64,12 @@
     transform: translateY(0)
     transition: transform 0.5s ease-in-out
     @media (max-width:769px)
-      font-size: 32px
+      font-size: 20px
+      position: relative
+      top: -100px
+      color: #444A50
+      // text-align: left
+      max-width: 100%
 
     &:hover
       transform: translateY(-10px)
@@ -75,10 +81,13 @@
     margin-bottom: 20px
     font-family: Mulish-Regular
     @media (max-width:769px)
-      font-size: 18px
+      font-size: 16px
+      position: relative
+      top: 410px
       color: #000000
-      position: absolute
-      bott: 20px
+      padding-top: 10px
+      text-align: left  
+      // position: absolute
 
   &__descone
     font-size: 28px
@@ -86,7 +95,14 @@
     margin-bottom: 20px
     font-family: Mulish-Regular
     @media (max-width:769px)
+      // padding-top: 365px
+      position: relative
+      // text-align: left
+      line-height: 30px
+      top: 420px
+      color: #000000
       font-size: 24px
+      width: 100%
 
   .fadeIn
     animation: fadeIn 0.5s forwards

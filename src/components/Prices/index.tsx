@@ -118,41 +118,43 @@ export const Prices: React.FC = () => {
       >
         <div className={styles.sliderControls}>
         <Image
-        src={isHovered.left ? '/assets/img/1-1.svg' : '/assets/img/1.svg'}
-        alt="arrow"
-        width={45}
-        height={45}
-        className={styles.leftButton}
-        onClick={handlePrev}
-        onMouseEnter={() => setIsHovered({ ...isHovered, left: true })}
-        onMouseLeave={() => setIsHovered({ ...isHovered, left: false })}
-      />
+  src={isHovered.left ? '/assets/img/1-1.svg' : '/assets/img/1.svg'}
+  alt="arrow"
+  width={45}
+  height={45}
+  className={styles.leftButton}
+  onClick={handlePrev}
+  onMouseEnter={() => setIsHovered({ ...isHovered, left: true })}
+  onMouseLeave={() => setIsHovered({ ...isHovered, left: false })}
+/>
 
-      <Image
-        src={isHovered.right ? '/assets/img/2-1.svg' : '/assets/img/2.svg'}
-        alt="arrow"
-        width={45}
-        height={45}
-        className={styles.rightButton}
-        onClick={handleNext}
-        onMouseEnter={() => setIsHovered({ ...isHovered, right: true })}
-        onMouseLeave={() => setIsHovered({ ...isHovered, right: false })}
-      />
+<Image
+  src={isHovered.right ? '/assets/img/2-1.svg' : '/assets/img/2.svg'}
+  alt="arrow"
+  width={45}
+  height={45}
+  className={styles.rightButton}
+  onClick={handleNext}
+  onMouseEnter={() => setIsHovered({ ...isHovered, right: true })}
+  onMouseLeave={() => setIsHovered({ ...isHovered, right: false })}
+/>
+
           
         </div>
         <div className={styles.container__static}>
           <p className={styles.title}>{t("advantagesBlock.title")}</p>
         </div>
         <motion.div
-          key={contentIndex} // Use contentIndex for animating content
-          initial={{ opacity: 0, x: 100 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -100 }}
-          transition={{ duration: 0.5 }}
-        >
-          <p className={styles.container__name}>{content.contentTitle}</p>
-          <p className={styles.container__desc}>{content.contentDesc}</p>
-        </motion.div>
+  key={contentIndex}
+  initial={{ opacity: 0, x: 100 }}
+  animate={{ opacity: 1, x: 0 }}
+  exit={{ opacity: 0, x: -100 }}
+  transition={{ duration: 0.5 }}
+>
+  <p className={styles.container__name}>{content.contentTitle}</p>
+  <p className={styles.container__desc}>{content.contentDesc}</p>
+</motion.div>
+
       </motion.div>
 
       <div className={styles.container__review}>

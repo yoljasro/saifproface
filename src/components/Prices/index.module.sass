@@ -10,7 +10,7 @@
     flex-direction: column
   @media (max-width:1500px)
     gap: 25px
-    padding: 0px 20px 0px 20px
+    padding: 0px 10px 0px 10px
 
   &__content
     width: 100%
@@ -23,19 +23,24 @@
     transition: 0.5s linear
     position: relative
     @media (max-width:769px)
-      max-width: 90%
+      max-width: 85%
       background-size: cover
       background-position: center
-      height: 380px
+      height: 450px
+      margin-right: 20px
+      padding-left: 15px // Telefon ekranida chapdan joy tashlash
+      padding-right: 15px // Telefon ekranida o'ngdan joy tashlash
 
     .sliderControls
       display: flex
-      justify-content: center // Tugmalarni markazga joylashtirish
-      gap: 20px // Tugmalar orasidagi masofa
+      justify-content: center
+      gap: 20px
       position: absolute
-      bottom: 20px // Tugmalarni pastda joylashgan holati
-      left: 90px // Tugmalarni o'ngga joylashtirish
-      transform: translateX(-50%) // Tugmalarni markazga moslashtirish
+      bottom: 20px
+      left: 90px
+      transform: translateX(-50%)
+      @media (max-width:769px)
+        display: none
 
       button
         background-color: rgba(0, 0, 0, 0.3)
@@ -93,11 +98,14 @@
       justify-content: center
       align-content: center
       max-width: 100%
-      width: 100%
+      width: 85%
       align-items: center
-      height: 380px
-      text-align: center
-      padding: 10px
+      height: 450px
+      // text-align: center
+      padding-left: 15px // Telefon ekranida chapdan joy tashlash
+      padding-right: 15px // Telefon ekranida o'ngdan joy tashlash
+      // margin-left: 15px // Telefon ekranida ikki tomondan joy
+
     @media (max-width:1500px)
       margin-right: 20px
 
@@ -105,26 +113,32 @@
     color: #FFFFFF
     font-family: 'Mulish-Regular'
     font-size: 40px
+    padding-left: 20px
     @media (max-width:769px)
       font-size: 32px
       display: flex
       flex-direction: column
-      justify-content: center
-      align-content: center
-      align-items: center
+      padding-left: 0
+      // justify-content: center
+      // align-content: center
+      // align-items: center
 
   &__person
     font-family: 'Mulish-Black'
     font-size: 30px
+    padding-left: 20px
+
     @media (max-width:769px)
       font-size: 26px
-      text-align: center
+      // padding-left: 0
+      // text-align: center
 
   &__date
     font-family: 'Mulish-Regular'
     font-size: 20px
     color: #fff
     position: relative
+    padding-left: 20px
     top: -20px
     @media (max-width:769px)
       font-size: 18px
@@ -136,9 +150,12 @@
     top: -15px
     width: 100%
     max-width: 400px
+    padding-left: 20px
     @media (max-width:769px)
-      font-size: 20px
-      text-align: center
+      font-size:18px
+      padding-right: 10px
+      max-width: 350px
+      // text-align: center
 
 .title
   font-family: 'Mulish-Medium'

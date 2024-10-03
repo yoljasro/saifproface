@@ -30,7 +30,7 @@ export const Header = () => {
         {/* Video Background */}
         <video
           className={styles.header__video}
-          autoPlay
+          autoPlay      
           loop
           muted
           playsInline

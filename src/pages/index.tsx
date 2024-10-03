@@ -16,6 +16,7 @@ import 'swiper/swiper-bundle.css'; // Yangi versiyalar uchun to'g'ri yo'l
 
 import { Learn } from "@/components/Learn";
 import { Nav } from "@/components/Nav";
+import { Foot } from "@/components/Foot";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -40,6 +41,7 @@ export default function Home() {
       <YandexMap/>
       {/* <Map/> */}
       <Footer/>
+      {/* <Foot/> */}
     </>
   );
 }

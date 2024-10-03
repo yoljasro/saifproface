@@ -13,56 +13,71 @@
     padding: 20px
     margin-bottom: 40px
 
-    // For small devices
-    @media (max-width: 768px)
-        flex-direction: column
+    // For small devices (769px and below)
+    @media (max-width: 769px)
+        flex-direction: column // Elementlarni vertikal joylash
         height: auto
         padding: 10px
-        border-radius: 0px 
+        border-radius: 0px
+        padding-left: 20px
         width: 100%
 
 .location
     width: 100%
-    display: flex // Ikkita blokni yonma-yon joylashtirish uchun flex ishlatish
+    display: flex
     justify-content: space-between
     border-radius: 20px !important
-
-    // For small devices, stack items vertically
-    @media (max-width: 768px)
+    // For small devices (769px and below)
+    @media (max-width: 769px)
         flex-direction: column
         align-items: center
+        flex-direction: column-reverse
+        padding: 0 20px // Left va right dan bir xil masofa
+
+.maping
+    @media (max-width:769px)
+        position: relative
+        left: 16px
+        width: 100%
+        height: 100%
+        border-radius: 0px !important
 
 .mapContainer
-    width: 65% // Birinchi blokning kengligini belgilash
-    padding: 20px // Ichki bo'shliq berish
+    width: 65%
+    padding: 20px
     border-radius: 20px !important
-    overflow: hidden // Yangi o'zgarish
+    overflow: hidden
+
     @media (max-width:1500px)
         width: 450px !important
         margin-right: 40px
         height: 250px
         border-radius: 20px !important
-        border-radius: none  !important
-        overflow: hidden 
-        // overflow: hidden
 
-    // Make the map responsive
-    @media (max-width: 768px)
-        width: 400px
-        justify-content: center
-        align-content: center
-        align-items: center
-        // border-radius: 0px !important
-        // overflow: hidden
-        // border-radius: 20px
-        // padding: 10px
-        margin-right: 20px
+    // For small devices (769px and below)
+    @media (max-width: 769px)
+        width: 390px !important
+        padding: 0px
+        height: 400px !important
+        border-radius: 0px !important
+        // overflow: visible
+        margin-top: 20px
+        position: relative
+        margin-bottom: 20px
+        // left: 10px
 
 .textBlock
-    margin-bottom: 20px // Bloklar o'rtasidagi bo'shliq
+    margin-bottom: 20px
+
+    // For small devices (769px and below)
+    @media (max-width: 769px)
+        // text-align: center
+        margin-bottom: 15px
+        margin-top: -35px
+        padding: 0px 20px
 
 .imageContainer
-    width: 30% // Ikkinchi blokning kengligini belgilash
+    width: 30%
     display: flex
     justify-content: center
     align-items: center
@@ -70,40 +85,39 @@
     & img
         object-fit: cover
 
-    // Adjust image container size for smaller screens
-    @media (max-width: 768px)
+    // For small devices (769px and below)
+    @media (max-width: 769px)
         width: 100%
         margin-top: 20px
+        padding: 0 20px
 
 .imgback
     position: relative
     top: -25px
     right: 20px
+
     @media (max-width:1500px)
         top: 0px
         height: 700px
         width: 800px
-    // object-fit: cover
 
-    @media (max-width:769px)
+    // For small devices (769px and below)
+    @media (max-width: 769px)
         object-fit: auto
-        width: 90%
-        height: 400px
-        padding-left: 20px
-        // border-radius: 20px !important
+        width: 87%
+        height: auto
+        border-radius: 20px
+        top: -20px
 
 .name
     font-family: Mulish-Black
     font-size: 47px
     color: #ffffff
-    @media (max-width:769px)
-        font-size: 32px
-        padding-left: 10px
-        // text-align: center
 
-    // Font size adjustment for smaller screens
-    @media (max-width: 768px)
+    // For small devices (769px and below)
+    @media (max-width: 769px)
         font-size: 32px
+        // text-align: center
 
 .desc
     font-family: Mulish-Medium
@@ -111,22 +125,21 @@
     color: #ffffff
     padding-bottom: 6px
     position: relative
-    top: -15pxw
+    top: -15px
     width: 100%
     max-width: 480px
 
-    // Font size adjustment for smaller screens
-    @media (max-width: 768px)
+    // For small devices (769px and below)
+    @media (max-width: 769px)
         font-size: 20px
-        padding-left: 10px
-        text-align: left
+        // text-align: center
 
 .text
     font-family: Mulish-Regular
     font-size: 23px
     color: #ffffff
 
-    // Font size adjustment for smaller screens
-    @media (max-width: 768px)
+    // For small devices (769px and below)
+    @media (max-width: 769px)
         font-size: 17px
-        padding-left: 10px
+        // text-align: center
