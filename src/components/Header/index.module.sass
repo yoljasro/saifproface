@@ -12,7 +12,7 @@
   @media (max-width: 769px)
     padding: 30px 20px
     margin-top: 25px
-    margin-bottom: 380px
+    margin-bottom: 200px
 
   &__container
     display: flex
@@ -42,6 +42,12 @@
     object-fit: cover
     z-index: 0 // Video to be behind text
     // opacity: 0.8 // Slight transparency for visibility of text
+    @media (max-width:769px)
+      height: 60%
+      width: 100%
+
+      // &:first-child
+      //   display: none
 
   &__text
     max-width: 700px
@@ -83,7 +89,7 @@
     @media (max-width:769px)
       font-size: 16px
       position: relative
-      top: 410px
+      top: 215px
       color: #000000
       padding-top: 10px
       text-align: left  
@@ -99,7 +105,7 @@
       position: relative
       // text-align: left
       line-height: 30px
-      top: 420px
+      top: 220px
       color: #000000
       font-size: 24px
       width: 100%

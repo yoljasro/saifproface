@@ -29,9 +29,9 @@ export const YandexMap: FC<MapProps> = () => {
     const t = useTranslations();
     const [places, setPlaces] = useState<Place[]>([
         {
-            name: "Student Union",
+            name: "SaifProFace",
             location: { lat: 41.315281, lng: 69.289192 },
-            info: "Learning center",
+            info: "Center for maxillofacial surgery and dentistry",
         },
     ]);
 

@@ -139,8 +139,8 @@ export const Teachers: React.FC = () => {
   breakpoints={{
     // Mobil ekranlar uchun (640px dan kichik bo'lsa)
     0: {
-      slidesPerView: 1, // Telefon ekrani uchun bitta card ko'rsatiladi
-      spaceBetween: 10, // Kartalar orasidagi bo'shliq
+      slidesPerView: 2, // Telefon ekrani uchun bitta card ko'rsatiladi
+      spaceBetween: 8, // Kartalar orasidagi bo'shliq
     },
     // Planshet ekranlar uchun (640px dan 1024px gacha)
     640: {

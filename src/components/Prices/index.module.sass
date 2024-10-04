@@ -26,7 +26,9 @@
       max-width: 85%
       background-size: cover
       background-position: center
-      height: 450px
+      // backdrop-filter: blur(10px)
+      background-position: right
+      height: 350px
       margin-right: 20px
       padding-left: 15px // Telefon ekranida chapdan joy tashlash
       padding-right: 15px // Telefon ekranida o'ngdan joy tashlash
@@ -68,7 +70,10 @@
     position: relative
     top: -10px
     @media (max-width:769px)
-      font-size: 30px
+      font-size: 24px
+      width: 90%
+      text-shadow: 1px 1px 2px #fff
+      // padding-right: 30px
 
   &__desc
     color: #444A50
@@ -80,7 +85,12 @@
     top: -30px
     margin-bottom: 20px // Tugmalar uchun joy
     @media (max-width:769px)
-      font-size: 20px
+      font-size: 18px
+      color: black
+      padding-top: 20px
+      text-shadow: 2px 1px 2px #fff
+      padding-top: 60px
+
 
   &__review
     height: 500px
@@ -100,7 +110,7 @@
       max-width: 100%
       width: 85%
       align-items: center
-      height: 450px
+      height: 350px
       // text-align: center
       padding-left: 15px // Telefon ekranida chapdan joy tashlash
       padding-right: 15px // Telefon ekranida o'ngdan joy tashlash
@@ -152,8 +162,10 @@
     max-width: 400px
     padding-left: 20px
     @media (max-width:769px)
-      font-size:18px
+      font-size: 17px
       padding-right: 10px
+      height: 130px
+      overflow: hidden
       max-width: 350px
       // text-align: center
 
@@ -163,7 +175,7 @@
   color: #444A50
   margin-bottom: 20px
   @media (max-width:769px)
-    font-size: 32px
+    font-size: 28px
     // text-align: center
 
   @media (max-width: 769px)

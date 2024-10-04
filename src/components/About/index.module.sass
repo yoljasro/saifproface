@@ -17,7 +17,7 @@
 
     &__imageContainer
         position: relative
-        width: 260px
+        width: 280px
         height: 280px
         overflow: hidden
         display: flex
@@ -26,7 +26,7 @@
         border-radius: 15px // Make the border-radius permanent
         @media (max-width:769px)
             width: 95%
-            height: 400px
+            height: 300px
             border: none
             outline: none   
             // overflow: visible
@@ -44,7 +44,7 @@
         display: flex
         gap: 25px
         justify-content: center
-        flex-wrap: wrap
+        // flex-wrap: wrap
         width: 100%
         @media (max-width:1500px)
             gap: 15px
@@ -69,17 +69,17 @@
         gap: 10px
         flex-direction: row
         @media (max-width:1500px)
-            max-width: 380px
+            max-width: 350px
 
         @media (max-width: 769px)
             padding: 12px
-            width: 85%
+            width: 80%
             gap: 8px
             flex-direction: column-reverse
             justify-content: center
             align-content: center
             align-items: center
-            height: 400px
+            height: 350px
 
         &:hover
             transform: scale(1.02)
@@ -92,9 +92,14 @@
         border-radius: 15px // Ensure images keep 15px border-radius
 
         @media (max-width:769px)
-            width: 500px !important
-            border: 1px solid black
-            height: 350px !important
+            width: 180px !important
+            overflow: hidden !important
+            height: 180px !important
+            // overflow: visible !important
+            // overflow: hidden
+            border-radius: 8px !important
+            object-fit: cover !important
+            // margin-bottom: 50px
 
     &__cardContent
         width: 60%
@@ -132,6 +137,8 @@
             font-size: 11px
             padding-left: 30px
             padding-right: 10px
+            height: 100px   
+            overflow: hidden
 
     &__listtwo
         font-size: 13px
@@ -144,6 +151,8 @@
             font-size: 10px
             padding-left: 30px
             padding-right: 10px
+            height: 100px   
+            overflow: hidden
             // list-style: none
 
     &__listthree
@@ -157,4 +166,6 @@
             font-size: 11px
             padding-left: 30px
             padding-right: 10px
+            height: 100px   
+            overflow: hidden
             // list-style: none
