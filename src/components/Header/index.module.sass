@@ -7,7 +7,6 @@
   align-items: center
   justify-content: center
   padding: 0px 0
-  // color: white
 
   @media (max-width: 769px)
     padding: 30px 20px
@@ -21,7 +20,6 @@
     width: 90%
     padding: 40px
     border-radius: 20px
-    // box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2)
     margin-top: 50px
     position: relative
     overflow: hidden
@@ -40,21 +38,25 @@
     width: 100%
     height: 100%
     object-fit: cover
-    z-index: 0 // Video to be behind text
-    // opacity: 0.8 // Slight transparency for visibility of text
-    @media (max-width:769px)
-      height: 60%
-      width: 100%
+    z-index: 0
 
-      // &:first-child
-      //   display: none
+  .desktopVideo
+    display: block
+    @media (max-width: 769px)
+      display: none
+
+  .mobileVideo
+    display: none
+    @media (max-width: 769px)
+      display: block
+      height: 300px
 
   &__text
     max-width: 700px
     text-align: left
     padding-right: 30px
     position: relative
-    z-index: 1 // Text should appear above video
+    z-index: 1
 
     @media (max-width: 769px)
       text-align: center
@@ -69,12 +71,12 @@
     margin-bottom: 20px
     transform: translateY(0)
     transition: transform 0.5s ease-in-out
-    @media (max-width:769px)
+
+    @media (max-width: 769px)
       font-size: 20px
       position: relative
       top: -100px
       color: #444A50
-      // text-align: left
       max-width: 100%
 
     &:hover
@@ -86,24 +88,21 @@
     line-height: 1.5
     margin-bottom: 20px
     font-family: Mulish-Regular
-    @media (max-width:769px)
+    @media (max-width: 769px)
       font-size: 16px
       position: relative
       top: 215px
       color: #000000
       padding-top: 10px
-      text-align: left  
-      // position: absolute
+      text-align: left
 
   &__descone
     font-size: 28px
     line-height: 1.5
     margin-bottom: 20px
     font-family: Mulish-Regular
-    @media (max-width:769px)
-      // padding-top: 365px
+    @media (max-width: 769px)
       position: relative
-      // text-align: left
       line-height: 30px
       top: 220px
       color: #000000

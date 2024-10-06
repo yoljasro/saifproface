@@ -6,7 +6,6 @@ export const Header = () => {
   const t = useTranslations();
   const [currentImage, setCurrentImage] = useState(0);
   const [fade, setFade] = useState(true);
-  const [isMobile, setIsMobile] = useState(false); // Mobil holatni saqlash
 
   const images = [
     '/assets/img/image1.jpg',
@@ -14,16 +13,7 @@ export const Header = () => {
   ];
 
   useEffect(() => {
-    // Mobil ekranni aniqlash
-    const checkMobile = () => {
-      if (typeof window !== 'undefined') {
-        setIsMobile(window.innerWidth <= 769);
-      }
-    };
-
-    checkMobile(); // Dastlabki tekshirish
-    window.addEventListener('resize', checkMobile); // O'lcham o'zgarishi uchun kuzatish
-
+    // Slayder uchun interval
     const interval = setInterval(() => {
       setFade(false);
       setTimeout(() => {
@@ -34,25 +24,31 @@ export const Header = () => {
 
     return () => {
       clearInterval(interval);
-      window.removeEventListener('resize', checkMobile); // O'chirish
     };
   }, [images.length]);
-
-  // Video manzilini belgilash
-  const videoSrc = isMobile ? "/assets/img/phonevideo.mp4" : "/assets/img/saifvideo.mp4";
 
   return (
     <div className={styles.header} id='aboutus'>
       <div className={styles.header__container}>
         {/* Video Background */}
         <video
-          className={styles.header__video}
-          autoPlay      
-          loop  
+          className={`${styles.header__video} ${styles.desktopVideo}`}
+          autoPlay
+          loop
           muted
           playsInline
         >
-          <source src={videoSrc} type="video/mp4" />
+          <source src="/assets/img/saifvideo.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <video
+          className={`${styles.header__video} ${styles.mobileVideo}`}
+          autoPlay
+          loop
+          muted
+          playsInline
+        >
+          <source src="/assets/img/phonevideo.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <div className={styles.header__text}>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion'; // Add AnimatePresence for exit animations
+import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import styles from './index.module.sass';
 import { useTranslations } from 'next-intl';
@@ -7,31 +7,59 @@ import { useTranslations } from 'next-intl';
 export const About = () => {
   const t = useTranslations();
 
+  // Image arrays for desktop and phone
   const cardOneImages = ['/assets/img/cel.jpg', '/assets/img/cel2.jpg', '/assets/img/cel3.jpg', '/assets/img/cel4.jpg'];
   const cardTwoImages = ['/assets/img/zub.jpg', '/assets/img/zub2.jpg', '/assets/img/zub3.jpg', '/assets/img/zub4.jpg'];
   const cardThreeImages = ['/assets/img/ff.jpg', '/assets/img/ff2.jpg', '/assets/img/ff3.jpg', '/assets/img/ff2.jpg'];
+
+  const cardOneImagesPhone = ['/assets/img/celphone.jpg', '/assets/img/cel2phone.jpg', '/assets/img/cel3phone.jpg', '/assets/img/cel4phone.jpg'];
+  const cardTwoImagesPhone = ['/assets/img/zubphone.jpg', '/assets/img/zub2phone.jpg', '/assets/img/zub3phone.jpg', '/assets/img/zub4phone.jpg'];
+  const cardThreeImagesPhone = ['/assets/img/ffphone.jpg', '/assets/img/ff2phone.jpg', '/assets/img/ff3phone.jpg', '/assets/img/ff2phone.jpg'];
 
   const [currentImageIndex1, setCurrentImageIndex1] = useState(0);
   const [currentImageIndex2, setCurrentImageIndex2] = useState(0);
   const [currentImageIndex3, setCurrentImageIndex3] = useState(0);
 
+  const [imagesOne, setImagesOne] = useState(cardOneImages);
+  const [imagesTwo, setImagesTwo] = useState(cardTwoImages);
+  const [imagesThree, setImagesThree] = useState(cardThreeImages);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 768) { // Phone screen threshold
+        setImagesOne(cardOneImagesPhone);
+        setImagesTwo(cardTwoImagesPhone);
+        setImagesThree(cardThreeImagesPhone);
+      } else {
+        setImagesOne(cardOneImages);
+        setImagesTwo(cardTwoImages);
+        setImagesThree(cardThreeImages);
+      }
+    };
+
+    handleResize(); // Initial check
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentImageIndex1((prevIndex) => (prevIndex + 1) % cardOneImages.length);
-      setCurrentImageIndex2((prevIndex) => (prevIndex + 1) % cardTwoImages.length);
-      setCurrentImageIndex3((prevIndex) => (prevIndex + 1) % cardThreeImages.length);
+      setCurrentImageIndex1((prevIndex) => (prevIndex + 1) % imagesOne.length);
+      setCurrentImageIndex2((prevIndex) => (prevIndex + 1) % imagesTwo.length);
+      setCurrentImageIndex3((prevIndex) => (prevIndex + 1) % imagesThree.length);
     }, 3000);
     return () => clearInterval(interval);
-  }, []);
+  }, [imagesOne, imagesTwo, imagesThree]);
 
   const imageVariants = {
     enter: {
-      x: 300, // Hozirgi rasm ekrandan o'ng tomonda kiradi
+      x: 300, 
       opacity: 0,
       scale: 1,
     },
     center: {
-      x: 0, // Rasm markazda qoladi
+      x: 0, 
       opacity: 1,
       scale: 1,
       transition: {
@@ -40,7 +68,7 @@ export const About = () => {
       },
     },
     exit: {
-      x: -300, // Ketayotgan rasm ekrandan chap tomonga chiqadi
+      x: -300, 
       opacity: 0,
       scale: 1,
       transition: {
@@ -72,12 +100,11 @@ export const About = () => {
                   key={currentImageIndex1}
                   initial="enter"
                   animate="center"
-                  // exit="exit"
                   variants={imageVariants}
                   className={styles.about__carouselImage}
                 >
                   <Image
-                    src={cardOneImages[currentImageIndex1]}
+                    src={imagesOne[currentImageIndex1]}
                     alt="cardone"
                     width={260}
                     height={310}
@@ -107,12 +134,11 @@ export const About = () => {
                   key={currentImageIndex2}
                   initial="enter"
                   animate="center"
-                  // exit="exit"
                   variants={imageVariants}
                   className={styles.about__carouselImage}
                 >
                   <Image
-                    src={cardTwoImages[currentImageIndex2]}
+                    src={imagesTwo[currentImageIndex2]}
                     alt="cardtwo"
                     width={260}
                     height={310}
@@ -139,12 +165,11 @@ export const About = () => {
                   key={currentImageIndex3}
                   initial="enter"
                   animate="center"
-                  // exit="exit"
                   variants={imageVariants}
                   className={styles.about__carouselImage}
                 >
                   <Image
-                    src={cardThreeImages[currentImageIndex3]}
+                    src={imagesThree[currentImageIndex3]}
                     alt="cardthree"
                     width={260}
                     height={310}
