@@ -3,7 +3,6 @@ import styles from './index.module.sass';
 import Image from 'next/image';
 import { Lang } from '../Lang';
 import { useTranslations } from "next-intl";
-import { Link } from "react-scroll";
 import { useRouter } from 'next/router';
 import { FaPhoneAlt } from 'react-icons/fa';
 
@@ -11,20 +10,6 @@ export const Nav = () => {
     const t = useTranslations();
     const [menuOpen, setMenuOpen] = useState(false);
     const router = useRouter();
-
-    useEffect(() => {
-        if (menuOpen) {
-            document.body.style.overflow = 'hidden';
-            document.body.classList.add(styles.bodyOverlay); // Add overlay class
-        } else {
-            document.body.style.overflow = 'auto';
-            document.body.classList.remove(styles.bodyOverlay); // Remove overlay class
-        }
-    }, [menuOpen]);
-
-    const toggleMenu = () => {
-        setMenuOpen(!menuOpen);
-    };
 
     const getLogoSrc = () => {
         switch (router.locale) {
@@ -41,9 +26,13 @@ export const Nav = () => {
         }
     };
 
+    const handlePhoneClick = (event) => {
+        event.stopPropagation(); // Voqeani to'xtatish
+    };
+
     return (
         <div className={`${styles.navbar} ${menuOpen ? styles.navbar_open : ''}`}>
-            <div className={`${styles.navbar__container} ${menuOpen ? styles.navbar__container_open : ''}`}>
+            <div className={`${styles.navbar__container}`}>
                 <a href={'/'}>
                     <Image
                         className={styles.navbar__logo}
@@ -53,26 +42,26 @@ export const Nav = () => {
                         height={20}
                     />
                 </a>
-                <div className={styles.navbar__toggle} onClick={toggleMenu}>
+                <div className={styles.navbar__toggle} onClick={() => setMenuOpen(!menuOpen)}>
                     {menuOpen ? '✕' : '☰'}
                 </div>
                 <ul className={`${styles.navbar__menu} ${menuOpen ? styles.navbar__menu_open : ''}`}>
-                    <Link activeClass="active" to="aboutus" spy={true} smooth={true} offset={-70} duration={500} className={styles.navbar__link}>
-                        <li>{t("about")}</li>
-                    </Link>
-                    <Link activeClass="active" to="ourservices" spy={true} smooth={true} offset={-70} duration={500} className={styles.navbar__link}>
-                        <li>{t("services")}</li>
-                    </Link>
-                    <Link activeClass="active" to="advantage" spy={true} smooth={true} offset={-70} duration={500} className={styles.navbar__link}>
-                        <li>{t("advantages")}</li>
-                    </Link>
-                    <Link activeClass="active" to="team" spy={true} smooth={true} offset={-70} duration={500} className={styles.navbar__link}>
-                        <li>{t("contact")}</li>
-                    </Link>
+                    <li>
+                        <a href="#aboutus" className={styles.navbar__link}>{t("about")}</a>
+                    </li>
+                    <li>
+                        <a href="#ourservices" className={styles.navbar__link}>{t("services")}</a>
+                    </li>
+                    <li>
+                        <a href="#advantage" className={styles.navbar__link}>{t("advantages")}</a>
+                    </li>
+                    <li>
+                        <a href="#team" className={styles.navbar__link}>{t("contact")}</a>
+                    </li>
                 </ul>
             </div>
             <div className={styles.navbar__containertwo}>
-                <a href={'tel:+998781139545'} className={styles.navbar__number}>
+                <a href={'tel:+998781139545'} className={styles.navbar__number} onClick={handlePhoneClick}>
                     <Image
                         style={{ marginRight: '15px' }}
                         src={'/assets/img/phoneicon.png'}
@@ -85,33 +74,6 @@ export const Nav = () => {
                 </a>
                 <a href={'tel:+998884307000'}>
                     <button className={styles.navbar__register}>{t("btn")}</button>
-                </a>
-                <Lang />
-            </div>
-
-            {/* Mobile menu */}
-            <div className={`${styles.navbar__mobileMenu} ${menuOpen ? styles.navbar__mobileMenu_open : ''}`}>
-                <div className={styles.navbar__mobileContainer}>
-                    <Link to="aboutus" spy={true} smooth={true} offset={-70} duration={500} className={styles.navbar__link} onClick={toggleMenu}>
-                        {t("about")}
-                    </Link>
-                    <Link to="ourservices" spy={true} smooth={true} offset={-70} duration={500} className={styles.navbar__link} onClick={toggleMenu}>
-                        {t("services")}
-                    </Link>
-                    <Link to="advantage" spy={true} smooth={true} offset={-70} duration={500} className={styles.navbar__link} onClick={toggleMenu}>
-                        {t("advantages")}
-                    </Link>
-                    <Link to="team" spy={true} smooth={true} offset={-70} duration={500} className={styles.navbar__link} onClick={toggleMenu}>
-                        {t("contact")}
-                    </Link>
-                </div>
-                <a href="tel:+998781139545" className={styles.navbar__mobileNumber}>
-                    <FaPhoneAlt className={styles.navbar__mobileIcon} />
-                    +998 (78) 113-95-45
-                </a>
-
-                <a href={'tel:+998884307000'}>
-                    <button className={styles.navbar__registertwo}>{t("btn")}</button>
                 </a>
                 <Lang />
             </div>

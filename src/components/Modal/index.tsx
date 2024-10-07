@@ -14,6 +14,7 @@ interface Teacher {
   titleone?: string;
   titletwo?: string;
   titlethree?: string;
+  lastyebat? : string;
 }
 
 interface ModalProps {
@@ -27,6 +28,7 @@ const Modal: React.FC<ModalProps> = ({ onClose, teacher }) => {
       <div className={styles.modalContent} tabIndex={0} style={{ backgroundImage: `url(${teacher.bgImage})` }}>
         <button className={styles.closeButton} onClick={onClose}>X</button>
         <div className={styles.info}>
+          <Image className={styles.lastyebat} src={teacher.lastyebat} alt={teacher.title} width={350} height={400}/>
         <p className={styles.title}>{teacher.title}</p>
         <p className={styles.desc}>{teacher.description}</p>
         <p className={styles.biografy}>{teacher.titleone} </p>

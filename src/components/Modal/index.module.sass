@@ -29,7 +29,7 @@
   
   @media (max-width: 769px) // Telefon ekranlar uchun
     background-image: none !important // Telefon ekranlarida fon rasmni olib tashlash
-    background-color: #f0f0f0 // Rasm o'rniga fon rang berish (ixtiyoriy)
+    background-color: #FFFFFFFF // Rasm o'rniga fon rang berish (ixtiyoriy)
     align-items: center
     justify-content: center
     overflow-x: hidden
@@ -55,15 +55,20 @@
   width: 100% // Ensure it takes full width
   box-sizing: border-box // Include padding in width calculation
 
+.lastyebat
+  display: none
+  @media (max-width:769px)
+    display: block
+    margin-top: 15px
 .title
   font-family: Mulish-Black
   font-size: 60px
-  line-height: 55px
+  line-height: 40px
   color: #444A50
   width: 100%
   max-width: 800px
   @media (max-width:769px)
-    font-size: 35px
+    font-size: 30px
 
 .desc
   font-family: Mulish-Medium
