@@ -2,6 +2,7 @@ import React, { useState, FC } from 'react';
 import { YMaps, Map, Placemark, ZoomControl, FullscreenControl } from '@pbe/react-yandex-maps';
 import styles from './index.module.sass';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useTranslations } from "next-intl";
 
 const mapContainerStyle = {
@@ -54,6 +55,7 @@ export const YandexMap: FC<MapProps> = () => {
                         <p className={styles.desc}>{t("advantagesBlock.adress")}</p>
                         <p className={styles.text}>{t("advantagesBlock.push")}</p>
                     </div>
+                    <Link className={styles.hiddenlink} href={'https://yandex.uz/maps/org/saif_proface/205203270620/?ll=69.333214%2C41.293877&z=17.02'} target='_blank'>
                     <YMaps>
                         <Map
                         className={styles.maping}
@@ -97,6 +99,7 @@ export const YandexMap: FC<MapProps> = () => {
                             <FullscreenControl />
                         </Map>
                     </YMaps>
+                    </Link>
                 </div>
                 <Image className={styles.imgback} src={'/assets/img/mapimg.png'} alt='mapimg' width={1070} height={670} />
             </div>
