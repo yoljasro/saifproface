@@ -44,6 +44,8 @@
   right: 200px
   @media (max-width:769px)
     right: 0
+  @media (min-width:800px) and  (max-width:1480px)
+    right: 80px
 
 .footer__socials
   display: flex
@@ -87,7 +89,7 @@
 
 .footer__created
   font-family: Mulish-Regular
-  position: relative
+  position: relative  
   display: flex
   position: relative
   top: -30px
@@ -147,6 +149,8 @@
   width: 100%
   position: relative
   top: 5px
+  @media (max-width:1480px)
+    top: 22px
 
 .footer__main
   // object-fit: contain
@@ -167,6 +171,10 @@
   width: 80%
   // max-width: 250px
   // padding-left: 70px
+  @media (max-width:1480px)
+    width: 100%
+    position: relative
+    // right: 100px
 
 .footer__logo
   position: relative
@@ -246,6 +254,11 @@
     left: 80px
     margin-bottom: 20px
     width: 350px
+  @media (min-width:800px) and (max-width:1480px)
+    left: 35px
+    width: 100%
+
+    &__iconic
   // padding-left: 150px
 
 .footer__first
@@ -268,13 +281,14 @@
   position: relative
   top: 7px
   margin-right: 10px // Ikon va matn orasidagi bo'sh joy
-
   &.uz
     left: 10px
     // position: relative
   // left: 15px
   &.kl
     left: 18px
+
+
 .footer__context
   list-style: none
   margin: 0 // Ro'yxatning oldingi va yuqori bo'shlig'ini olib tashlash
