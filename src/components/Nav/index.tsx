@@ -61,7 +61,7 @@ export const Nav = () => {
                 </ul>
             </div>
             <div className={styles.navbar__containertwo}>
-                <a href={'tel:+998781139545'} className={styles.navbar__number} onClick={handlePhoneClick}>
+                <a href={'tel:+998884307000'} className={styles.navbar__number} onClick={handlePhoneClick}>  
                     <Image
                         style={{ marginRight: '15px' }}
                         src={'/assets/img/phoneicon.png'}
@@ -70,7 +70,7 @@ export const Nav = () => {
                         alt='phoneicon'
                         className={styles.navbar__iconphone}
                     />
-                    +998 (78) 113-95-45
+                     +998 (88) 430-70-00 
                 </a>
                 <a href={'tel:+998884307000'}>
                     <button className={styles.navbar__register}>{t("btn")}</button>

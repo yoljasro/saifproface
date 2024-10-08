@@ -57,12 +57,12 @@ export const Footer = () => {
 
       <div className={styles.footer__work}>
         <Fade bottom cascade>
-          <p className={styles.footer__menutwo}>{t("advantagesBlock.weekone")} : <span className={styles.footer__span}> 08:00-18:00</span> </p>
-          <p className={styles.footer__menutwo}>{t("advantagesBlock.weektwo")} :  <span className={styles.footer__span}> 08:00-18:00</span> </p>
-          <p className={styles.footer__menutwo}>{t("advantagesBlock.weekthree")} :   <span className={styles.footer__span}> 08:00-18:00</span>  </p>
-          <p className={styles.footer__menutwo}>{t("advantagesBlock.weekfour")} :   <span className={styles.footer__span}> 08:00-18:00</span></p>
-          <p className={styles.footer__menutwo}>{t("advantagesBlock.weekfive")} :   <span className={styles.footer__span}> 08:00-18:00</span></p>
-          <p className={styles.footer__menutwo}>{t("advantagesBlock.weeksix")} :   <span className={styles.footer__span}> 08:00-18:00</span></p>
+          <p className={styles.footer__menutwo}>{t("advantagesBlock.weekone")} : <span className={styles.footer__span}> 08:30-18:00</span> </p>
+          <p className={styles.footer__menutwo}>{t("advantagesBlock.weektwo")} :  <span className={styles.footer__span}> 08:30-18:00</span> </p>
+          <p className={styles.footer__menutwo}>{t("advantagesBlock.weekthree")} :   <span className={styles.footer__span}> 08:30-18:00</span>  </p>
+          <p className={styles.footer__menutwo}>{t("advantagesBlock.weekfour")} :   <span className={styles.footer__span}> 08:30-18:00</span></p>
+          <p className={styles.footer__menutwo}>{t("advantagesBlock.weekfive")} :   <span className={styles.footer__span}> 08:30-18:00</span></p>
+          <p className={styles.footer__menutwo}>{t("advantagesBlock.weeksix")} :   <span className={styles.footer__span}> 08:30-18:00</span></p>
           <p className={styles.footer__menutwo}>{t("advantagesBlock.weekseven")} :   <span className={styles.footer__span}> {t("advantagesBlock.dayoff")}</span></p>
         </Fade>
       </div>
@@ -96,7 +96,7 @@ export const Footer = () => {
   {t("advantagesBlock.callme")}
 </li>
 
-              <li>+998781139545</li>
+              <li>+998884307000</li>
             </div>
           </ul>
         </div>

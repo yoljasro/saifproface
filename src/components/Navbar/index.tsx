@@ -43,8 +43,8 @@ export const Navbar = () => {
                     </button>
                 </div>
                 <div className={`${styles.navbar__right} ${menuOpen ? styles.navbar__right_open : ''}`}>
-                    <a href={'tel:+998781139545'} className={styles.navbar__number}>
-                        +998 (78) 113-95-45
+                    <a href={'tel:+998884307000'} className={styles.navbar__number}>
+                        +998 (88) 430-70-00
                     </a>
                     <button className={styles.navbar__register}>Register</button>
                     <Lang />
