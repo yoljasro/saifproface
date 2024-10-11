@@ -11,15 +11,15 @@
     "desc": "SAIF PROFACE – bu yuz-jag’ va og‘iz bo‘shlig‘ining salomatlik va estetik jihatdan tiklash bo‘yicha yuqori sifatli tibbiy xizmatlarni taqdim etish uchun mo‘ljallangan zamonaviy yuz-jag‘ jarrohligi va stomatologiya markazi. Bizning markazimiz eng ilg’or tibbiy uskunalar bilan jihozlangan va bemor xavfsizligi, samarali davolash hamda yuqori darajadagi qulaylikni ustuvor hisoblaydigan yuqori malakali mutaxassislar jamoasiga ega. ",
     "descTwo": "Biz bemor xavfsizligi, samarali davolanish va yuqori qulaylik darajasini birinchi o‘ringa qo‘yamiz.",
     "doctor1" : "Askarov Mansur Anvarovich ",
-    "doctor2" : "Abobakirov Davron Mamadsidiqovich",
-    "doctor3" :"Yigitaliev Shuhrat Numonovich",
+    "doctor2" : "Abobakirov Davron Maxamadsidiqovich",
+    "doctor3" :"Yigitaliev Shuhrat Numanovich",
     "doctor4" : "Xakimov Akmal Abduhakimovich",
     "doctor5" : "Iskandarov Mirjalol Baxtiyorovich ",
-    "doctor6" : "Saliyev Xabibbulo Xamidullaevich",
+    "doctor6" : "Saliyev Xabibbulo Xamidullayevich",
     "doctorone" : "Yuz-jag' jarrohi, implantolog",
     "doctortwo" : "Yuz-jag' jarrohi",
     "doctorthree" : "Tibbiyot fanlari nomzodi, yuz-jag' va plastik jarroh",
-    "doctorfour" : "Doktor terapevt-ortoped",
+    "doctorfour" : "Terapevt-ortoped",
     "doctorfive" : "Ortodont"
   },
   "servicesBlock": {
@@ -36,7 +36,7 @@
     "second": "Estetik stomatologiya (tishlarni oqartirish, badiiy restavratsiya)",
     "three": "Protezlash (keramik koronkalar, vinirlar, ko‘priklar, protezlar)",
     "four": "Tish implantatsiyasi",
-    "five": "Parodontologiya (tish go‘shti kasalliklarini davolash va oldini olish)",
+    "five": "Parodontologiya (milk kasalliklarini davolash va oldini olish)",
     "six": "Ortodontiya (diagnostika, breketlar, elaynerlar va olinadigan kappalar)",
     "titleThree": "Yuz kosmetologiyasi",
     "descThree": "Plastik jarrohlik (rinoplastika, yuzni tortish)",
@@ -47,7 +47,7 @@
     "title": "Bizning afzalliklarimiz",
     "guarant": "Natija kafolati",
     "conver": "Qulay joylashuv",
-    "converDesc": "Bizning markazimiz qulay va oson yetib boriladigan joyda joylashgani sababli shahrimiz va viloyatlarimiz aholisi uchun tashrif buyurishni qulay qiladi",
+    "converDesc": "Bizning markaz qulay va oson yetib boriladigan joyda joylashgani sababli shahrimiz va viloyatlarimiz aholisi uchun tashrif buyurishni qulay qiladi",
     "guarantDesc": "Bizning obro‘imiz va ko‘plab ijobiy fikr-mulohazalar tufayli bemorlar bizga ishonishadi",
     "titleOne": "Yuqori malakali jamoa",
     "descOne": "SAIF PROFACE shifokorlari va tibbiyot xodimlari – bu tajribali va doimiy ravishda o‘z malakasini oshirib boradigan mutaxassislardir. Ular muntazam ravishda xalqaro konferensiyalar va seminarlar orqali o‘z bilimlarini oshiradilar.",
@@ -70,7 +70,7 @@
     "weeksix": "Shanba",
     "weekseven": "Yakshanba",
     "oursocial": "Biz ijtimoiy tarmoqlarda",
-    "adress": "Toshkent sh., Yashnobod tumani, 1-oʻtish, Alimkent, 32-uy",
+    "adress": "Toshkent sh., Yashnobod tumani, Alimkent 1-tor,32",
     "dayoff": "Dam olish kuni",
     "callme": "Bizga qo'ng'iroq qiling:",
     "writeme": "Bizga yozing:",
@@ -79,7 +79,7 @@
     "person" : "Sharhlar"
   },
   "whyChooseUsBlock": {
-    "title": "Nima uchun Saif ProFace ni tanlaysiz",
+    "title": "Nima uchun SAIF PROFACE ni tanlaysiz",
     "desc": "Kafolatlangan natijalar: Bizning obro‘-e'tiborimiz va ijobiy sharhlarimiz sifatimizni tasdiqlaydi.",
     "descTwo": "Qulay joylashuv: Aholi uchun oson yetib boriladigan joy."
   }
