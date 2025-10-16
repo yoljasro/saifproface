@@ -15,13 +15,13 @@ export const Navbar = () => {
     const getLogoSrc = () => {
         switch (router.locale) {
             case 'uz':
-                return '/assets/img/uzlogo.png';
+                return '/assets/img/logonewor.png';
             case 'en':
-                return '/assets/img/logoeng.png';
+                return '/assets/img/logonewor.png';
             case 'ru':
-                return '/assets/img/rulogo.png';
+                return '/assets/img/logonewor.png';
             default:
-                return '/assets/img/defaultlogo.png';
+                return '/assets/img/logonewor.png';
         }
     };
 
