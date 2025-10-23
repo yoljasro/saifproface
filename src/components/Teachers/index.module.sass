@@ -1,3 +1,5 @@
+$brand: #856CA9
+
 .teachers
   width: 100%
   position: relative
@@ -8,7 +10,6 @@
     text-align: center
     color: #444A50
     margin-bottom: 20px
-
     @media (max-width: 769px)
       font-size: 35px
 
@@ -22,7 +23,6 @@
     font-family: Mulish-Regular
     cursor: pointer
     transition: background-color 0.3s
-
     &:hover
       background-color: #333
       color: #ffff
@@ -44,23 +44,35 @@
     width: 400px
     display: flex
     flex-direction: column
-    justify-content: space-between
-    align-items: center
-    box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6)  
+    align-items: stretch
+    justify-content: flex-start
+    box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6)
     margin-top: 30px
     border-radius: 15px
     overflow: hidden
-
-    @media (max-width:769px)
+    /* Kartaning fon rangi — #856CA9 */
+    background-color: $brand
+    @media (max-width: 769px)
       height: 500px !important
       width: 305px !important
 
+  /* Rasm konteyneri */
+  &__imageWrap
+    position: relative
+    width: 100%
+    height: 100%
+    min-height: 360px
+    background-color: $brand
+    overflow: hidden
+
+  /* Rasm — hech qanday rang o‘zgartirish YO‘Q */
   &__image
     width: 100%
     height: 100%
     object-fit: cover
-    border-radius: 15px
+    display: block
 
+  /* Pastdagi info panel */
   &__info
     display: flex
     flex-direction: column
@@ -70,12 +82,14 @@
     bottom: 20px
     left: 50%
     transform: translateX(-50%)
-    color: white
+    color: #fff
     text-align: center
     padding: 10px
     border-radius: 10px
     width: 90%
     min-height: 80px
+    z-index: 2
+    background: #856CA9
 
   &__name
     font-family: Mulish-Regular
@@ -90,12 +104,14 @@
     text-overflow: ellipsis
     white-space: normal
     text-align: center
+    color: #fff
 
   &__desc
     font-family: Mulish-Regular
     font-size: 16px
     margin: 0
     text-align: center
+    color: #fff
 
   @media (max-width: 1024px)
     &__slide
@@ -104,7 +120,6 @@
 .modal-enter
   opacity: 0
   transform: translateY(20px)
-
   &-active
     opacity: 1
     transform: translateY(0)
@@ -113,7 +128,6 @@
 .modal-exit
   opacity: 1
   transform: translateY(0)
-
   &-active
     opacity: 0
     transform: translateY(20px)

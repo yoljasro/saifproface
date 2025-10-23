@@ -1,3 +1,5 @@
+$brand: #856CA9
+
 .container
   width: 100%
   display: flex
@@ -6,11 +8,13 @@
   margin: 100px 0
   position: relative
   gap: 30px
-  @media (max-width:769px)
+
+  @media (max-width: 769px)
     flex-direction: column
-  @media (max-width:1500px)
+
+  @media (max-width: 1500px)
     gap: 25px
-    padding: 0px 10px 0px 10px
+    padding: 0 10px
 
   &__content
     width: 100%
@@ -22,27 +26,17 @@
     background-repeat: no-repeat
     transition: 0.5s linear
     position: relative
-    @media (max-width:769px)
+
+    @media (max-width: 769px)
       max-width: 85%
       background-size: cover
-      // background-position: center
-      // backdrop-filter: blur(10px)
-      // backdrop-filter: blur(10px)
       background-position: right
       height: 350px
-      // backdrop-filter: blur(10px)
-      // backdrop-filter: invert(80%)
-      // backdrop-filter: contrast(40%)
       background-blend-mode: screen
       margin-right: 20px
-      padding-left: 15px // Telefon ekranida chapdan joy tashlash
+      padding-left: 15px
       opacity: 0.1
-      // filter: blur(1px)
-      padding-right: 15px // Telefon ekranida o'ngdan joy tashlash
-      // backdrop-filter: drop-shadow(4px 4px 10px blue)
-
-      &:hover
-        // filter: blur(5px)
+      padding-right: 15px
 
     .sliderControls
       display: flex
@@ -52,23 +46,24 @@
       bottom: 20px
       left: 90px
       transform: translateX(-50%)
-      @media (max-width:769px)
+
+      @media (max-width: 769px)
         display: none
 
       button
         background-color: rgba(0, 0, 0, 0.3)
         border: none
         border-radius: 50%
-        color: white
-        width: 60px // Tugma o'lchami
-        height: 60px // Tugma o'lchami
-        font-size: 24px // Tugma ikonkasi o'lchami
+        color: #fff
+        width: 60px
+        height: 60px
+        font-size: 24px
         cursor: pointer
-        transition: background-color 0.3s, transform 0.3s // O'zgarishlar uchun animatsiya
+        transition: background-color 0.3s, transform 0.3s
 
         &:hover
           background-color: rgba(0, 0, 0, 0.6)
-          transform: scale(1.1) // Hover paytida kattalashishi
+          transform: scale(1.1)
 
         &:focus
           outline: none
@@ -80,12 +75,12 @@
     max-width: 300px
     position: relative
     top: -10px
-    @media (max-width:769px)
+
+    @media (max-width: 769px)
       font-size: 24px
       color: #000
       width: 90%
       text-shadow: 1px 1px 2px #fff
-      // padding-right: 30px
 
   &__desc
     color: #444A50
@@ -95,25 +90,25 @@
     max-width: 430px
     position: relative
     top: -30px
-    margin-bottom: 20px // Tugmalar uchun joy
-    @media (max-width:769px)
+    margin-bottom: 20px
+
+    @media (max-width: 769px)
       font-size: 17px
       color: #000
-      padding-top: 20px
       text-shadow: 2px 1px 2px whitesmoke
       padding-top: 60px
 
+  /* === REVIEW CARD (o‘ng blok) === */
   &__review
     height: 500px
     border-radius: 20px
     width: 100%
     max-width: 500px
-    background-image: url('/assets/img/bgpre.png')
-    background-repeat: no-repeat
-    background-size: cover
+    background-color: $brand
     padding: 20px
     position: relative
-    @media (max-width:769px)
+
+    @media (max-width: 769px)
       display: flex
       flex-direction: column
       justify-content: center
@@ -122,12 +117,10 @@
       width: 85%
       align-items: center
       height: 350px
-      // text-align: center
-      padding-left: 15px // Telefon ekranida chapdan joy tashlash
-      padding-right: 15px // Telefon ekranida o'ngdan joy tashlash
-      // margin-left: 15px // Telefon ekranida ikki tomondan joy
+      padding-left: 15px
+      padding-right: 15px
 
-    @media (max-width:1500px)
+    @media (max-width: 1500px)
       margin-right: 20px
 
   &__revtitle
@@ -135,33 +128,31 @@
     font-family: 'Mulish-Regular'
     font-size: 40px
     padding-left: 20px
-    @media (max-width:769px)
+
+    @media (max-width: 769px)
       font-size: 32px
       display: flex
       flex-direction: column
       padding-left: 0
-      // justify-content: center
-      // align-content: center
-      // align-items: center
 
   &__person
     font-family: 'Mulish-Black'
     font-size: 30px
     padding-left: 20px
+    color: #FFFFFF
 
-    @media (max-width:769px)
+    @media (max-width: 769px)
       font-size: 26px
-      // padding-left: 0
-      // text-align: center
 
   &__date
     font-family: 'Mulish-Regular'
     font-size: 20px
-    color: #fff
+    color: #FFFFFF
     position: relative
     padding-left: 20px
     top: -20px
-    @media (max-width:769px)
+
+    @media (max-width: 769px)
       font-size: 18px
 
   &__text
@@ -172,23 +163,24 @@
     width: 100%
     max-width: 400px
     padding-left: 20px
-    @media (max-width:769px)
+    color: #FFFFFF
+
+    @media (max-width: 769px)
       font-size: 16px
       padding-right: 10px
       height: 130px
       overflow: hidden
       max-width: 350px
-      // text-align: center
 
 .title
   font-family: 'Mulish-Medium'
   font-size: 40px
   color: #444A50
   margin-bottom: 20px
-  @media (max-width:769px)
+
+  @media (max-width: 769px)
     font-size: 28px
     color: #000
-    // text-align: center
 
   @media (max-width: 769px)
     font-size: 35px
@@ -196,8 +188,8 @@
 .leftButton, .rightButton
   font-size: 35px
   cursor: pointer
-  transition: transform 0.4s ease, filter 0.4s ease // Animatsiya uchun o'zgarishlar
+  transition: transform 0.4s ease, filter 0.4s ease
 
 .leftButton:hover, .rightButton:hover
-  transform: scale(1.1) // Kattalashtirish effekti
-  filter: brightness(1.2) // Yorqinlik effekti
+  transform: scale(1.1)
+  filter: brightness(1.2)
