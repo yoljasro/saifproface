@@ -24,9 +24,10 @@ export const About = () => {
   const [imagesTwo, setImagesTwo] = useState(cardTwoImages);
   const [imagesThree, setImagesThree] = useState(cardThreeImages);
 
+  // 🧩 Resize effect — dependencies qo‘shildi
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth <= 768) { // Phone screen threshold
+      if (window.innerWidth <= 768) {
         setImagesOne(cardOneImagesPhone);
         setImagesTwo(cardTwoImagesPhone);
         setImagesThree(cardThreeImagesPhone);
@@ -37,29 +38,38 @@ export const About = () => {
       }
     };
 
-    handleResize(); // Initial check
+    handleResize();
     window.addEventListener('resize', handleResize);
 
     return () => window.removeEventListener('resize', handleResize);
-  }, []);
+  }, [
+    cardOneImages,
+    cardTwoImages,
+    cardThreeImages,
+    cardOneImagesPhone,
+    cardTwoImagesPhone,
+    cardThreeImagesPhone,
+  ]);
 
+  // 🧩 Interval effect (rasmlarni almashish)
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex1((prevIndex) => (prevIndex + 1) % imagesOne.length);
       setCurrentImageIndex2((prevIndex) => (prevIndex + 1) % imagesTwo.length);
       setCurrentImageIndex3((prevIndex) => (prevIndex + 1) % imagesThree.length);
     }, 3000);
+
     return () => clearInterval(interval);
   }, [imagesOne, imagesTwo, imagesThree]);
 
   const imageVariants = {
     enter: {
-      x: 300, 
+      x: 300,
       opacity: 0,
       scale: 1,
     },
     center: {
-      x: 0, 
+      x: 0,
       opacity: 1,
       scale: 1,
       transition: {
@@ -68,7 +78,7 @@ export const About = () => {
       },
     },
     exit: {
-      x: -300, 
+      x: -300,
       opacity: 0,
       scale: 1,
       transition: {
@@ -108,7 +118,7 @@ export const About = () => {
                     alt="cardone"
                     width={260}
                     height={310}
-                    className={styles.about__cardImage} 
+                    className={styles.about__cardImage}
                   />
                 </motion.div>
               </AnimatePresence>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styles from './index.module.sass';
 import Image from 'next/image';
+import Link from 'next/link'; // 🧩 qo‘shildi
 import { Lang } from '../Lang';
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/router';
@@ -29,18 +30,18 @@ export const Nav = () => {
     <div className={`${styles.navbar} ${menuOpen ? styles.navbar_open : ''}`}>
       <div className={styles.navbar__container}>
         {/* BRAND / LOGO */}
-        <a href='/' className={styles.navbar__brand} aria-label='SAIF PROFACE'>
+        <Link href="/" className={styles.navbar__brand} aria-label="SAIF PROFACE">
           <Image
             className={styles.navbar__logo}
             src={getLogoSrc()}
-            alt='SAIF PROFACE logo'
+            alt="SAIF PROFACE logo"
             width={320}
             height={64}
             priority
             quality={100}
             sizes="(max-width: 768px) 180px, (max-width: 1200px) 260px, 320px"
           />
-        </a>
+        </Link>
 
         {/* BURGER (mobile) */}
         <button
@@ -98,10 +99,26 @@ export const Nav = () => {
       {menuOpen && (
         <div className={styles.navbar__mobileMenu}>
           <ul className={styles.navbar__mobileContainer}>
-            <li><a href="#aboutus" className={styles.navbar__link} onClick={() => setMenuOpen(false)}>{t('about')}</a></li>
-            <li><a href="#ourservices" className={styles.navbar__link} onClick={() => setMenuOpen(false)}>{t('services')}</a></li>
-            <li><a href="#advantage" className={styles.navbar__link} onClick={() => setMenuOpen(false)}>{t('advantages')}</a></li>
-            <li><a href="#team" className={styles.navbar__link} onClick={() => setMenuOpen(false)}>{t('contact')}</a></li>
+            <li>
+              <a href="#aboutus" className={styles.navbar__link} onClick={() => setMenuOpen(false)}>
+                {t('about')}
+              </a>
+            </li>
+            <li>
+              <a href="#ourservices" className={styles.navbar__link} onClick={() => setMenuOpen(false)}>
+                {t('services')}
+              </a>
+            </li>
+            <li>
+              <a href="#advantage" className={styles.navbar__link} onClick={() => setMenuOpen(false)}>
+                {t('advantages')}
+              </a>
+            </li>
+            <li>
+              <a href="#team" className={styles.navbar__link} onClick={() => setMenuOpen(false)}>
+                {t('contact')}
+              </a>
+            </li>
 
             {/* Mobile numbers */}
             <a href="tel:+998884307000" className={styles.navbar__mobileNumber} onClick={handlePhoneClick}>
@@ -127,3 +144,5 @@ export const Nav = () => {
     </div>
   );
 };
+
+export default Nav;
