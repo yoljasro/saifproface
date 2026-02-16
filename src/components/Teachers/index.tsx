@@ -4,7 +4,7 @@ import "swiper/css";
 import "swiper/css/autoplay";
 import { Autoplay } from "swiper/modules";
 import Image from "next/image";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import styles from "./index.module.sass";
 import Modal from "../Modal";
 
@@ -50,15 +50,23 @@ interface Teacher {
 const API_URL = process.env.NEXT_PUBLIC_API_URL || "";
 
 /* ---- Backenddan kelgan itemni Teacher ga maplash ---- */
-const mapCommandToTeacher = (c: CommandItem): Teacher => ({
-  src: c.image || "/assets/img/placeholder-doctor.png",
-  title: c.title,
-  description: c.job,
-  bgImage: "",
-  biografy: "",
-  teach: c.obrazovanie,
-  skill: c.stajRaboti,
-});
+const mapCommandToTeacher = (c: any, locale: string): Teacher => {
+  const currentLocale = locale === 'kl' ? 'uz_cyr' : locale;
+  return {
+    src: c.image || "/assets/img/placeholder-doctor.png",
+    bgImage: c.bgImage || "",
+    lastyebat: c.lastyebat || "",
+    title: c[`name_${locale}`] || c[`name_${currentLocale}`] || c.title,
+    description: c[`spec_${locale}`] || c[`spec_${currentLocale}`] || c.job,
+    biografy: c[`biography_${locale}`] || c[`biography_${currentLocale}`] || "",
+    teach: c[`education_${locale}`] || c[`education_${currentLocale}`] || "",
+    skill: c[`experience_${locale}`] || c[`experience_${currentLocale}`] || "",
+    // Labels for the modal
+    titleone: locale === 'ru' ? "Биография" : locale === 'uz' ? "Biografiya" : locale === 'en' ? "Biography" : "Биографии",
+    titletwo: locale === 'ru' ? "Образование" : locale === 'uz' ? "Ma'lumot" : locale === 'en' ? "Education" : "Маълумот",
+    titlethree: locale === 'ru' ? "Стаж работы" : locale === 'uz' ? "Ish tajribasi" : locale === 'en' ? "Experience" : "Иш тажрибаsi",
+  };
+};
 
 /* ---- Statik ro‘yxatni t ga bog‘lab, funksiyada qaytaramiz ---- */
 const buildStaticTeachers = (t: (k: string) => string): Teacher[] => [
@@ -238,6 +246,7 @@ const buildStaticTeachers = (t: (k: string) => string): Teacher[] => [
 
 export const Teachers: React.FC = () => {
   const t = useTranslations();
+  const locale = useLocale();
 
   // 1) Avval statik ro‘yxat bilan ochamiz
   const [teachers, setTeachers] = useState<Teacher[]>(() =>
@@ -250,14 +259,27 @@ export const Teachers: React.FC = () => {
     let cancelled = false;
 
     const load = async () => {
-      if (!API_URL) return; // env yo‘q bo‘lsa, statik qoladi
+      const url = API_URL || "http://localhost:5000";
       try {
-        const res = await fetch(`${API_URL}/api/commands`, { cache: "no-store" });
+        const res = await fetch(`${url}/api/commands`, { cache: "no-store" });
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
-        const data: CommandItem[] = await res.json();
+        const data: any[] = await res.json();
 
         if (!cancelled && Array.isArray(data) && data.length > 0) {
-          setTeachers(data.map(mapCommandToTeacher));
+          const dynamicDocs = data.map(c => mapCommandToTeacher(c, locale)).map(doc => {
+            const fixPath = (p: string | undefined): string => {
+              if (!p) return "";
+              if (p.startsWith('http') || p.startsWith('/assets/')) return p;
+              return `${url}${p.startsWith('/') ? '' : '/'}${p.startsWith('uploads/') ? '' : 'uploads/'}${p}`;
+            };
+            return {
+              ...doc,
+              src: fixPath(doc.src),
+              bgImage: fixPath(doc.bgImage),
+              lastyebat: fixPath(doc.lastyebat),
+            };
+          });
+          setTeachers(dynamicDocs);
         }
       } catch (e) {
         console.warn("Commands fetch failed, keep static:", e);
@@ -268,7 +290,7 @@ export const Teachers: React.FC = () => {
     return () => {
       cancelled = true;
     };
-  }, []);
+  }, [locale]);
 
   // Modalga uzatish
   const normalizeForModal = useMemo(

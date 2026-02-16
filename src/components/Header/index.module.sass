@@ -87,58 +87,57 @@ $brand: #856CA9
   // Same color behind the text
   &__textBox
     display: inline-block
-    background: rgba($brand, 0.6)
-    padding: 24px 28px
-    border-radius: 16px
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18)
+    background: rgba($brand, 0.5) // Slightly more transparent
+    padding: 20px 24px       // More compact padding
+    border-radius: 12px
+    backdrop-filter: blur(4px) // Add a subtle blur for premium feel
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12)
 
   &__name
-    font-size: 48px
-    max-width: 600px
+    font-size: 36px          // Smaller title
+    max-width: 550px
     font-family: Mulish-Black
-    margin-bottom: 16px
+    margin-bottom: 8px
     color: #fff
-    transform: translateY(0)
-    transition: transform 0.5s ease-in-out
+    line-height: 1.2
 
     @media (max-width: 769px)
-      font-size: 20px
+      font-size: 24px
       position: relative
-      top: -100px
+      top: 0                 // Reset unusual top position
       color: #fff
       max-width: 100%
 
-    &:hover
-      transform: translateY(-10px)
+  &__descone
+    font-size: 18px          // Subtitle size
+    font-weight: 600
+    line-height: 1.4
+    margin-bottom: 12px
+    font-family: Mulish-Regular
+    color: rgba(255, 255, 255, 0.9)
+
+    @media (max-width: 769px)
+      position: relative
+      line-height: 24px
+      top: 0
+      font-size: 16px
+      width: 100%
 
   &__desc
-    font-size: 20px
-    line-height: 1.5
-    margin-bottom: 12px
+    font-size: 14px          // Description size
+    line-height: 1.6
+    margin-bottom: 0
+    max-width: 500px
     font-family: Mulish-Regular
     color: #F7F7FB
 
     @media (max-width: 769px)
-      font-size: 16px
+      font-size: 13px
       position: relative
-      top: 215px
+      top: 0
       color: #fff
-      padding-top: 10px
+      padding-top: 8px
       text-align: left
-
-  &__descone
-    font-size: 28px
-    line-height: 1.5
-    margin-bottom: 12px
-    font-family: Mulish-Regular
-    color: #fff
-
-    @media (max-width: 769px)
-      position: relative
-      line-height: 30px
-      top: 220px
-      font-size: 24px
-      width: 100%
 
   .fadeIn
     animation: fadeIn 0.5s forwards

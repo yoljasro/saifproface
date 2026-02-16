@@ -13,139 +13,146 @@
 
 .modalContent
   position: relative
-  width: 100%
-  max-width: 1700px
-  height: 98vh
+  width: 95%
+  max-width: 1400px // Wider for split layout
+  height: 90vh
+  background-color: #fff
   border-radius: 20px
-  background-repeat: no-repeat
-  background-size: cover // Rasmni to'liq sig'dirish
-  background-position: center // Rasmni markazda ko'rsatish
-  overflow-y: auto
   display: flex
-  flex-direction: column
-  align-items: flex-end
-  color: white
+  flex-direction: row
+  color: #444A50
   overflow: hidden
+  box-shadow: 0 10px 40px rgba(0,0,0,0.3)
   
-  @media (max-width: 769px) // Telefon ekranlar uchun
-    background-image: none !important // Telefon ekranlarida fon rasmni olib tashlash
-    background-color: #FFFFFFFF // Rasm o'rniga fon rang berish (ixtiyoriy)
-    align-items: center
-    justify-content: center
-    overflow-x: hidden
-    overflow-y: auto 
+  @media (max-width: 1024px)
+    max-width: 1100px
+
+  @media (max-width: 769px)
+    flex-direction: column
+    width: 90%
+    height: 95vh
+    overflow-y: auto
 
 .closeButton
   position: absolute
-  top: 20px
-  right: 10px
-  background: transparent
+  top: 15px
+  right: 15px
+  background: rgba(0,0,0,0.05)
   border: none
-  font-size: 20px
+  width: 35px
+  height: 35px
+  border-radius: 50%
+  font-size: 18px
   cursor: pointer
-  z-index: 1001
+  z-index: 1005
+  display: flex
+  align-items: center
+  justify-content: center
+  transition: all 0.2s
+  &:hover
+    background: rgba(0,0,0,0.1)
+    transform: rotate(90deg)
+
+.imageSection
+  flex: 0 0 45%
+  background-size: contain
+  background-position: center
+  background-repeat: no-repeat
+  position: relative
+  background-color: #7BB0E1 // Primary blue color from the clinic design
+  
+  @media (max-width: 769px)
+    display: none
 
 .info
+  flex: 1
   display: flex
   flex-direction: column
-  margin-top: -38px
-  overflow-y: scroll
-  align-items: flex-end // Align items to the end (right side)
-  padding: 40px // Add padding on the left and right
-  width: 100% // Ensure it takes full width
-  box-sizing: border-box // Include padding in width calculation
+  padding: 60px 50px
+  height: 100%
+  box-sizing: border-box
+  background-color: #fff
+  
+  @media (max-width: 769px)
+    padding: 30px 20px
+    flex: none
+
+.scrollableContent
+  flex: 1
+  overflow-y: auto
+  padding-right: 10px
+  margin-top: 20px
+  
+  /* Scrollbar styles */
+  &::-webkit-scrollbar
+    width: 4px
+  &::-webkit-scrollbar-track
+    background: #f1f1f1
+  &::-webkit-scrollbar-thumb
+    background: #856CA9
+    border-radius: 10px
 
 .lastyebat
   display: none
   @media (max-width:769px)
     display: block
-    margin-top: 15px
+    width: 100%
+    max-width: 320px
+    height: auto
+    margin: 0 auto 20px
+    border-radius: 15px
+
 .title
   font-family: Mulish-Black
-  font-size: 60px
-  // line-height: 40px
+  font-size: 44px
+  line-height: 1.1
   color: #444A50
-  width: 100%
-  max-width: 800px
+  margin: 0 0 10px 0
+  
+  @media (max-width:1024px)
+    font-size: 36px
+  
   @media (max-width:769px)
-    font-size: 30px
-    line-height: 40px
+    font-size: 28px
+    text-align: center
 
 .desc
   font-family: Mulish-Medium
-  font-size: 28px
-  color: #444A50
-  width: 100%
-  max-width: 800px
-  position: relative
-  top: -50px
+  font-size: 20px
+  color: #856CA9 // Doctor's specialty color
+  margin: 0 0 30px 0
+  
   @media (max-width:769px)
-    font-size: 24px
-    // text-align: center
+    font-size: 18px
+    text-align: center
+    margin-bottom: 20px
 
+.section
+  margin-bottom: 30px
 
-.biografy
+.sectionTitle
   font-family: Mulish-Black
-  font-size: 35px
-  color: #444A50
-  width: 100%
-  max-width: 800px
-  position: relative
-  top: -90px
-  @media (max-width:769px)
-    font-size: 30px
-
-.bio
-  font-family: Mulish-Regular
   font-size: 24px
   color: #444A50
-  width: 100%
-  max-width: 800px
+  margin-bottom: 12px
   position: relative
-  top: -130px
-  @media (max-width:769px)
-    font-size: 20px
+  display: inline-block
+  
+  &::after
+    content: ''
+    position: absolute
+    bottom: -4px
+    left: 0
+    width: 40px
+    height: 3px
+    background-color: #856CA9
 
-.biografytwo
-  font-family: Mulish-Black
-  font-size: 35px
-  color: #444A50
-  width: 100%
-  max-width: 800px
-  position: relative
-  top: -140px
-  @media (max-width:769px)
-    font-size: 30px
-
-.biotwo
+.sectionText
   font-family: Mulish-Regular
-  font-size: 24px
-  color: #444A50
-  width: 100%
-  max-width: 800px
-  position: relative
-  top: -180px
+  font-size: 16px
+  line-height: 1.7
+  color: #555
+  white-space: pre-wrap
+  
   @media (max-width:769px)
-    font-size: 20px
-
-.biografythree
-  font-family: Mulish-Black
-  font-size: 35px
-  color: #444A50
-  width: 100%
-  max-width: 800px
-  position: relative
-  top: -220px
-  @media (max-width:769px)
-    font-size: 30px
-
-.biothree
-  font-family: Mulish-Regular
-  font-size: 24px
-  color: #444A50
-  width: 100%
-  max-width: 800px
-  position: relative
-  top: -250px
-  @media (max-width:769px)
-    font-size: 20px
+    font-size: 15px

@@ -1,69 +1,123 @@
+// --- Fonts ---
+
+// Mulish Family
 @font-face
-  font-family: Roboto
-  src: url(/assets/fonts/Roboto-Black.ttf)
+  font-family: 'Mulish'
+  src: url(/assets/fonts/Mulish-Thin.ttf)
+  font-weight: 100
+  font-style: normal
 
 @font-face
-  font-family: Roboto-Bold
-  src: url(/assets/fonts/Roboto-Bold.ttf)
+  font-family: 'Mulish'
+  src: url(/assets/fonts/Mulish-ExtraLight.ttf)
+  font-weight: 200
+  font-style: normal
 
 @font-face
-  font-family: Roboto-ExtraBold
-  src: url(/assets/fonts/Roboto-ExtraBold.ttf)
+  font-family: 'Mulish'
+  src: url(/assets/fonts/Mulish-Light.ttf)
+  font-weight: 300
+  font-style: normal
 
 @font-face
-  font-family: Roboto-ExtraLight
-  src: url(/assets/fonts/Roboto-ExtraLight.ttf)
+  font-family: 'Mulish'
+  src: url(/assets/fonts/Mulish-Regular.ttf)
+  font-weight: 400
+  font-style: normal
 
 @font-face
-  font-family: Roboto-Light
-  src: url(/assets/fonts/Roboto-Light.ttf)
+  font-family: 'Mulish'
+  src: url(/assets/fonts/Mulish-Medium.ttf)
+  font-weight: 500
+  font-style: normal
 
 @font-face
-  font-family: Roboto-Medium
-  src: url(/assets/fonts/Roboto-Medium.ttf)
+  font-family: 'Mulish'
+  src: url(/assets/fonts/Mulish-SemiBold.ttf)
+  font-weight: 600
+  font-style: normal
 
 @font-face
-  font-family: Roboto-Regular
-  src: url(/assets/fonts/Roboto-Regular.ttf)
+  font-family: 'Mulish'
+  src: url(/assets/fonts/Mulish-Bold.ttf)
+  font-weight: 700
+  font-style: normal
 
 @font-face
-  font-family: Roboto-SemiBold
-  src: url(/assets/fonts/Roboto-SemiBold.ttf)
+  font-family: 'Mulish'
+  src: url(/assets/fonts/Mulish-ExtraBold.ttf)
+  font-weight: 800
+  font-style: normal
 
 @font-face
-  font-family: Roboto-Thin
-  src: url(/assets/fonts/Roboto-Thin.ttf)
-
-@font-face
-  font-family: Mulish-Black
+  font-family: 'Mulish'
   src: url(/assets/fonts/Mulish-Black.ttf)
+  font-weight: 900
+  font-style: normal
+
+// Roboto Family
+@font-face
+  font-family: 'Roboto'
+  src: url(/assets/fonts/Roboto-Thin.ttf)
+  font-weight: 100
 
 @font-face
-  font-family: Mulish-Medium
+  font-family: 'Roboto'
+  src: url(/assets/fonts/Roboto-Light.ttf)
+  font-weight: 300
+
+@font-face
+  font-family: 'Roboto'
+  src: url(/assets/fonts/Roboto-Regular.ttf)
+  font-weight: 400
+
+@font-face
+  font-family: 'Roboto'
+  src: url(/assets/fonts/Roboto-Medium.ttf)
+  font-weight: 500
+
+@font-face
+  font-family: 'Roboto'
+  src: url(/assets/fonts/Roboto-Bold.ttf)
+  font-weight: 700
+
+@font-face
+  font-family: 'Roboto'
+  src: url(/assets/fonts/Roboto-Black.ttf)
+  font-weight: 900
+
+// Weight-specific names (Backwards compatibility)
+@font-face
+  font-family: 'Mulish-Regular'
+  src: url(/assets/fonts/Mulish-Regular.ttf)
+
+@font-face
+  font-family: 'Mulish-Medium'
   src: url(/assets/fonts/Mulish-Medium.ttf)
 
 @font-face
-  font-family: Mulish-Regular
-  src: url(/assets/fonts/Mulish-Regular.ttf)
+  font-family: 'Mulish-Black'
+  src: url(/assets/fonts/Mulish-Black.ttf)
+
+// Global Styles
+*
+  box-sizing: border-box
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
 
 html,
 body
   max-width: 100vw
   overflow-x: hidden
-  box-sizing: border-box
   margin: 0
   padding: 0
   color: #FFFFFF
   background-color: #F2F2F2
+  font-family: 'Mulish', 'Roboto', sans-serif // Global Font
   background-image: url("/assets/img/leftpro.png"), url("/assets/img/rightgpro.png")
   background-repeat: no-repeat
   background-position: left 0% top 30%, right 0% bottom 30%
   background-size: 30% auto, 30% auto
-
-// @media (max-width: 1900px)
-//   html,
-//   body
-//     display: none
 
 a
   color: inherit

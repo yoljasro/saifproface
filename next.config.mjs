@@ -9,8 +9,17 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
-  output: "standalone"
+  output: "standalone",
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'http',
+        hostname: 'localhost',
+        port: '5000',
+        pathname: '/**',
+      },
+    ],
+  },
 };
 
 export default nextConfig;
-  

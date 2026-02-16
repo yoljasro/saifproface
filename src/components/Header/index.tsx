@@ -1,13 +1,34 @@
 import React, { useState, useEffect } from "react";
 import styles from "./index.module.sass";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 
 export const Header = () => {
   const t = useTranslations();
+  const locale = useLocale();
   const [currentImage, setCurrentImage] = useState(0);
   const [fade, setFade] = useState(true);
+  const [dynamicMotto, setDynamicMotto] = useState<any | null>(null);
 
   const images = ["/assets/img/image1.jpg", "/assets/img/fasad.jpg"];
+  const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
+
+  useEffect(() => {
+    const fetchMotto = async () => {
+      try {
+        const res = await fetch(`${API_URL}/api/motto`);
+        if (res.ok) {
+          const data = await res.json();
+          if (Array.isArray(data) && data.length > 0) {
+            // Take the latest one
+            setDynamicMotto(data[data.length - 1]);
+          }
+        }
+      } catch (error) {
+        console.error("Error fetching motto:", error);
+      }
+    };
+    fetchMotto();
+  }, [API_URL]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -49,9 +70,21 @@ export const Header = () => {
         {/* Text */}
         <div className={styles.header__text}>
           <div className={styles.header__textBox}>
-            <p className={styles.header__name}>{t("welcome")}</p>
-            <p className={styles.header__descone}>{t("aboutBlock.title")}</p>
-            <p className={styles.header__desc}>{t("aboutBlock.desc")}</p>
+            <p className={styles.header__name}>
+              {dynamicMotto
+                ? (dynamicMotto[`title_${locale}`] || dynamicMotto[`title_${locale === 'kl' ? 'uz_cyr' : locale}`] || dynamicMotto.title)
+                : t("welcome")}
+            </p>
+            <p className={styles.header__descone}>
+              {dynamicMotto
+                ? (dynamicMotto[`subtitle_${locale}`] || dynamicMotto[`subtitle_${locale === 'kl' ? 'uz_cyr' : locale}`] || dynamicMotto.subtitle)
+                : t("aboutBlock.title")}
+            </p>
+            <p className={styles.header__desc}>
+              {dynamicMotto
+                ? (dynamicMotto[`description_${locale}`] || dynamicMotto[`description_${locale === 'kl' ? 'uz_cyr' : locale}`] || dynamicMotto.description)
+                : t("aboutBlock.desc")}
+            </p>
           </div>
         </div>
       </div>

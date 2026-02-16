@@ -1,133 +1,131 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import styles from './index.module.sass';
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import Image from 'next/image';
 import { FaArrowAltCircleLeft } from "react-icons/fa";
 import { FaArrowAltCircleRight } from "react-icons/fa";
 
 export const Prices: React.FC = () => {
   const t = useTranslations();
+  const locale = useLocale();
   const [isHovered, setIsHovered] = useState({ left: false, right: false });
   const [isMobile, setIsMobile] = useState(false);
 
-  const reviews = [
-    {
-      name: "Вероника Ли",
-      date: "24.09.2024",
-      text: "Saif ProFace - клиника с превосходным персоналом и врачами . В клинике уютно и чисто .Хочу выразить огромную благодарность хирургу Мансуру Анваровичу, который провел несколько сложных удалений зубов мудрости , не смотря на то что удаления были сложными.",
-      contentTitle: t("advantagesBlock.titleFive"),
-      contentDesc: t("advantagesBlock.descFive"),
-      backgroundImage: '/assets/img/uyut.jpg',
-      phoneImg: "/assets/img/uyutphone.jpg"
-    },
-    {
-      name: "Лащёнов Руслан",
-      date: "12.09.2024",
-      text: "Зубы коренные замучали, пришёл прооперировали удалили всё, спасибо большое!",
-      contentTitle: t("advantagesBlock.titleOne"),
-      contentDesc: t("advantagesBlock.descOne"),
-      backgroundImage: '/assets/img/visoko.jpg',
-      phoneImg: "/assets/img/visokophone.jpg"
-    },
-    {
-      name: "Юнусова Сабина",
-      date: "08.09.2024",
-      text: "Спасибо клинике Saif Proface, после родов ухудшились все зубы. Вылечили, объяснили что делать дальше, вы большие молодцы!!!!",
-      contentTitle: t("advantagesBlock.titleTwo"),
-      contentDesc: t("advantagesBlock.descTwo"),
-      backgroundImage: '/assets/img/j1.jpg',
-      phoneImg: "/assets/img/j1phone.jpg"
-    },
-    {
-      name: "Умарова Камола",
-      date: "16.09.2024",
-      text: "Здравствуйте хочу поделиться с вами своими впечатлениями. Я давно не улыбалась из за отсутствия зубов в этой клинике поставили мне 10 имплантов и керамические зубы, хочу поблагодарить весь коллектив, они вернули мне мою замечательную улыбку. Спасибо всем от всей души.",
-      contentTitle: t("advantagesBlock.titleThree"),
-      contentDesc: t("advantagesBlock.descThree"),
-      backgroundImage: '/assets/img/j2.jpg',
-      phoneImg: "/assets/img/j2phone.jpg"
-    },
+  interface Advantage {
+    _id: string;
+    title: string;
+    description: string;
+    image: string;
+    phoneImage?: string;
+    [key: string]: any;
+  }
 
-    {
-      name: "Файзиева Рано",
-      date: "19.09.2024",
-      text: "Хочу поделиться своим опытом, для тех, кто долго не может решиться на циркониевые зубы. Я делала себе цирконий 10 лет назад в этой клинике, была приятно удивлена на контроле, встретив, тех же мастеров и персонал.",
-      contentTitle: t("advantagesBlock.titleFour"),
-      contentDesc: t("advantagesBlock.descFour"),
-      backgroundImage: '/assets/img/j3.jpg',
-      phoneImg: "/assets/img/j3phone.jpg"
-    },
-
-    {
-      name: "Закиров Шохрух",
-      date: "14.09.2024",
-      text: "Случайно нашел в интернете клинику Saif Proface и выбрал её, т.к очень быстро прислали план работы и её стоимость. Очень рад, что здесь работают очень отзывчивые и профессиональные люди.",
-      contentTitle: t("advantagesBlock.guarant"),
-      contentDesc: t("advantagesBlock.guarantDesc"),
-      backgroundImage: '/assets/img/j4.jpg',
-      phoneImg: "/assets/img/j4phone.jpg"
-    },
-
-    {
-      name: "Хасанов Анвар",
-      date: "21.09.2024",
-      text: "Мне всё понравилось. Я отмечаю значительное улучшение после лечения. Врачи в очень хорошие, обходительные. Они всегда позвонят, предупредят о визите. Спасибо Saif Proface за организацию лечения!",
-      contentTitle: t("advantagesBlock.conver"),
-      contentDesc: t("advantagesBlock.converDesc"),
-      backgroundImage: '/assets/img/j5.jpg',
-      phoneImg: "/assets/img/j5phone.jpg"
-    },
-  ];
+  interface Review {
+    _id: string;
+    name: string;
+    date: string;
+    text_uz: string;
+    text_ru: string;
+    text_en: string;
+    text_uz_cyr: string;
+    [key: string]: any;
+  }
+  const [advantages, setAdvantages] = useState<Advantage[]>([
+    { _id: '1', title: t("advantagesBlock.titleOne"), description: t("advantagesBlock.descOne"), image: '/assets/img/visoko.jpg', phoneImage: "/assets/img/visokophone.jpg" },
+    { _id: '2', title: t("advantagesBlock.titleTwo"), description: t("advantagesBlock.descTwo"), image: '/assets/img/j1.jpg', phoneImage: "/assets/img/j1phone.jpg" },
+    { _id: '3', title: t("advantagesBlock.titleThree"), description: t("advantagesBlock.descThree"), image: '/assets/img/j2.jpg', phoneImage: "/assets/img/j2phone.jpg" },
+    { _id: '4', title: t("advantagesBlock.titleFour"), description: t("advantagesBlock.descFour"), image: '/assets/img/j3.jpg', phoneImage: "/assets/img/j3phone.jpg" },
+    { _id: '5', title: t("advantagesBlock.titleFive"), description: t("advantagesBlock.descFive"), image: '/assets/img/uyut.jpg', phoneImage: "/assets/img/uyutphone.jpg" },
+    { _id: '6', title: t("advantagesBlock.guarant"), description: t("advantagesBlock.guarantDesc"), image: '/assets/img/j4.jpg', phoneImage: "/assets/img/j4phone.jpg" },
+    { _id: '7', title: t("advantagesBlock.conver"), description: t("advantagesBlock.converDesc"), image: '/assets/img/j5.jpg', phoneImage: "/assets/img/j5phone.jpg" },
+  ]);
+  const [reviews, setReviews] = useState<Review[]>([
+    { _id: 'r1', name: "Вероника Ли", date: "24.09.2024", text_uz: "Saif ProFace - kl... (demo)", text_ru: "Saif ProFace - клиника с превосходным персоналом и врачами . В клинике уютно и чисто .Хочу выразить огромную благодарность хирургу Мансуру Анваровичу, который провел несколько сложных удалений зубов мудрости , не смотря на то что удаления были сложными.", text_en: "Saif ProFace - clinic...", text_uz_cyr: "Saif ProFace..." },
+    { _id: 'r2', name: "Лащёнов Руслан", date: "12.09.2024", text_uz: "Tishlar...", text_ru: "Зубы коренные замучали, пришёл прооперировали удалили всё, спасибо большое!", text_en: "Teeth...", text_uz_cyr: "Тишлар..." },
+  ]);
   const [contentIndex, setContentIndex] = useState(0);
   const [reviewIndex, setReviewIndex] = useState(0);
+  const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
+
+  useEffect(() => {
+    const fetchAdvantages = async () => {
+      try {
+        const res = await fetch(`${API_URL}/api/advantages`);
+        if (res.ok) {
+          const data = await res.json();
+          if (Array.isArray(data) && data.length > 0) setAdvantages(data);
+        }
+      } catch (error) {
+        console.error("Error fetching advantages:", error);
+      }
+    };
+    const fetchReviews = async () => {
+      try {
+        const res = await fetch(`${API_URL}/api/reviews`);
+        if (res.ok) {
+          const data = await res.json();
+          if (Array.isArray(data) && data.length > 0) setReviews(data);
+        }
+      } catch (error) {
+        console.error("Error fetching reviews:", error);
+      }
+    };
+    fetchAdvantages();
+    fetchReviews();
+  }, [API_URL]);
 
   // Ekran o'lchamini kuzatish
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 769);
     };
-
-    // Ilk yuklashda ham o'lchamni tekshiramiz
     handleResize();
-
     window.addEventListener('resize', handleResize);
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   // Avtomatik o'zgarishlar uchun useEffect
   useEffect(() => {
+    if (reviews.length === 0) return;
     const interval = setInterval(() => {
       setReviewIndex((prevIndex) => (prevIndex + 1) % reviews.length);
-    }, 5000); // 5 sekund
-
+    }, 7000);
     return () => clearInterval(interval);
   }, [reviews.length]);
 
   useEffect(() => {
+    if (advantages.length === 0) return;
     const interval = setInterval(() => {
-      setContentIndex((prevIndex) => (prevIndex + 1) % reviews.length);
+      setContentIndex((prevIndex) => (prevIndex + 1) % advantages.length);
     }, 5000);
-
     return () => clearInterval(interval);
-  }, [reviews.length]);
+  }, [advantages.length]);
 
   // Next va Prev tugmalari
   const handleNext = () => {
-    setContentIndex((prevIndex) => (prevIndex + 1) % reviews.length);
+    if (advantages.length === 0) return;
+    setContentIndex((prevIndex) => (prevIndex + 1) % advantages.length);
   };
 
   const handlePrev = () => {
-    setContentIndex((prevIndex) => (prevIndex - 1 + reviews.length) % reviews.length);
+    if (advantages.length === 0) return;
+    setContentIndex((prevIndex) => (prevIndex - 1 + advantages.length) % advantages.length);
   };
 
-  const review = reviews[reviewIndex];
-  const content = reviews[contentIndex];
+  const currentAdvantage = advantages[contentIndex] || advantages[0];
+  const currentReview = reviews[reviewIndex] || reviews[0];
+
+  if (!currentAdvantage) return null; // Defensive, should not happen now
+
+  const fixPath = (path: string) => {
+    if (!path) return "";
+    if (path.startsWith('http') || path.startsWith('/assets/')) return path;
+    return `${API_URL}${path.startsWith('/') ? '' : '/'}${path}`;
+  };
 
   // Mobil va katta ekran uchun mos fon rasmni tanlaymiz
-  const backgroundImg = isMobile ? content.phoneImg : content.backgroundImage;
+  const backgroundImg = isMobile ? fixPath(currentAdvantage.phoneImage || currentAdvantage.image) : fixPath(currentAdvantage.image);
 
   return (
     <div className={styles.container} id='advantage'>
@@ -174,8 +172,12 @@ export const Prices: React.FC = () => {
           exit={{ opacity: 0, x: -100 }}
           transition={{ duration: 0.5 }}
         >
-          <p className={styles.container__name}>{content.contentTitle}</p>
-          <p className={styles.container__desc}>{content.contentDesc}</p>
+          <p className={styles.container__name}>
+            {currentAdvantage[`title_${locale}`] || currentAdvantage[`title_${locale === 'kl' ? 'uz_cyr' : locale}`] || currentAdvantage.title}
+          </p>
+          <p className={styles.container__desc}>
+            {currentAdvantage[`description_${locale}`] || currentAdvantage[`description_${locale === 'kl' ? 'uz_cyr' : locale}`] || currentAdvantage.description}
+          </p>
         </motion.div>
       </motion.div>
 
@@ -183,17 +185,21 @@ export const Prices: React.FC = () => {
         <div className={styles.container__static}>
           <p className={styles.container__revtitle}>{t("advantagesBlock.person")}</p>
         </div>
-        <motion.div
-          key={reviewIndex}
-          initial={{ opacity: 0, x: 100 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -100 }}
-          transition={{ duration: 0.5 }}
-        >
-          <p className={styles.container__person}>{review.name}</p>
-          <p className={styles.container__date}>{review.date}</p>
-          <p className={styles.container__text}>{review.text}</p>
-        </motion.div>
+        {currentReview && (
+          <motion.div
+            key={reviewIndex}
+            initial={{ opacity: 0, x: 100 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -100 }}
+            transition={{ duration: 0.5 }}
+          >
+            <p className={styles.container__person}>{currentReview.name}</p>
+            <p className={styles.container__date}>{currentReview.date}</p>
+            <p className={styles.container__text}>
+              {currentReview[`text_${locale}`] || currentReview[`text_${locale === 'kl' ? 'uz_cyr' : locale}`] || currentReview.text}
+            </p>
+          </motion.div>
+        )}
       </div>
     </div>
   );

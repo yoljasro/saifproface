@@ -13,20 +13,20 @@ interface Teacher {
   skill?: string;
   titleone?: string;
   titletwo?: string;
-  teachtwo? : string;
+  teachtwo?: string;
   titlethree?: string;
-  lastyebat? : string;
-  teachthree? : string;
-  teachfourth? : string;
-  teachfive? : string;
-  teachsix? : string;
+  lastyebat?: string;
+  teachthree?: string;
+  teachfourth?: string;
+  teachfive?: string;
+  teachsix?: string;
   skilltwo?: string;
   skillthree?: string;
   skillfourth?: string;
   skillfive?: string;
-  skillsix? : string;
-  skillseven? : string;
-  skilleight? : string;
+  skillsix?: string;
+  skillseven?: string;
+  skilleight?: string;
 }
 
 interface ModalProps {
@@ -37,32 +37,44 @@ interface ModalProps {
 const Modal: React.FC<ModalProps> = ({ onClose, teacher }) => {
   return (
     <div className={styles.modal} onClick={onClose} >
-      <div className={styles.modalContent} tabIndex={0} style={{ backgroundImage: `url(${teacher.bgImage})` }}>
+      <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
         <button className={styles.closeButton} onClick={onClose}>X</button>
-        <div className={styles.info}>
-          <Image className={styles.lastyebat} src={teacher.lastyebat} alt={teacher.title} width={350} height={400}/>
-        <p className={styles.title}>{teacher.title}</p>
-        <p className={styles.desc}>{teacher.description}</p>
-        <p className={styles.biografy}>{teacher.titleone} </p>
-        <p className={styles.bio}>{teacher.biografy}</p>
-        <p className={styles.biografytwo}>{teacher.titletwo}</p>
-        <p className={styles.biotwo}>{teacher.teach}</p>
-        <p className={styles.biotwo}>{teacher.teachtwo}</p>
-        <p className={styles.biotwo}>{teacher.teachthree}</p>
-        <p className={styles.biotwo}>{teacher.teachfourth}</p>
-        <p className={styles.biotwo}>{teacher.teachfive}</p>
-        <p className={styles.biotwo}>{teacher.teachsix}</p>
-        <p className={styles.biografythree}>{teacher.titlethree}</p>
-        <p className={styles.biothree}>{teacher.skill}</p>
-        <p className={styles.biothree}>{teacher.skilltwo}</p>
-        <p className={styles.biothree}>{teacher.skillthree}</p>
-        <p className={styles.biothree}>{teacher.skillfourth}</p>
-        <p className={styles.biothree}>{teacher.skillfive}</p>
-        <p className={styles.biothree}>{teacher.skillsix}</p>
-        <p className={styles.biothree}>{teacher.skillseven}</p>
-        <p className={styles.biothree}>{teacher.skilleight}</p>
+
+        {/* Left Side: Composite Image (Background + Doctor) */}
+        <div className={styles.imageSection} style={{ backgroundImage: `url(${teacher.bgImage})` }}>
         </div>
-      
+
+        {/* Right Side: Text Info */}
+        <div className={styles.info}>
+          {/* Mobile only image */}
+          {teacher.lastyebat && <Image className={styles.lastyebat} src={teacher.lastyebat} alt={teacher.title} width={350} height={400} />}
+
+          <h2 className={styles.title}>{teacher.title}</h2>
+          <p className={styles.desc}>{teacher.description}</p>
+
+          <div className={styles.scrollableContent}>
+            {teacher.biografy && (
+              <div className={styles.section}>
+                <h3 className={styles.sectionTitle}>{teacher.titleone}</h3>
+                <p className={styles.sectionText}>{teacher.biografy}</p>
+              </div>
+            )}
+
+            {teacher.teach && (
+              <div className={styles.section}>
+                <h3 className={styles.sectionTitle}>{teacher.titletwo}</h3>
+                <div className={styles.sectionText}>{teacher.teach}</div>
+              </div>
+            )}
+
+            {teacher.skill && (
+              <div className={styles.section}>
+                <h3 className={styles.sectionTitle}>{teacher.titlethree}</h3>
+                <div className={styles.sectionText}>{teacher.skill}</div>
+              </div>
+            )}
+          </div>
+        </div>
       </div>
     </div>
   );
