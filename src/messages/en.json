@@ -11,10 +11,8 @@
     "desc": "SAIF PROFACE is a modern center of maxillofacial surgery and dentistry designed to provide high quality medical services in the field of restoring the health and aesthetics of the face and oral cavity. Our center is equipped with advanced medical equipment and staffed by a team of highly qualified specialists who prioritize patient safety, effective treatment and high level of comfort.",
     "descTwo": "We prioritize patient safety, effective treatment, and a high level of comfort.",
     "doctor1": "Askarov Mansur Anvarovich",
-    "doctor2": "Abobakirov Davron Mamadsidiqovich",
     "doctor3": "Yigitaliev Shuhrat Numonovich",
-    "doctor4": "Khakimov Akmal Abduhakimovich",
-    "doctor5": "Iskandarov Mirjalol Bakhtiyorovich",  
+    "doctor5": "Iskandarov Mirjalol Bakhtiyorovich",
     "doctor6": "Saliyev Khabibullo Khamidullayevich",
     "doctorone": "Maxillofacial Surgeon, Implantologist",
     "doctortwo": "Maxillofacial Surgeon",
@@ -74,7 +72,7 @@
     "callme": "Call us:",
     "writeme": "Write to us:",
     "adressme": "Our address is:",
-    "push" : "Click on the map to build a route:",
+    "push": "Click on the map to build a route:",
     "person": "Reviews"
   },
   "whyChooseUsBlock": {
